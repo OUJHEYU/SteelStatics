@@ -1,11 +1,3 @@
-//
-//  AppDelegate.m
-//  SteelStatics
-//
-//  Created by Isaacs on 7/15/14.
-//  Copyright (c) 2014 isaacs. All rights reserved.
-//
-
 #import "AppDelegate.h"
 
 @implementation AppDelegate
@@ -13,7 +5,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    NSLog(@"--------");
     return YES;
 }
 							
