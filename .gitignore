@@ -17,8 +17,8 @@
 #####
 # OS X temporary files that should never be committed
 
-#SteelStatics.xcodeproj/project.pbxproj
-#*project.pbxproj
+SteelStatics.xcodeproj/project.pbxproj
+*project.pbxproj
 
 .DS_Store
 *.swp
