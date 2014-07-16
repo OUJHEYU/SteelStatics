@@ -12,6 +12,7 @@
     [super viewWillAppear:animated];
     
     [self.navigationController setNavigationBarHidden: NO animated:YES];
+
 }
 
 - (void)viewDidLoad
@@ -20,12 +21,17 @@
     // Do any additional setup after loading the view.
     
     self.view.backgroundColor = [UIColor whiteColor];
+
     
-    
-    // set delegate
     for (UIView* view in self.view.subviews) {
+        if ([view isKindOfClass:[BaseTextField class]]) {
+            BaseTextField* tx = (BaseTextField*)view;
+            tx.enabled = NO;
+        }
+        // set delegate
         if ([view isKindOfClass:[CaculateTextField class]]) {
             CaculateTextField* tx = (CaculateTextField*)view;
+            tx.enabled = YES;
             tx.delegate = self;
         }
     }
@@ -51,6 +57,7 @@
         
         textField.text = nil;
         
+        return;
     }
     
     [self autoUpdateResuls];
@@ -75,6 +82,7 @@
         }
     }
 }
+
 
 
 @end

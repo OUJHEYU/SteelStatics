@@ -12,7 +12,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self.navigationItem setTitle:@"鋼樑"];
 }
 
-
+- (IBAction)Hide {
+    [self.view endEditing:YES];
+}
 @end

@@ -1,18 +1,17 @@
-#import "SteelPillarController.h"
 
-@interface SteelPillarController ()
+#import "CircleSteelController.h"
+
+@interface CircleSteelController ()
 
 @end
 
-@implementation SteelPillarController
-
-
+@implementation CircleSteelController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.navigationItem setTitle:@"鋼柱"];
+    [self.navigationItem setTitle:@"圓鋼"];
 }
 
 - (IBAction)Hide {

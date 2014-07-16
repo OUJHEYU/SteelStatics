@@ -40,6 +40,18 @@
 		4EE55CCF19756CE40078428D /* EmployeeDataSheet_24@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EE55CCE19756CE40078428D /* EmployeeDataSheet_24@2x.png */; };
 		4EE55CD219756E020078428D /* BaseTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE55CD119756E020078428D /* BaseTextField.m */; };
 		4EE55CD51975704D0078428D /* CaculateTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE55CD41975704D0078428D /* CaculateTextField.m */; };
+		5E49393A19768A000082FEBA /* IQKeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E49393919768A000082FEBA /* IQKeyboardManager.m */; };
+		5EEE09941976557800ADE47D /* CirclePipeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEE09931976557800ADE47D /* CirclePipeController.m */; };
+		5EEE09971976558A00ADE47D /* CircleSteelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEE09961976558A00ADE47D /* CircleSteelController.m */; };
+		5EEE099A197655D800ADE47D /* SmallSteelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEE0999197655D800ADE47D /* SmallSteelController.m */; };
+		5EEE099D197655F000ADE47D /* AngleSteelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEE099C197655F000ADE47D /* AngleSteelController.m */; };
+		5EEE09A01976562800ADE47D /* SteelBoardController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEE099F1976562800ADE47D /* SteelBoardController.m */; };
+		5EEE09A31976564300ADE47D /* HSteelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEE09A21976564300ADE47D /* HSteelController.m */; };
+		5EEE09A61976565200ADE47D /* CSteelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEE09A51976565200ADE47D /* CSteelController.m */; };
+		5EEE09A91976565E00ADE47D /* ZSteelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEE09A81976565E00ADE47D /* ZSteelController.m */; };
+		5EEE09AC1976568800ADE47D /* RectangleSteelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEE09AB1976568800ADE47D /* RectangleSteelController.m */; };
+		5EEE09AF197656B700ADE47D /* GirderSteelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEE09AE197656B700ADE47D /* GirderSteelController.m */; };
+		5EEE09B2197656D300ADE47D /* ChannelSteelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEE09B1197656D300ADE47D /* ChannelSteelController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +114,30 @@
 		4EE55CD119756E020078428D /* BaseTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTextField.m; sourceTree = "<group>"; };
 		4EE55CD31975704D0078428D /* CaculateTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaculateTextField.h; sourceTree = "<group>"; };
 		4EE55CD41975704D0078428D /* CaculateTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaculateTextField.m; sourceTree = "<group>"; };
+		5E49393819768A000082FEBA /* IQKeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQKeyboardManager.h; sourceTree = "<group>"; };
+		5E49393919768A000082FEBA /* IQKeyboardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQKeyboardManager.m; sourceTree = "<group>"; };
+		5EEE09921976557800ADE47D /* CirclePipeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CirclePipeController.h; sourceTree = "<group>"; };
+		5EEE09931976557800ADE47D /* CirclePipeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CirclePipeController.m; sourceTree = "<group>"; };
+		5EEE09951976558A00ADE47D /* CircleSteelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleSteelController.h; sourceTree = "<group>"; };
+		5EEE09961976558A00ADE47D /* CircleSteelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleSteelController.m; sourceTree = "<group>"; };
+		5EEE0998197655D800ADE47D /* SmallSteelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmallSteelController.h; sourceTree = "<group>"; };
+		5EEE0999197655D800ADE47D /* SmallSteelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmallSteelController.m; sourceTree = "<group>"; };
+		5EEE099B197655F000ADE47D /* AngleSteelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AngleSteelController.h; sourceTree = "<group>"; };
+		5EEE099C197655F000ADE47D /* AngleSteelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AngleSteelController.m; sourceTree = "<group>"; };
+		5EEE099E1976562800ADE47D /* SteelBoardController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SteelBoardController.h; sourceTree = "<group>"; };
+		5EEE099F1976562800ADE47D /* SteelBoardController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SteelBoardController.m; sourceTree = "<group>"; };
+		5EEE09A11976564300ADE47D /* HSteelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSteelController.h; sourceTree = "<group>"; };
+		5EEE09A21976564300ADE47D /* HSteelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSteelController.m; sourceTree = "<group>"; };
+		5EEE09A41976565200ADE47D /* CSteelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSteelController.h; sourceTree = "<group>"; };
+		5EEE09A51976565200ADE47D /* CSteelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSteelController.m; sourceTree = "<group>"; };
+		5EEE09A71976565E00ADE47D /* ZSteelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSteelController.h; sourceTree = "<group>"; };
+		5EEE09A81976565E00ADE47D /* ZSteelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSteelController.m; sourceTree = "<group>"; };
+		5EEE09AA1976568800ADE47D /* RectangleSteelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RectangleSteelController.h; sourceTree = "<group>"; };
+		5EEE09AB1976568800ADE47D /* RectangleSteelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RectangleSteelController.m; sourceTree = "<group>"; };
+		5EEE09AD197656B700ADE47D /* GirderSteelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GirderSteelController.h; sourceTree = "<group>"; };
+		5EEE09AE197656B700ADE47D /* GirderSteelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GirderSteelController.m; sourceTree = "<group>"; };
+		5EEE09B0197656D300ADE47D /* ChannelSteelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelSteelController.h; sourceTree = "<group>"; };
+		5EEE09B1197656D300ADE47D /* ChannelSteelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChannelSteelController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +167,7 @@
 		4EC462821975F82E00A57C7D /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				5E49393719768A000082FEBA /* KeyBoardManager */,
 				4EC462831975F83C00A57C7D /* NumberHelper.h */,
 				4EC462841975F83C00A57C7D /* NumberHelper.m */,
 			);
@@ -271,6 +308,28 @@
 				4EE55CCA197561C40078428D /* SteelPillarController.m */,
 				4EC4628A1976016200A57C7D /* SteelGirderController.h */,
 				4EC4628B1976016200A57C7D /* SteelGirderController.m */,
+				5EEE09921976557800ADE47D /* CirclePipeController.h */,
+				5EEE09931976557800ADE47D /* CirclePipeController.m */,
+				5EEE09951976558A00ADE47D /* CircleSteelController.h */,
+				5EEE09961976558A00ADE47D /* CircleSteelController.m */,
+				5EEE0998197655D800ADE47D /* SmallSteelController.h */,
+				5EEE0999197655D800ADE47D /* SmallSteelController.m */,
+				5EEE099B197655F000ADE47D /* AngleSteelController.h */,
+				5EEE099C197655F000ADE47D /* AngleSteelController.m */,
+				5EEE099E1976562800ADE47D /* SteelBoardController.h */,
+				5EEE099F1976562800ADE47D /* SteelBoardController.m */,
+				5EEE09A11976564300ADE47D /* HSteelController.h */,
+				5EEE09A21976564300ADE47D /* HSteelController.m */,
+				5EEE09A41976565200ADE47D /* CSteelController.h */,
+				5EEE09A51976565200ADE47D /* CSteelController.m */,
+				5EEE09A71976565E00ADE47D /* ZSteelController.h */,
+				5EEE09A81976565E00ADE47D /* ZSteelController.m */,
+				5EEE09AA1976568800ADE47D /* RectangleSteelController.h */,
+				5EEE09AB1976568800ADE47D /* RectangleSteelController.m */,
+				5EEE09AD197656B700ADE47D /* GirderSteelController.h */,
+				5EEE09AE197656B700ADE47D /* GirderSteelController.m */,
+				5EEE09B0197656D300ADE47D /* ChannelSteelController.h */,
+				5EEE09B1197656D300ADE47D /* ChannelSteelController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -286,6 +345,15 @@
 				4EE55CD41975704D0078428D /* CaculateTextField.m */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		5E49393719768A000082FEBA /* KeyBoardManager */ = {
+			isa = PBXGroup;
+			children = (
+				5E49393819768A000082FEBA /* IQKeyboardManager.h */,
+				5E49393919768A000082FEBA /* IQKeyboardManager.m */,
+			);
+			path = KeyBoardManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,19 +462,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EEE09971976558A00ADE47D /* CircleSteelController.m in Sources */,
 				4EC462851975F83C00A57C7D /* NumberHelper.m in Sources */,
 				4EE55CBD197522420078428D /* NavigatorController.m in Sources */,
 				4EE55C8419751FB20078428D /* AppDelegate.m in Sources */,
+				5EEE099D197655F000ADE47D /* AngleSteelController.m in Sources */,
+				5E49393A19768A000082FEBA /* IQKeyboardManager.m in Sources */,
 				4EE55CB5197521510078428D /* MainController.m in Sources */,
 				4EC4628C1976016200A57C7D /* SteelGirderController.m in Sources */,
 				4EC4628F1976042A00A57C7D /* SteelSkyController.m in Sources */,
+				5EEE09AF197656B700ADE47D /* GirderSteelController.m in Sources */,
+				5EEE09A31976564300ADE47D /* HSteelController.m in Sources */,
+				5EEE09A61976565200ADE47D /* CSteelController.m in Sources */,
 				4EE55CC11975254D0078428D /* BaseButton.m in Sources */,
+				5EEE09941976557800ADE47D /* CirclePipeController.m in Sources */,
 				4EE55CC8197560260078428D /* SteelColumnController.m in Sources */,
 				4EE55CD51975704D0078428D /* CaculateTextField.m in Sources */,
+				5EEE099A197655D800ADE47D /* SmallSteelController.m in Sources */,
 				4EE55CBA197521D20078428D /* BaseController.m in Sources */,
+				5EEE09A01976562800ADE47D /* SteelBoardController.m in Sources */,
+				5EEE09A91976565E00ADE47D /* ZSteelController.m in Sources */,
 				4EE55CD219756E020078428D /* BaseTextField.m in Sources */,
 				4EE55C8019751FB20078428D /* main.m in Sources */,
+				5EEE09B2197656D300ADE47D /* ChannelSteelController.m in Sources */,
 				4EE55CCB197561C40078428D /* SteelPillarController.m in Sources */,
+				5EEE09AC1976568800ADE47D /* RectangleSteelController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

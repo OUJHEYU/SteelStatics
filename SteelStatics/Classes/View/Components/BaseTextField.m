@@ -12,5 +12,17 @@
 }
 
 
+-(float) value
+{
+    return [self.text floatValue];
+}
+
+
+-(void) setValue:(float)value
+{
+    self.text = [[NSNumber numberWithFloat: value] stringValue];
+}
+
+
 
 @end

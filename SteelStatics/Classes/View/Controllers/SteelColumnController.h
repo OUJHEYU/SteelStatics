@@ -1,5 +1,6 @@
 #import "BaseController.h"
 
+@class BaseTextField;
 @class CaculateTextField;
 
 @interface SteelColumnController : BaseController
@@ -16,6 +17,9 @@
 @property (weak, nonatomic) IBOutlet CaculateTextField *paintUnitTextField;
 @property (weak, nonatomic) IBOutlet CaculateTextField *paintAreaTextField;
 
+
+// result field
+@property (weak, nonatomic) IBOutlet BaseTextField *unitWightTx;
 
 
 @end

@@ -1,10 +1,13 @@
 #import "AppDelegate.h"
+#import "AppInterface.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [IQKeyboardManager enableKeyboardManagerWithDistance: 50/*[FrameTranslater convertCanvasHeight: 85]*/];
+    
     return YES;
 }
 							

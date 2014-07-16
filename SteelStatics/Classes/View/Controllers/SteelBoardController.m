@@ -1,22 +1,20 @@
-#import "SteelPillarController.h"
 
-@interface SteelPillarController ()
+#import "SteelBoardController.h"
+
+@interface SteelBoardController ()
 
 @end
 
-@implementation SteelPillarController
-
-
+@implementation SteelBoardController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.navigationItem setTitle:@"鋼柱"];
+    [self.navigationItem setTitle:@"鋼板"];
 }
 
 - (IBAction)Hide {
     [self.view endEditing:YES];
 }
-
 @end

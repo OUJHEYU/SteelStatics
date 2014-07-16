@@ -1,18 +1,17 @@
-#import "SteelPillarController.h"
 
-@interface SteelPillarController ()
+#import "ZSteelController.h"
+
+@interface ZSteelController ()
 
 @end
 
-@implementation SteelPillarController
-
-
+@implementation ZSteelController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.navigationItem setTitle:@"鋼柱"];
+    [self.navigationItem setTitle:@"Z型鋼"];
 }
 
 - (IBAction)Hide {
