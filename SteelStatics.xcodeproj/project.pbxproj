@@ -84,6 +84,7 @@
 		5EFBC7741978F11D003F2839 /* CustomerDataCard_07@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EFBC7691978F11D003F2839 /* CustomerDataCard_07@2x.png */; };
 		5EFBC7751978F11D003F2839 /* EmployeeDataSheet_21@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EFBC76A1978F11D003F2839 /* EmployeeDataSheet_21@2x.png */; };
 		5EFBC7761978F11D003F2839 /* EmployeeDataSheet_24@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EFBC76B1978F11D003F2839 /* EmployeeDataSheet_24@2x.png */; };
+		BAE0B1B6199354030041BDE2 /* Empty.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAE0B1B5199354030041BDE2 /* Empty.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -199,6 +200,7 @@
 		5EFBC7691978F11D003F2839 /* CustomerDataCard_07@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CustomerDataCard_07@2x.png"; sourceTree = "<group>"; };
 		5EFBC76A1978F11D003F2839 /* EmployeeDataSheet_21@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "EmployeeDataSheet_21@2x.png"; sourceTree = "<group>"; };
 		5EFBC76B1978F11D003F2839 /* EmployeeDataSheet_24@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "EmployeeDataSheet_24@2x.png"; sourceTree = "<group>"; };
+		BAE0B1B5199354030041BDE2 /* Empty.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Empty.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -342,6 +344,7 @@
 		4EE55CAD197520310078428D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BAE0B1B4199353E50041BDE2 /* InterfaceBuilder */,
 				4EE55CAE197520310078428D /* Images */,
 			);
 			path = Resources;
@@ -446,6 +449,14 @@
 			path = KeyBoardManager;
 			sourceTree = "<group>";
 		};
+		BAE0B1B4199353E50041BDE2 /* InterfaceBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				BAE0B1B5199354030041BDE2 /* Empty.xib */,
+			);
+			path = InterfaceBuilder;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -531,6 +542,7 @@
 				5E4119B21979F3FB008A1B2B /* 角鋼.png in Resources */,
 				5E71DE8A1993179C00CC7CF0 /* 天車.png in Resources */,
 				5E71DE9019932D3700CC7CF0 /* 鋼板.png in Resources */,
+				BAE0B1B6199354030041BDE2 /* Empty.xib in Resources */,
 				5EB4EF71197DE73D00CCAFED /* 矩形管規.png in Resources */,
 				5EAA8E001980D74300E55A3D /* down_dark.png in Resources */,
 				5E8CCFAE1988A0DF00F473EB /* OutSingle_姓名栏@2x.png in Resources */,

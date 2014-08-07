@@ -42,14 +42,8 @@
 @synthesize boardh;
 @synthesize boardpcs;
 @synthesize boardloss;
-//成型鋼caculate field
-@synthesize typeunits;
-@synthesize typem;
-@synthesize typepcs;
-@synthesize typeloss;
 
 //成型鋼 result field
-@synthesize type;
 @synthesize board;
 @synthesize overhead;
 @synthesize bridge;
@@ -63,7 +57,6 @@
     bridge.value = ((bridgeh1.value + bridgeh2.value) / 2 * bridget1.value * 0.00785 + bridgeb.value * bridget2.value * 2 * 0.00785) * bridgem.value * bridgepcs.value * (sqrtf(100 * 100 + bridgewater.value * bridgewater.value) / 100) * (bridgeloss.value / 100 + 1);
     overhead.value = ((overheadmidl.value * overheadw.value * overheadm.value * 0.00785) + (overheadtopl.value * overheadtopw.value * overheadm.value * 0.00785) + (overheadlowerl.value * overheadlowerw.value * (overheadm.value + ((overheadmidl.value - overheadoxh.value) / 500)) * 0.00785)) * overheadpcs.value * (overheadloss.value / 100 + 1);
     board.value = (boardl.value * boardw.value * boardh.value * 0.00000785) * boardpcs.value * (boardloss.value / 100 + 1);
-    type.value = typeunits.value * typem.value * typepcs.value * (typeloss.value / 100 + 1);
 }
 
 - (void)viewDidLoad
@@ -124,16 +117,6 @@
     boardloss.text = nil;
     boardpcs.text = nil;
     boardw.text = nil;
-    
-    [pillarh1 becomeFirstResponder];
-    [pillarh1 resignFirstResponder];
-}
-- (IBAction)typeclear {
-    type.text = nil;
-    typeloss.text = nil;
-    typem.text = nil;
-    typepcs.text = nil;
-    typeunits.text = nil;
     
     [pillarh1 becomeFirstResponder];
     [pillarh1 resignFirstResponder];

@@ -38,14 +38,9 @@
 @property (weak, nonatomic) IBOutlet CaculateTextField *boardh;
 @property (weak, nonatomic) IBOutlet CaculateTextField *boardpcs;
 @property (weak, nonatomic) IBOutlet CaculateTextField *boardloss;
-//成型鋼caculate field
-@property (weak, nonatomic) IBOutlet CaculateTextField *typeunits;
-@property (weak, nonatomic) IBOutlet CaculateTextField *typem;
-@property (weak, nonatomic) IBOutlet CaculateTextField *typepcs;
-@property (weak, nonatomic) IBOutlet CaculateTextField *typeloss;
+
 
 //result field
-@property (weak, nonatomic) IBOutlet BaseTextField *type;
 @property (weak, nonatomic) IBOutlet BaseTextField *board;
 @property (weak, nonatomic) IBOutlet BaseTextField *overhead;
 @property (weak, nonatomic) IBOutlet BaseTextField *bridge;
