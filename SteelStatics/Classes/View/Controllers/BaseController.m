@@ -144,54 +144,54 @@
 
 
 #pragma mark - IB Action
-- (IBAction)view:(id)sender
-{
-    CATransition *transition = [CATransition animation];
-    [transition setDuration:0.5];
-    [transition setType:@"rippleEffect"];
-    [self.tabBarController.view.layer addAnimation:transition forKey:nil];
-    [self.tabBarController setSelectedIndex:5];
-}
-- (IBAction)tools:(id)sender
-{
-    CATransition *transition = [CATransition animation];
-    [transition setDuration:0.5];
-    [transition setType:@"rippleEffect"];
-    [self.tabBarController.view.layer addAnimation:transition forKey:nil];
-    [self.tabBarController setSelectedIndex:4];
-}
-- (IBAction)paint:(id)sender
-{
-    CATransition *transition = [CATransition animation];
-    [transition setDuration:0.5];
-    [transition setType:@"rippleEffect"];
-    [self.tabBarController.view.layer addAnimation:transition forKey:nil];
-    [self.tabBarController setSelectedIndex:3];
-}
-- (IBAction)profile2:(id)sender
-{
-    CATransition *transition = [CATransition animation];
-    [transition setDuration:0.5];
-    [transition setType:@"rippleEffect"];
-    [self.tabBarController.view.layer addAnimation:transition forKey:nil];
-    [self.tabBarController setSelectedIndex:2];
-}
-- (IBAction)profile1:(id)sender
-{
-    CATransition *transition = [CATransition animation];
-    [transition setDuration:0.5];
-    [transition setType:@"rippleEffect"];
-    [self.tabBarController.view.layer addAnimation:transition forKey:nil];
-    [self.tabBarController setSelectedIndex:1];
-}
-- (IBAction)rolled:(id)sender
-{
-    CATransition *transition = [CATransition animation];
-    [transition setDuration:0.5];
-    [transition setType:@"rippleEffect"];
-    [self.tabBarController.view.layer addAnimation:transition forKey:nil];
-    [self.tabBarController setSelectedIndex:0];
-}
+//- (IBAction)view:(id)sender
+//{
+//    CATransition *transition = [CATransition animation];
+//    [transition setDuration:0.5];
+//    [transition setType:@"rippleEffect"];
+//    [self.tabBarController.view.layer addAnimation:transition forKey:nil];
+//    [self.tabBarController setSelectedIndex:5];
+//}
+//- (IBAction)tools:(id)sender
+//{
+//    CATransition *transition = [CATransition animation];
+//    [transition setDuration:0.5];
+//    [transition setType:@"rippleEffect"];
+//    [self.tabBarController.view.layer addAnimation:transition forKey:nil];
+//    [self.tabBarController setSelectedIndex:4];
+//}
+//- (IBAction)paint:(id)sender
+//{
+//    CATransition *transition = [CATransition animation];
+//    [transition setDuration:0.5];
+//    [transition setType:@"rippleEffect"];
+//    [self.tabBarController.view.layer addAnimation:transition forKey:nil];
+//    [self.tabBarController setSelectedIndex:3];
+//}
+//- (IBAction)profile2:(id)sender
+//{
+//    CATransition *transition = [CATransition animation];
+//    [transition setDuration:0.5];
+//    [transition setType:@"rippleEffect"];
+//    [self.tabBarController.view.layer addAnimation:transition forKey:nil];
+//    [self.tabBarController setSelectedIndex:2];
+//}
+//- (IBAction)profile1:(id)sender
+//{
+//    CATransition *transition = [CATransition animation];
+//    [transition setDuration:0.5];
+//    [transition setType:@"rippleEffect"];
+//    [self.tabBarController.view.layer addAnimation:transition forKey:nil];
+//    [self.tabBarController setSelectedIndex:1];
+//}
+//- (IBAction)rolled:(id)sender
+//{
+//    CATransition *transition = [CATransition animation];
+//    [transition setDuration:0.5];
+//    [transition setType:@"rippleEffect"];
+//    [self.tabBarController.view.layer addAnimation:transition forKey:nil];
+//    [self.tabBarController setSelectedIndex:0];
+//}
 - (IBAction)hmore:(id)sender {
     CATransition *transition = [CATransition animation];
     [transition setDuration:0.5];
