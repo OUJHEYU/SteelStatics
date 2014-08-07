@@ -2,9 +2,7 @@
 // KeyboardManager.h
 //
 
-
 #import "IQKeyboardManager.h"
-
 @interface IQKeyboardManager()<UIGestureRecognizerDelegate>
 
 /*! save rootViewControlle for reuse. */
@@ -44,6 +42,8 @@
 	/*! TextField or TextView object. */
     UIView *textFieldView;
     
+    UITextField *textField1;
+    
 	/*! To save keyboard animation duration. */
     CGFloat animationDuration;
     
@@ -82,6 +82,7 @@
 //  Singleton Object Initialization.
 -(id)initUniqueInstance
 {
+
 	if (self = [super init])
     {
         static dispatch_once_t onceToken;
@@ -90,7 +91,7 @@
 			//  Registering for keyboard notification.
 			[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
 			[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
-			
+            
 			//  Registering for textField notification.
 			[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldViewDidBeginEditing:) name:UITextFieldTextDidBeginEditingNotification object:nil];
 			[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldViewDidEndEditing:) name:UITextFieldTextDidEndEditingNotification object:nil];
@@ -582,6 +583,8 @@
 //  Removing fetched object.
 -(void)textFieldViewDidEndEditing:(NSNotification*)notification
 {
+    textField1 = notification.object;
+    if (textField1.tag == 0) {
     [textFieldView.window removeGestureRecognizer:tapGesture];
     
     [UIView animateWithDuration:animationDuration animations:^{
@@ -590,14 +593,18 @@
     
     //Setting object to nil
     textFieldView = nil;
+    }
 }
-
 //  Fetching UITextFieldView object from notification.
 -(void)textFieldViewDidBeginEditing:(NSNotification*)notification
 {
+    textField1 = notification.object;
+    if (textField1.tag == 0) {
+    
     //  Getting object
     textFieldView = notification.object;
     textFieldViewIntialFrame = textFieldView.frame;
+    
 
 	//If autoToolbar enable, then add toolbar on all the UITextField/UITextView's if required.
 	if (_enableAutoToolbar)
@@ -635,8 +642,8 @@
     
     //  keyboard is already showing. adjust frame.
     [self adjustFrame];
+    }
 }
-
 #pragma mark AutoResign methods
 
 
@@ -986,7 +993,7 @@
     return self;
 }
 
-//  Value has changed
+//  Value has changedcommitAnimations
 - (void)segmentedControlHandler:(IQSegmentedNextPrevious*)sender
 {
     //  Switching to selected segmenteIndex.

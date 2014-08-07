@@ -2,6 +2,4 @@
 
 @interface MainController : UIViewController
 
-- (IBAction)exit:(id)sender;
-
 @end
