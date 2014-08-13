@@ -106,17 +106,10 @@
 }
 -(void)pullup
 {
-    [UIView animateWithDuration: 0.5 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+    [UIView animateWithDuration: 0.4 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
         [self setSizeHeight: CanvasHeight(30)];
         [tv setSizeHeight: 0];
     } completion:nil];
-    
-//    [UIView animateWithDuration: 0.5 animations:^{
-//            
-//        [self setSizeHeight: CanvasHeight(30)];
-//        [tv setSizeHeight: 0];
-//        
-//    } completion:nil];
     
     [self.window removeGestureRecognizer:gestureRecognizer];
 }

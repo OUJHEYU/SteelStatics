@@ -76,7 +76,6 @@
     }
     else if ([viewController isKindOfClass: [UITabBarController class]]) {
         UITabBarController* tabController = (UITabBarController*)viewController;
-//        int maxIndex = tabController.viewControllers.count - 1;
         int selectIndex = (int)tabController.selectedIndex;
         int previousIndex = selectIndex - 1;
         if (selectIndex == 5) {

@@ -87,25 +87,6 @@
     AppScrollView* scrollView = (AppScrollView*)self.view;
     UIView* contentView = [scrollView.subviews firstObject];
     scrollView.contentSize = CGSizeMake(scrollView.bounds.size.width, contentView.bounds.size.height);
-    //Hide tableview
-    UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(buttonClicked)];
-    gestureRecognizer.cancelsTouchesInView = NO;
-    gestureRecognizer.delegate=self;
-    [self.view addGestureRecognizer:gestureRecognizer];
-}
-
-#pragma mark - UIGestureRecognizerDelegate
-
--(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
-{
-    if ([touch.view isKindOfClass:[UITextField class]])
-    {
-        return NO;
-    }
-    else
-    {
-        return YES;
-    }
 }
 
 -(void) autoUpdateResuls
@@ -135,10 +116,7 @@
     hsteelsymmetryname.text = nil;
     hsteelasymmetricalmodel.text = nil;
     dd1.textField.text = @"";
-    
-    
     [hsteelsymmetry becomeFirstResponder];
-    
 }
 - (IBAction)hsteelasymmetricalclear {
     hsteelasymmetrical.text = nil;
@@ -153,7 +131,6 @@
     hsteelasymmetricalt2.text = nil;
     hsteelasymmetricalname.text = nil;
     hsteelasymmetricalmodel.text = nil;
-    
     [hsteelasymmetrical becomeFirstResponder];
 }
 - (IBAction)rectanglepipeclear {
@@ -183,9 +160,7 @@
     dd2.textField.text = @"";
     dd3.textField.text = @"";
     
-    
     [rectanglepipe becomeFirstResponder];
-    
     
     [r3 setOriginX:CanvasX(498)];
     [rectanglepipem setOriginX:CanvasX(369)];
@@ -208,7 +183,6 @@
     circlepipeloss.text = nil;
     circlepipename.text = nil;
     circlepipemodel.text = nil;
-    
     [circlepipe becomeFirstResponder];
 }
 - (IBAction)circlsteelclear {
@@ -224,7 +198,6 @@
     circlesteelkg.hidden = YES;
     circlesteelkglabel.hidden = YES;
     c1.hidden = NO;
-    
     dd4.textField.text = @"";
     [circlesteel becomeFirstResponder];
     [c1 setOriginX:CanvasX(236)];
@@ -243,7 +216,6 @@
     hsectionloss.text = nil;
     hsectionmodel.text = nil;
     hsectionname.text = nil;
-    
     [hsection becomeFirstResponder];
 }
 - (IBAction)bridgeclear {
@@ -259,7 +231,6 @@
     bridgeloss.text = nil;
     bridgename.text = nil;
     bridgemodel.text = nil;
-    
     [bridge becomeFirstResponder];
 }
 - (IBAction)overheadclear {
@@ -276,7 +247,6 @@
     overheadloss.text = nil;
     overheadname.text = nil;
     overheadmodel.text = nil;
-    
     [overhead becomeFirstResponder];
 }
 - (IBAction)boardclear {
@@ -288,7 +258,6 @@
     boardw.text = nil;
     boardname.text = nil;
     boardmodel.text = nil;
-    
     [board becomeFirstResponder];
 }
 - (IBAction)csteelclear {
@@ -324,7 +293,6 @@
     [csteelmlabel setOriginX:CanvasX(412)];
     [csteelpcslabel setOriginX:CanvasX(487)];
     [csteellosslabel setOriginX:CanvasX(553)];
-    
 }
 - (IBAction)zsteelclear {
     z1.hidden = NO;
@@ -368,10 +336,8 @@
     girdername.text = nil;
     girderpcs.text = nil;
     dd6.textField.text = @"";
-    
-    
+
     [girder becomeFirstResponder];
-    
 }
 - (IBAction)channelclear {
     channel.text = nil;
@@ -381,10 +347,7 @@
     channelname.text = nil;
     channelkg.text = nil;
     dd7.textField.text = @"";
-    
-    
     [channel becomeFirstResponder];
-    
 }
 - (IBAction)angleclear {
     angleside1.hidden = NO;
@@ -408,7 +371,6 @@
     angleside2.text = nil;
     anglethick.text = nil;
     dd9.textField.text = @"";
-    
     dd10.textField.text = @"";
     
     [angles becomeFirstResponder];
@@ -3790,8 +3752,6 @@
     }else if([dd7.textField.text isEqualToString:@"〔40c"]){
         channelkg.value = 71.5;
     }
-    
 }
-
 
 @end

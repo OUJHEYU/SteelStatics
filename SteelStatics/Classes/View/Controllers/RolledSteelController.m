@@ -89,7 +89,6 @@
     AppScrollView* scrollView = (AppScrollView*)self.view;
     UIView* contentView = [scrollView.subviews firstObject];
     scrollView.contentSize = CGSizeMake(scrollView.bounds.size.width, contentView.bounds.size.height);
-
 }
 
 
@@ -166,11 +165,7 @@
     rectanglepipename.text = nil;
     dd2.textField.text = @"";
     dd3.textField.text = @"";
-    
-    
     [rectanglepipe becomeFirstResponder];
-    
-    
     [r3 setOriginX:CanvasX(498)];
     [rectanglepipem setOriginX:CanvasX(369)];
     [rectanglepipepcs setOriginX:CanvasX(439)];
@@ -178,7 +173,6 @@
     [rectanglepipemlabel setOriginX:CanvasX(371)];
     [rectanglepipepcslabel setOriginX:CanvasX(451)];
     [rectanglepipelosslabel setOriginX:CanvasX(521)];
-    
     dd3.textField.enabled = YES;
     dd2.textField.enabled = YES;
     
@@ -192,7 +186,6 @@
     circlepipeloss.text = nil;
     circlepipename.text = nil;
     circlepipemodel.text = nil;
-    
     [circlepipe becomeFirstResponder];
 }
 - (IBAction)circlsteelclear {
@@ -208,7 +201,6 @@
     circlesteelkg.hidden = YES;
     circlesteelkglabel.hidden = YES;
     c1.hidden = NO;
-    
     dd4.textField.text = @"";
     [circlesteel becomeFirstResponder];
     [c1 setOriginX:CanvasX(236)];
@@ -227,7 +219,6 @@
     hsectionloss.text = nil;
     hsectionmodel.text = nil;
     hsectionname.text = nil;
-    
     [hsection becomeFirstResponder];
 }
 - (IBAction)bridgeclear {
@@ -243,7 +234,6 @@
     bridgeloss.text = nil;
     bridgename.text = nil;
     bridgemodel.text = nil;
-    
     [bridge becomeFirstResponder];
 }
 - (IBAction)overheadclear {
@@ -260,7 +250,6 @@
     overheadloss.text = nil;
     overheadname.text = nil;
     overheadmodel.text = nil;
-    
     [overhead becomeFirstResponder];
 }
 - (IBAction)boardclear {
@@ -272,7 +261,6 @@
     boardw.text = nil;
     boardname.text = nil;
     boardmodel.text = nil;
-    
     [board becomeFirstResponder];
 }
 - (IBAction)csteelclear {
@@ -300,7 +288,6 @@
     csteelname.text = nil;
     dd5.textField.text = @"";
     csteelhlabel.text = @"H(mm)";
-    
     [csteel becomeFirstResponder];
     [csteelm setOriginX:CanvasX(410)];
     [csteelpcs setOriginX:CanvasX(475)];
@@ -335,7 +322,6 @@
     zsteelloss.text = nil;
     zsteelhlabel.text = @"H(mm)";
     dd8.textField.text = @"";
-    
     [zsteel becomeFirstResponder];
     [zsteelm setOriginX:CanvasX(409)];
     [zsteelpcs setOriginX:CanvasX(471)];
@@ -353,8 +339,6 @@
     girdername.text = nil;
     girderpcs.text = nil;
     dd6.textField.text = @"";
-    
-    
     [girder becomeFirstResponder];
     
 }
@@ -366,8 +350,6 @@
     channelname.text = nil;
     channelkg.text = nil;
     dd7.textField.text = @"";
-    
-    
     [channel becomeFirstResponder];
     
 }
@@ -393,9 +375,7 @@
     angleside2.text = nil;
     anglethick.text = nil;
     dd9.textField.text = @"";
-    
     dd10.textField.text = @"";
-    
     [angles becomeFirstResponder];
     [anglem setOriginX:CanvasX(399)];
     [anglepcs setOriginX:CanvasX(479)];
