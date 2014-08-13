@@ -22,7 +22,6 @@ typedef enum IQAutoToolbarManageBehaviour
 
 
 #import <Foundation/Foundation.h>
-
 /*!
     @author Iftekhar Qurashi
  

@@ -1,6 +1,6 @@
 #import "BaseController.h"
 
-@interface CircleController : BaseController
+@interface CircleMoreController : BaseController
 @property (weak, nonatomic) IBOutlet UIImageView *image1;
 @property (weak, nonatomic) IBOutlet UIImageView *image2;
 @property (weak, nonatomic) IBOutlet UIImageView *image3;

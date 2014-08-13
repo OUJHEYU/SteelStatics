@@ -1,6 +1,6 @@
 #import <Foundation/Foundation.h>
 
-@interface NumberHelper : NSObject
+@interface SSNumberHelper : NSObject
 
 
 +(BOOL) isNumericValue:(NSString*)string;

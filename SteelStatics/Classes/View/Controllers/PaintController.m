@@ -83,6 +83,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    AppScrollView* scrollView = (AppScrollView*)self.view;
+    
+    UIView* contentView = [scrollView.subviews firstObject];
+    scrollView.contentSize = CGSizeMake(scrollView.bounds.size.width, contentView.bounds.size.height);
     // Do any additional setup after loading the view.
 }
 - (IBAction)boardpaint {
@@ -99,8 +104,8 @@
     boardton.text = nil;
     boardprice.text = nil;
     
-    [boardw becomeFirstResponder];
-    [boardw resignFirstResponder];
+    [boardpaintface becomeFirstResponder];
+    [boardpaintface resignFirstResponder];
 }
 - (IBAction)circlepipepaint {
     circlepipediamter.text = nil;
@@ -115,8 +120,8 @@
     circlepipeton.text = nil;
     circlepipeprice.text = nil;
     
-    [boardw becomeFirstResponder];
-    [boardw resignFirstResponder];
+    [circlepipepaintprice becomeFirstResponder];
+    [circlepipepaintprice resignFirstResponder];
 }
 - (IBAction)circlesteelpaint {
     circlesteeldiamter.text = nil;
@@ -130,8 +135,8 @@
     circlesteelton.text = nil;
     circlesteelprice.text = nil;
     
-    [boardw becomeFirstResponder];
-    [boardw resignFirstResponder];
+    [circlesteelneedkg becomeFirstResponder];
+    [circlesteelneedkg resignFirstResponder];
 }
 - (IBAction)hsteelpaint {
     hseelh2.text = nil;
@@ -148,8 +153,8 @@
     hsteelton.text = nil;
     hsteelprice.text = nil;
     
-    [boardw becomeFirstResponder];
-    [boardw resignFirstResponder];
+    [hsteelneedl becomeFirstResponder];
+    [hsteelneedl resignFirstResponder];
 }
 
 

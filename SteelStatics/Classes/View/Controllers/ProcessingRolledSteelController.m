@@ -1,7 +1,7 @@
+#import "ProcessingRolledSteelController.h"
 #import "AppInterface.h"
-#import "RolledSteelController.h"
+@interface ProcessingRolledSteelController ()
 
-@interface RolledSteelController ()
 @property DropDown1 *dd1;
 @property DropDown1 *dd2;
 @property DropDown1 *dd3;
@@ -12,10 +12,9 @@
 @property DropDown1 *dd8;
 @property DropDown1 *dd9;
 @property DropDown1 *dd10;
-
 @end
 
-@implementation RolledSteelController
+@implementation ProcessingRolledSteelController
 @synthesize dd1,dd2,dd3,dd4,dd5,dd6,dd7,dd8,dd9,dd10;
 
 //標準H型鋼對稱 caculate field
@@ -78,7 +77,6 @@
 //Z Label
 @synthesize zsteelhlabel, zsteelblabel, zsteelclabel, zsteelthicklabel, zsteelmlabel, zsteelpcslabel, zsteellosslabel, zsteelkglabel, z1, z2, z3;
 
-
 #pragma mark - Override Methods
 - (void)viewDidLoad
 {
@@ -89,9 +87,26 @@
     AppScrollView* scrollView = (AppScrollView*)self.view;
     UIView* contentView = [scrollView.subviews firstObject];
     scrollView.contentSize = CGSizeMake(scrollView.bounds.size.width, contentView.bounds.size.height);
-
+    //Hide tableview
+    UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(buttonClicked)];
+    gestureRecognizer.cancelsTouchesInView = NO;
+    gestureRecognizer.delegate=self;
+    [self.view addGestureRecognizer:gestureRecognizer];
 }
 
+#pragma mark - UIGestureRecognizerDelegate
+
+-(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
+{
+    if ([touch.view isKindOfClass:[UITextField class]])
+    {
+        return NO;
+    }
+    else
+    {
+        return YES;
+    }
+}
 
 -(void) autoUpdateResuls
 {
@@ -120,6 +135,7 @@
     hsteelsymmetryname.text = nil;
     hsteelasymmetricalmodel.text = nil;
     dd1.textField.text = @"";
+    
     
     [hsteelsymmetry becomeFirstResponder];
     
@@ -212,7 +228,7 @@
     dd4.textField.text = @"";
     [circlesteel becomeFirstResponder];
     [c1 setOriginX:CanvasX(236)];
-    
+
 }
 
 - (IBAction)hsectionclear {
@@ -343,7 +359,6 @@
     [zsteelmlabel setOriginX:CanvasX(412)];
     [zsteelpcslabel setOriginX:CanvasX(483)];
     [zsteellosslabel setOriginX:CanvasX(546)];
-
 }
 - (IBAction)girderclear {
     girder.text = nil;
@@ -414,7 +429,7 @@
     
     dd1 = [[DropDown1 alloc] initWithFrame:CanvasRect(595 , 58, 165, 31)];
     dd1.textField.placeholder = @"標準H型鋼型號";
-    RolledSteelController* weakSelf1 = self;
+    ProcessingRolledSteelController* weakSelf1 = self;
     dd1.didSelectIndexAction = ^void(DropDown1* view , NSIndexPath* indexPath)
     {
         [self hsteelsymmetryselect];
@@ -431,7 +446,7 @@
     
     dd2 = [[DropDown1 alloc] initWithFrame:CanvasRect(595, 1803, 165, 31)];
     dd2.textField.placeholder = @"等邊矩形管型號";
-    RolledSteelController* weakSelf2 = self;
+    ProcessingRolledSteelController* weakSelf2 = self;
     dd2.didSelectIndexAction = ^void(DropDown1* view , NSIndexPath* indexPath)
     {
         
@@ -471,7 +486,7 @@
     
     dd3 = [[DropDown1 alloc] initWithFrame:CanvasRect(595, 1837, 165, 31)];
     dd3.textField.placeholder = @"不等邊矩形管型號";
-    RolledSteelController* weakSelf3 = self;
+    ProcessingRolledSteelController* weakSelf3 = self;
     dd3.didSelectIndexAction = ^void(DropDown1* view , NSIndexPath* indexPath)
     {
         
@@ -511,7 +526,7 @@
     
     dd4 = [[DropDown1 alloc] initWithFrame:CanvasRect(595, 1630 , 165, 31)];
     dd4.textField.placeholder = @"圓鋼型號";
-    RolledSteelController* weakSelf4 = self;
+    ProcessingRolledSteelController* weakSelf4 = self;
     dd4.didSelectIndexAction = ^void(DropDown1* view , NSIndexPath* indexPath)
     {
         [self circleselect];
@@ -535,7 +550,7 @@
     
     dd5 = [[DropDown1 alloc] initWithFrame:CanvasRect(595, 2153, 165, 31)];
     dd5.textField.placeholder = @"C型鋼型號";
-    RolledSteelController* weakSelf5 = self;
+    ProcessingRolledSteelController* weakSelf5 = self;
     dd5.didSelectIndexAction = ^void(DropDown1* view , NSIndexPath* indexPath)
     {
         [self csteelselect];
@@ -571,7 +586,7 @@
     
     dd6 = [[DropDown1 alloc] initWithFrame:CanvasRect(595, 929, 165, 31)];
     dd6.textField.placeholder = @"工字鋼型號";
-    RolledSteelController* weakSelf6 = self;
+    ProcessingRolledSteelController* weakSelf6 = self;
     dd6.didSelectIndexAction = ^void(DropDown1* view , NSIndexPath* indexPath)
     {
         [self girderselect];
@@ -588,7 +603,7 @@
     
     dd7 = [[DropDown1 alloc] initWithFrame:CanvasRect(595, 1103, 165, 31)];
     dd7.textField.placeholder = @"槽鋼型號";
-    RolledSteelController* weakSelf7 = self;
+    ProcessingRolledSteelController* weakSelf7 = self;
     dd7.didSelectIndexAction = ^void(DropDown1* view , NSIndexPath* indexPath)
     {
         [self channelselect];
@@ -605,7 +620,7 @@
     
     dd8 = [[DropDown1 alloc] initWithFrame:CanvasRect(595, 2329, 165, 31)];
     dd8.textField.placeholder = @"Z型鋼型號";
-    RolledSteelController* weakSelf8 = self;
+    ProcessingRolledSteelController* weakSelf8 = self;
     dd8.didSelectIndexAction = ^void(DropDown1* view , NSIndexPath* indexPath)
     {
         [self zsteelselect];
@@ -642,7 +657,7 @@
     
     dd9 = [[DropDown1 alloc] initWithFrame:CanvasRect(595, 1278, 165, 31)];
     dd9.textField.placeholder = @"等邊角鋼型號";
-    RolledSteelController* weakSelf9 = self;
+    ProcessingRolledSteelController* weakSelf9 = self;
     dd9.didSelectIndexAction = ^void(DropDown1* view , NSIndexPath* indexPath)
     {
         
@@ -680,7 +695,7 @@
     
     dd10 = [[DropDown1 alloc] initWithFrame:CanvasRect(595, 1312, 165, 31)];
     dd10.textField.placeholder = @"不等邊角鋼型號";
-    RolledSteelController* weakSelf10 = self;
+    ProcessingRolledSteelController* weakSelf10 = self;
     dd10.didSelectIndexAction = ^void(DropDown1* view , NSIndexPath* indexPath)
     {
         
@@ -3777,4 +3792,6 @@
     }
     
 }
+
+
 @end

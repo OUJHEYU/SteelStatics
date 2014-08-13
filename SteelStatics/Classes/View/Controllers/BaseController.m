@@ -11,7 +11,6 @@
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden: YES animated:YES];
 }
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -20,18 +19,29 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.tabBarController.tabBar.hidden = YES;
     
-    for (UIView* view in self.view.subviews) {
+
+    [SSViewHelper iterateTextFieldRecursively: self.view handler:^(UITextField *view) {
+        if ([view isKindOfClass:[UITextField class]]) {
+            UITextField* tx = (UITextField*)view;
+            tx.font = [UIFont fontWithName:@"Arial" size:CanvasFontSize(12)];
+            tx.enabled = YES;
+        }
         if ([view isKindOfClass:[BaseTextField class]]) {
             BaseTextField* tx = (BaseTextField*)view;
+            tx.font = [UIFont fontWithName:@"Arial" size:CanvasFontSize(12)];
+            tx.keyboardType = UIKeyboardTypeDecimalPad;
             tx.enabled = NO;
         }
         // set delegate
         if ([view isKindOfClass:[CaculateTextField class]]) {
             CaculateTextField* tx = (CaculateTextField*)view;
             tx.enabled = YES;
+            tx.keyboardType = UIKeyboardTypeDecimalPad;
             tx.delegate = self;
         }
-    }
+    
+    }];
+    
     
     // swip
     
@@ -43,7 +53,11 @@
     swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeLeft:)];
     [swipe setDirection: (UISwipeGestureRecognizerDirectionLeft)];
     [self.view addGestureRecognizer:swipe];
+
+    [SSViewHelper translateViewsFramesRecursive: self.view];
 }
+
+
 
 
 #pragma mark - Swipe Action
@@ -63,16 +77,22 @@
     else if ([viewController isKindOfClass: [UITabBarController class]]) {
         UITabBarController* tabController = (UITabBarController*)viewController;
 //        int maxIndex = tabController.viewControllers.count - 1;
-        int selectIndex = tabController.selectedIndex;
+        int selectIndex = (int)tabController.selectedIndex;
         int previousIndex = selectIndex - 1;
-        if (selectIndex == 6) {
-            previousIndex = 1;
+        if (selectIndex == 5) {
+            previousIndex = 0;
+        }else if (selectIndex == 6) {
+            previousIndex = 0;
         }else if (selectIndex == 7) {
-            previousIndex = 1;
+            previousIndex = 0;
         }else if (selectIndex == 8) {
             previousIndex = 1;
+        }else if (selectIndex == 9) {
+            previousIndex = 1;
+        }else if (selectIndex == 10) {
+            previousIndex = 1;
         }else if (previousIndex < 0) {
-            previousIndex = 5;
+            previousIndex = 4;
 //          previousIndex = maxIndex;
         }
         tabController.selectedIndex = previousIndex;
@@ -94,16 +114,21 @@
         [nav popViewControllerAnimated: YES];
     } else if ([viewController isKindOfClass: [UITabBarController class]]) {
         UITabBarController* tabController = (UITabBarController*)viewController;
-//        int maxIndex = tabController.viewControllers.count - 1;
-        int selectIndex = tabController.selectedIndex;
+        int selectIndex = (int)tabController.selectedIndex;
         int nextIndex = selectIndex + 1;
-        if (selectIndex == 6) {
-            nextIndex = 1;
+        if (selectIndex == 5) {
+            nextIndex = 0;
+        }else if (selectIndex == 6) {
+            nextIndex = 0;
         }else if (selectIndex == 7) {
-            nextIndex = 1;
+            nextIndex = 0;
         }else if (selectIndex == 8) {
             nextIndex = 1;
-        }else if (nextIndex > 5) {
+        }else if (selectIndex == 9) {
+            nextIndex = 1;
+        }else if (selectIndex == 10) {
+            nextIndex = 1;
+        }else if (nextIndex > 4) {
             nextIndex = 0;
         }
         tabController.selectedIndex = nextIndex;
@@ -113,13 +138,12 @@
 #pragma mark - UITextFieldDelegate Methods
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
-    
     NSString* text = textField.text;
     if (! text || [text isEqualToString: @""]) {
         return;
     }
     
-    BOOL isNumeric = [NumberHelper isNumericValue: text];
+    BOOL isNumeric = [SSNumberHelper isNumericValue: text];
     if (!isNumeric) {
         UIAlertView* alert = [[UIAlertView alloc] initWithTitle: @"錯誤"
                                                         message: @"請輸入數字"
@@ -139,86 +163,38 @@
 
 -(void) autoUpdateResuls
 {
-    
+
 }
 
 
 #pragma mark - IB Action
-//- (IBAction)view:(id)sender
-//{
-//    CATransition *transition = [CATransition animation];
-//    [transition setDuration:0.5];
-//    [transition setType:@"rippleEffect"];
-//    [self.tabBarController.view.layer addAnimation:transition forKey:nil];
-//    [self.tabBarController setSelectedIndex:5];
-//}
-//- (IBAction)tools:(id)sender
-//{
-//    CATransition *transition = [CATransition animation];
-//    [transition setDuration:0.5];
-//    [transition setType:@"rippleEffect"];
-//    [self.tabBarController.view.layer addAnimation:transition forKey:nil];
-//    [self.tabBarController setSelectedIndex:4];
-//}
-//- (IBAction)paint:(id)sender
-//{
-//    CATransition *transition = [CATransition animation];
-//    [transition setDuration:0.5];
-//    [transition setType:@"rippleEffect"];
-//    [self.tabBarController.view.layer addAnimation:transition forKey:nil];
-//    [self.tabBarController setSelectedIndex:3];
-//}
-//- (IBAction)profile2:(id)sender
-//{
-//    CATransition *transition = [CATransition animation];
-//    [transition setDuration:0.5];
-//    [transition setType:@"rippleEffect"];
-//    [self.tabBarController.view.layer addAnimation:transition forKey:nil];
-//    [self.tabBarController setSelectedIndex:2];
-//}
-//- (IBAction)profile1:(id)sender
-//{
-//    CATransition *transition = [CATransition animation];
-//    [transition setDuration:0.5];
-//    [transition setType:@"rippleEffect"];
-//    [self.tabBarController.view.layer addAnimation:transition forKey:nil];
-//    [self.tabBarController setSelectedIndex:1];
-//}
-//- (IBAction)rolled:(id)sender
-//{
-//    CATransition *transition = [CATransition animation];
-//    [transition setDuration:0.5];
-//    [transition setType:@"rippleEffect"];
-//    [self.tabBarController.view.layer addAnimation:transition forKey:nil];
-//    [self.tabBarController setSelectedIndex:0];
-//}
 - (IBAction)hmore:(id)sender {
     CATransition *transition = [CATransition animation];
     [transition setDuration:0.5];
     [transition setType:@"pageCurl"];
     [self.tabBarController.view.layer addAnimation:transition forKey:nil];
-    [self.tabBarController setSelectedIndex:6];
+    [self.tabBarController setSelectedIndex:5];
 }
 - (IBAction)rectangmore:(id)sender {
     CATransition *transition = [CATransition animation];
     [transition setDuration:0.5];
     [transition setType:@"pageCurl"];
     [self.tabBarController.view.layer addAnimation:transition forKey:nil];
-    [self.tabBarController setSelectedIndex:7];
+    [self.tabBarController setSelectedIndex:6];
 }
 - (IBAction)circlemore:(id)sender {
     CATransition *transition = [CATransition animation];
     [transition setDuration:0.5];
     [transition setType:@"pageCurl"];
     [self.tabBarController.view.layer addAnimation:transition forKey:nil];
-    [self.tabBarController setSelectedIndex:8];
+    [self.tabBarController setSelectedIndex:7];
 }
 - (IBAction)back:(id)sender {
     CATransition *transition = [CATransition animation];
     [transition setDuration:0.5];
     [transition setType:@"pageUnCurl"];
     [self.tabBarController.view.layer addAnimation:transition forKey:nil];
-    [self.tabBarController setSelectedIndex:1];
+    [self.tabBarController setSelectedIndex:0];
 }
 
 - (IBAction)back1:(id)sender {
@@ -226,7 +202,7 @@
     [transition setDuration:0.5];
     [transition setType:@"pageUnCurl"];
     [self.tabBarController.view.layer addAnimation:transition forKey:nil];
-    [self.tabBarController setSelectedIndex:1];
+    [self.tabBarController setSelectedIndex:0];
 }
 
 - (IBAction)back2:(id)sender {
@@ -234,6 +210,56 @@
     [transition setDuration:0.5];
     [transition setType:@"pageUnCurl"];
     [self.tabBarController.view.layer addAnimation:transition forKey:nil];
+    [self.tabBarController setSelectedIndex:0];
+}
+
+
+- (IBAction)Processhmore:(id)sender {
+    CATransition *transition = [CATransition animation];
+    [transition setDuration:0.5];
+    [transition setType:@"pageCurl"];
+    [self.tabBarController.view.layer addAnimation:transition forKey:nil];
+    [self.tabBarController setSelectedIndex:8];
+}
+- (IBAction)Processrectangmore:(id)sender {
+    CATransition *transition = [CATransition animation];
+    [transition setDuration:0.5];
+    [transition setType:@"pageCurl"];
+    [self.tabBarController.view.layer addAnimation:transition forKey:nil];
+    [self.tabBarController setSelectedIndex:9];
+}
+- (IBAction)Processcirclemore:(id)sender {
+    CATransition *transition = [CATransition animation];
+    [transition setDuration:0.5];
+    [transition setType:@"pageCurl"];
+    [self.tabBarController.view.layer addAnimation:transition forKey:nil];
+    [self.tabBarController setSelectedIndex:10];
+}
+
+- (IBAction)Processback:(id)sender {
+    CATransition *transition = [CATransition animation];
+    [transition setDuration:0.5];
+    [transition setType:@"pageUnCurl"];
+    [self.tabBarController.view.layer addAnimation:transition forKey:nil];
     [self.tabBarController setSelectedIndex:1];
 }
+
+- (IBAction)Processback1:(id)sender {
+    CATransition *transition = [CATransition animation];
+    [transition setDuration:0.5];
+    [transition setType:@"pageUnCurl"];
+    [self.tabBarController.view.layer addAnimation:transition forKey:nil];
+    [self.tabBarController setSelectedIndex:1];
+}
+
+- (IBAction)Processback2:(id)sender {
+    CATransition *transition = [CATransition animation];
+    [transition setDuration:0.5];
+    [transition setType:@"pageUnCurl"];
+    [self.tabBarController.view.layer addAnimation:transition forKey:nil];
+    [self.tabBarController setSelectedIndex:1];
+}
+
+
+
 @end

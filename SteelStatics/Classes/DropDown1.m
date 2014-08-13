@@ -1,94 +1,160 @@
 #import "DropDown1.h"
+#import "AppInterface.h"
 
 @implementation DropDown1
+{
+    UITapGestureRecognizer *gestureRecognizer;
+}
 
 @synthesize tv,tableArray,textField;
 
 -(id)initWithFrame:(CGRect)frame
 {
-    if (frame.size.height<145)
+    if (frame.size.height<CanvasHeight(145))
     {
-        frameHeight = 140;
+        frameHeight = CanvasHeight(110);
     }else
     {
         frameHeight = frame.size.height;
     }
-    tabheight = frameHeight-30;
+    tabheight = frameHeight-CanvasHeight(30);
     
-    frame.size.height = 30.0f;
+    frame.size.height = CanvasHeight(30.0f);
     
     self=[super initWithFrame:frame];
     
     if(self)
-    {   //預設不顯示下拉清單
-        showList = NO;
-        tv = [[UITableView alloc] initWithFrame:CGRectMake(0, 27, frame.size.width, 0)];
+    {
+        tv = [[UITableView alloc] initWithFrame:CanvasRect(0, 27, frame.size.width, 0)];
+        [tv setSizeWidth: frame.size.width];
+        
+        
+        // UITableViewCell in ios7 now has gaps on left and right
+        // http://stackoverflow.com/questions/18982347/uitableviewcell-in-ios7-now-has-gaps-on-left-and-right/19059028#19059028
+        if ([tv respondsToSelector:@selector(setSeparatorInset:)]) [tv setSeparatorInset:UIEdgeInsetsZero];     // ios 7
+        
         tv.delegate = self;
         tv.dataSource = self;
         tv.backgroundColor = [UIColor whiteColor];
         tv.separatorColor = [UIColor lightGrayColor];
-        tv.hidden = YES;
         tv.layer.borderWidth = 0.6;
         tv.layer.borderColor = [[UIColor grayColor] CGColor];
         [self addSubview:tv];
         
-        textField = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, 31)];
+        textField = [[UITextField alloc] initWithFrame:CanvasRect(0, 0, frame.size.width, 31)];
+        [textField setSizeWidth: frame.size.width];
         textField.borderStyle=UITextBorderStyleRoundedRect;//設置文字方塊的邊框風格
-        [textField addTarget:self action:@selector(dropdown:) forControlEvents:UIControlEventTouchDown];
-        textField.font = [UIFont fontWithName:@"Arial" size:14.0f];
-        textField.textAlignment = UITextAlignmentCenter;
-        textField.keyboardType = UIKeyboardTypeNumberPad;
+        [textField addTarget:self action:@selector(textFieldDidClicked:) forControlEvents:UIControlEventTouchDown];
+        CGFloat fontsize = CanvasFontSize(12.0f);
+        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+            fontsize -= 0.7;
+        }
+        textField.font = [UIFont fontWithName:@"Arial" size:fontsize];
+        textField.textAlignment = NSTextAlignmentCenter;
         textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
         textField.tag = 1;
         [self addSubview:textField];
+        [self bringSubviewToFront:textField];
     }
     return self;
 }
 
--(void)dropdown: (UITextField*)textFieldObj{
-    //隱藏鍵盤
-    [self.window endEditing:YES];
-    [textFieldObj becomeFirstResponder];
-    [textFieldObj resignFirstResponder];
-    
-    if (tv.tag == 1) {
-        showList = NO;
-        tv.tag = 0;
+
+
+- (void)tapRecognized:(UITapGestureRecognizer*)gesture
+{
+    if (gesture.state == UIGestureRecognizerStateEnded)
+    {
+        [self pullup];
+    }
+}
+
+#pragma mark - UIGestureRecognizerDelegate
+
+-(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
+{
+    UIView* touchView = touch.view;
+    while (touchView != nil && ![touchView isKindOfClass: [DropDown1 class]]) {
+        touchView = touchView.superview;
     }
     
-    if (showList)
-    {   //如果下拉清單已顯示
-        showList = NO;
-        tv.hidden = YES;
-
-        CGRect sf = self.frame;
-        sf.size.height = 30;
-        self.frame = sf;
-        CGRect frame = tv.frame;
-        frame.size.height = 0;
-        tv.frame = frame;
+    if (touchView == self )
+    {
+        return NO;
+    }
+    else if([touch.view isKindOfClass:[UIControl class]]){
+        [self pullup];
+        return NO;
     }
     else
-    {   //如果下拉清單尚未顯示，則進行顯示
-        CGRect sf = self.frame;
-        sf.size.height = frameHeight;
-        
-        //把dropdownList放到前面，防止下拉清單被別的控制項遮住
-        [self.superview bringSubviewToFront:self];
-        tv.hidden = NO;
-        showList = YES;
-        //顯示下拉清單
-        CGRect frame = tv.frame;
-        frame.size.height = 0;
-        tv.frame = frame;
-        frame.size.height = tabheight;
-        [UIView beginAnimations:nil context:nil];
-        [UIView setAnimationDuration: 0.4];
-        [UIView setAnimationCurve:UIViewAnimationCurveLinear];
-        self.frame = sf;
-        tv.frame = frame;
-        [UIView commitAnimations];
+    {
+        return YES;
     }
+}
+
+-(void) textFieldDidClicked: (UITextField*)textFieldObj
+{
+    [textFieldObj becomeFirstResponder];
+    [textFieldObj resignFirstResponder];
+    [self.window endEditing:YES];
+    
+    if([tv sizeHeight] != 0 ) {
+        [self pullup];
+    } else {
+        [self dropdown];
+    }
+}
+-(void)pullup
+{
+    [UIView animateWithDuration: 0.5 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        [self setSizeHeight: CanvasHeight(30)];
+        [tv setSizeHeight: 0];
+    } completion:nil];
+    
+//    [UIView animateWithDuration: 0.5 animations:^{
+//            
+//        [self setSizeHeight: CanvasHeight(30)];
+//        [tv setSizeHeight: 0];
+//        
+//    } completion:nil];
+    
+    [self.window removeGestureRecognizer:gestureRecognizer];
+}
+
+-(void)dropdown{
+    
+    // registry Hide tableview event
+    NSArray* gestures = [self.window gestureRecognizers];
+    if (! [gestures containsObject: gestureRecognizer]) {
+        if (! gestureRecognizer) {
+            gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapRecognized:)];
+            gestureRecognizer.delegate = self;
+        }
+        [self.window addGestureRecognizer:gestureRecognizer];
+    }
+    
+    
+    //隱藏鍵盤
+
+    //如果下拉清單尚未顯示，則進行顯示
+    CGRect sf = self.frame;
+    sf.size.height = frameHeight;
+    
+    //把dropdownList放到前面，防止下拉清單被別的控制項遮住
+    [self.superview bringSubviewToFront:self];
+    //顯示下拉清單
+    CGRect frame = tv.frame;
+    frame.size.height = 0;
+    tv.frame = frame;
+    frame.size.height = tabheight;
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration: 0.4];
+    [UIView setAnimationCurve:UIViewAnimationCurveLinear];
+    self.frame = sf;
+    tv.frame = frame;
+    [UIView commitAnimations];
+    
+    
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -98,7 +164,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSLog(@"count=%d",[tableArray count]);
+    NSLog(@"count=%lu",(unsigned long)[tableArray count]);
     return [tableArray count];
 }
 
@@ -109,32 +175,38 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil)
     {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
     }
-    cell.textLabel.text = [tableArray objectAtIndex:[indexPath row]];
-    cell.textLabel.font = [UIFont systemFontOfSize:14.0f];
+    
+    UILabel* label = (UILabel*)[cell viewWithTag: 2200];
+    if (!label) {
+        label = [[UILabel alloc] initWithFrame:CanvasRect(20, 5, 30, 20)];
+        label.tag = 2200;
+        [cell.contentView addSubview: label];
+    }
+    
+    label.font = [UIFont systemFontOfSize: CanvasFontSize(12.0f)];
+    label.text = [tableArray objectAtIndex:[indexPath row]];
+    [label adjustWidthToFontText];
+    //    [ColorHelper setBorderRecursive: cell];
+    
+    
     cell.accessoryType = UITableViewCellAccessoryNone;
     cell.selectionStyle = UITableViewCellSelectionStyleGray;
     
-    return cell; 
-
+    return cell;
+    
 }
+
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 35;
+    return CanvasHeight(25);
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     textField.text = [tableArray objectAtIndex:[indexPath row]];
-    showList = NO;
-    tv.hidden = YES;
-   
-    CGRect sf = self.frame;
-    sf.size.height = 30;
-    self.frame = sf;
-    CGRect frame = tv.frame;
-    frame.size.height = 0;
-    tv.frame = frame;
+    
+    [self pullup];
     
     if (self.didSelectIndexAction) {
         self.didSelectIndexAction (self, indexPath);

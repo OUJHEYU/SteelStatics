@@ -6,11 +6,10 @@ typedef void(^DropDownDidSelectIndexAction) (DropDown1* view , NSIndexPath* inde
 
 
 
-@interface DropDown1 : UIView <UITableViewDelegate,UITableViewDataSource> {
+@interface DropDown1 : UIView <UITableViewDelegate,UITableViewDataSource ,UIGestureRecognizerDelegate> {
     UITableView *tv;//下拉清單
     NSArray *tableArray;//下拉清單資料
     UITextField *textField;//文本輸入框
-    BOOL showList;//是否彈出下拉清單
     CGFloat tabheight;//table下拉清單的高度
     CGFloat frameHeight;//frame的高度
 }
@@ -23,8 +22,6 @@ typedef void(^DropDownDidSelectIndexAction) (DropDown1* view , NSIndexPath* inde
 
 
 @property (copy) DropDownDidSelectIndexAction didSelectIndexAction ;
-
--(void)dropdown;
 
 
 @end

@@ -4,8 +4,20 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [IQKeyboardManager enableKeyboardManagerWithDistance: 65/*[FrameTranslater convertCanvasHeight: 85]*/];
 
+    [IQKeyboardManager enableKeyboardManagerWithDistance: CanvasHeight(0)];
+    
+    [FrameTranslater setCanvasSize: CGSizeMake(768, 1024)];
+
+    UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main_iPad" bundle:nil];
+    AppTabBarController* controller = [storyboard instantiateInitialViewController];
+    self.window = [[UIWindow alloc] initWithFrame: [UIScreen mainScreen].bounds];
+    self.window.rootViewController = controller;
+    [self.window makeKeyAndVisible];
+    //隱藏狀態欄
+    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
+    
+    
     return YES;
 }
 

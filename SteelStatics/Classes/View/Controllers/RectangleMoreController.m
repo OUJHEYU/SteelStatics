@@ -13,8 +13,4 @@
     // Do any additional setup after loading the view.
 }
 
-- (IBAction)back:(id)sender {
-    [self.tabBarController setSelectedIndex:1];
-}
-
 @end

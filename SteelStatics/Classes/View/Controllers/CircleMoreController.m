@@ -1,10 +1,10 @@
-#import "CircleController.h"
+#import "CircleMoreController.h"
 #import "AppInterface.h"
-@interface CircleController ()
+@interface CircleMoreController ()
 
 @end
 
-@implementation CircleController
+@implementation CircleMoreController
 
 - (void)viewDidLoad
 {
@@ -24,9 +24,6 @@
     self.image1.hidden = YES;
     self.image2.hidden = YES;
     self.image3.hidden = NO;
-}
-- (IBAction)back:(id)sender {
-    [self.tabBarController setSelectedIndex:1];
 }
 
 @end

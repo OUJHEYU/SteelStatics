@@ -1,6 +1,6 @@
-#import "NumberHelper.h"
+#import "SSNumberHelper.h"
 
-@implementation NumberHelper
+@implementation SSNumberHelper
 
 
 

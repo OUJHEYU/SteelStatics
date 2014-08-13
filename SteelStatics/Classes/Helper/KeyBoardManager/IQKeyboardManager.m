@@ -249,6 +249,14 @@
 
     //  Getting topMost ViewController
     while ([topController presentedViewController])	topController = [topController presentedViewController];
+    
+    if ([topController isKindOfClass:[UITabBarController class]]) {
+        UITabBarController* tabController = (UITabBarController*)topController;
+        topController = tabController.selectedViewController;
+    } else if ([topController isKindOfClass: [UINavigationController class]]) {
+        UINavigationController* navController = (UINavigationController*)topController;
+        topController = navController.topViewController;
+    }
 	
     //  Returning topMost ViewController
     return topController;
@@ -322,59 +330,6 @@
         default:
             break;
     }
-	
-    //  Getting it's superScrollView.
-//    UIScrollView *superScrollView = [IQKeyboardManager superScrollView:textFieldView];
-//
-//    //If there was a lastScrollView.
-//    if (lastScrollView) 
-//    {
-//        //If we can't find current superScrollView, then setting lastScrollView to it's original form.
-//        if (superScrollView == nil)
-//        {
-//            [lastScrollView setContentOffset:startingContentOffset animated:YES];
-//            lastScrollView = nil;
-//            startingContentOffset = CGPointZero;
-//        }
-//        //If both scrollView's are different, then reset lastScrollView to it's original frame and setting current scrollView as last scrollView.
-//        if (superScrollView != lastScrollView)
-//        {
-//            [lastScrollView setContentOffset:startingContentOffset animated:YES];
-//            lastScrollView = superScrollView;
-//            startingContentOffset = superScrollView.contentOffset;
-//        }
-//    }
-//    //If there was no lastScrollView and we found a current scrollView. then setting it as lastScrollView.
-//    else if(superScrollView)
-//    {
-//        lastScrollView = superScrollView;
-//        startingContentOffset = superScrollView.contentOffset;
-//    }
-//
-//    //  Special case for ScrollView.
-//    //  If we found lastScrollView then setting it's contentOffset to show textField.
-//    if (lastScrollView)
-//    {
-//        UIView *lastView = textFieldView;
-//        UIScrollView *superScrollView = lastScrollView;
-//
-//        while (superScrollView)
-//        {
-//            CGRect lastViewRect = [[lastView superview] convertRect:lastView.frame toView:superScrollView];
-//            
-//            CGFloat shouldOffsetY = superScrollView.contentOffset.y - MIN(superScrollView.contentOffset.y,-move);
-//            shouldOffsetY = MIN(shouldOffsetY, lastViewRect.origin.y-5);   //-5 is for good UI.
-//            
-//            move -= (shouldOffsetY-superScrollView.contentOffset.y);
-//            [superScrollView setContentOffset:CGPointMake(superScrollView.contentOffset.x, shouldOffsetY) animated:YES];
-//            
-//            //  Getting it's superScrollView.
-//            lastView = superScrollView;
-//            superScrollView = [IQKeyboardManager superScrollView:lastView];
-//        }
-//    }
-    //Going ahead. No else if.
-
 
     //Special case for UITextView(When it's hight is too big to fit on screen.
     {
@@ -575,7 +530,7 @@
         default:
             break;
     }
-	
+    
     [self adjustFrame];
 }
 

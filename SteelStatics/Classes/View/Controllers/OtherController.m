@@ -1,11 +1,11 @@
-#import "AppInterface.h"
-#import "ToolsController.h"
+#import "OtherController.h"
 
-@interface ToolsController ()
+@interface OtherController () 
 
 @end
 
-@implementation ToolsController
+@implementation OtherController
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

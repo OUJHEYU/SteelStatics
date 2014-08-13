@@ -26,7 +26,6 @@
 @property (weak, nonatomic) IBOutlet CaculateTextField *circlesteelpcs;
 @property (weak, nonatomic) IBOutlet CaculateTextField *circlesteelpaintprice;
 @property (weak, nonatomic) IBOutlet CaculateTextField *circlesteelpaintface;
-
 @property (weak, nonatomic) IBOutlet CaculateTextField *circlesteelpercentage;
 //H型鋼 caculate field
 @property (weak, nonatomic) IBOutlet CaculateTextField *hseelh2;
