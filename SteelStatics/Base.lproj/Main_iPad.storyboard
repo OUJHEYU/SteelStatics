@@ -51,7 +51,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="LAg-CB-0xk">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="2565"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="2450"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="表面未處理鋼材計算" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oyB-Bk-z4F">
@@ -2239,7 +2239,7 @@
                                                 <state key="selected" backgroundImage="EmployeeDataSheet_32.png"/>
                                                 <state key="highlighted" backgroundImage="EmployeeDataSheet_21.png"/>
                                                 <connections>
-                                                    <action selector="rectangmore:" destination="VLD-5W-Lho" eventType="touchUpInside" id="hqq-b7-PpG"/>
+                                                    <segue destination="YGY-QP-WM9" kind="push" id="92e-Gs-HcW"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="4Iy-XG-4Ak" customClass="BaseButton">
@@ -2419,7 +2419,7 @@
                                                 <state key="selected" backgroundImage="EmployeeDataSheet_32.png"/>
                                                 <state key="highlighted" backgroundImage="EmployeeDataSheet_21.png"/>
                                                 <connections>
-                                                    <action selector="circlemore:" destination="VLD-5W-Lho" eventType="touchUpInside" id="skx-b1-OWd"/>
+                                                    <segue destination="QJu-wc-ZYT" kind="push" id="BU2-kZ-U8y"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="BC5-NW-lL5" customClass="BaseButton">
@@ -3277,7 +3277,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="f1p-kH-beh">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="2565"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="2450"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="表面已處理鋼材計算" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iDH-79-hFW">
@@ -5465,7 +5465,7 @@
                                                 <state key="selected" backgroundImage="EmployeeDataSheet_32.png"/>
                                                 <state key="highlighted" backgroundImage="EmployeeDataSheet_21.png"/>
                                                 <connections>
-                                                    <action selector="Processrectangmore:" destination="ry0-Jp-QcB" eventType="touchUpInside" id="L6K-hA-uyN"/>
+                                                    <segue destination="YGY-QP-WM9" kind="push" id="hbq-ja-VAM"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="KPH-lS-4Sv" customClass="BaseButton">
@@ -5645,7 +5645,7 @@
                                                 <state key="selected" backgroundImage="EmployeeDataSheet_32.png"/>
                                                 <state key="highlighted" backgroundImage="EmployeeDataSheet_21.png"/>
                                                 <connections>
-                                                    <action selector="Processcirclemore:" destination="ry0-Jp-QcB" eventType="touchUpInside" id="gcQ-LG-E4Q"/>
+                                                    <segue destination="QJu-wc-ZYT" kind="push" id="ZMo-nS-Gdd"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="jBi-JB-Puw" customClass="BaseButton">
@@ -5818,7 +5818,7 @@
                                                 <state key="selected" backgroundImage="EmployeeDataSheet_32.png"/>
                                                 <state key="highlighted" backgroundImage="EmployeeDataSheet_21.png"/>
                                                 <connections>
-                                                    <action selector="Processhmore:" destination="ry0-Jp-QcB" eventType="touchUpInside" id="e7r-n7-zim"/>
+                                                    <segue destination="SjZ-bK-bgC" kind="push" id="N96-LI-kih"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="長度(m)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yvV-zy-X0b">
@@ -6493,7 +6493,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GX1-H3-V3c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-987" y="-5915"/>
+            <point key="canvasLocation" x="-1861" y="-6231"/>
         </scene>
         <!--Paint Controller - 油漆計算-->
         <scene sceneID="W5N-Bo-Nse">
@@ -7610,7 +7610,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hPV-9J-ikZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1851" y="-3963"/>
+            <point key="canvasLocation" x="-1861" y="-3730"/>
         </scene>
         <!--Order Table View Controller - Table_Price-->
         <scene sceneID="a75-bV-F7L">
@@ -7639,7 +7639,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oes-we-StJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3387" y="-3474"/>
+            <point key="canvasLocation" x="-2935" y="-3730"/>
         </scene>
         <!--Other Controller - 其它-->
         <scene sceneID="B0D-mH-H3V">
@@ -7670,38 +7670,38 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JyV-SN-5I1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="445" y="-4518"/>
+            <point key="canvasLocation" x="-2935" y="-5006"/>
         </scene>
         <!--Rectangle More Controller - 矩行管通用表格-->
         <scene sceneID="kTS-1P-Vq8">
             <objects>
                 <viewController id="YGY-QP-WM9" customClass="RectangleMoreController" sceneMemberID="viewController">
                     <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" delaysContentTouches="NO" id="NBe-lD-6LN" customClass="AppScrollView">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="64" width="768" height="960"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="b9A-lS-q2X">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <rect key="frame" x="0.0" y="19" width="768" height="1024"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Line_Ver.png" id="ysK-JX-h6G">
-                                        <rect key="frame" x="740" y="100" width="6" height="824"/>
+                                        <rect key="frame" x="740" y="20" width="6" height="824"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Line_Hor.png" id="VIV-va-cAk">
-                                        <rect key="frame" x="34" y="100" width="700" height="4"/>
+                                        <rect key="frame" x="34" y="20" width="700" height="4"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Line_Hor.png" id="WCR-In-jBe">
-                                        <rect key="frame" x="34" y="924" width="700" height="4"/>
+                                        <rect key="frame" x="34" y="844" width="700" height="4"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Line_Ver.png" id="TFK-ex-Wz2">
-                                        <rect key="frame" x="34" y="100" width="6" height="824"/>
+                                        <rect key="frame" x="34" y="20" width="6" height="824"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="矩形管規.png" id="Ha9-bB-10M">
-                                        <rect key="frame" x="48" y="310" width="686" height="400"/>
+                                        <rect key="frame" x="48" y="230" width="686" height="400"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
@@ -7714,46 +7714,46 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hN7-Ic-Lla" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="49" y="-7429"/>
+            <point key="canvasLocation" x="833" y="-7455"/>
         </scene>
         <!--Circle More Controller - 圓鋼管通用表格-->
         <scene sceneID="Zvd-Oh-Iis">
             <objects>
                 <viewController id="QJu-wc-ZYT" customClass="CircleMoreController" sceneMemberID="viewController">
                     <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" delaysContentTouches="NO" id="fax-Hg-Zu2" customClass="AppScrollView">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="64" width="768" height="960"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="Ah6-JR-axu">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <rect key="frame" x="0.0" y="19" width="768" height="1024"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="圓鋼管通用一.png" id="ovy-Jl-7nR">
-                                        <rect key="frame" x="48" y="112" width="686" height="400"/>
+                                        <rect key="frame" x="48" y="32" width="686" height="400"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Line_Ver.png" id="fbX-vw-ew1">
-                                        <rect key="frame" x="740" y="100" width="6" height="824"/>
+                                        <rect key="frame" x="740" y="20" width="6" height="824"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Line_Hor.png" id="hpU-Xw-wie">
-                                        <rect key="frame" x="34" y="100" width="700" height="4"/>
+                                        <rect key="frame" x="34" y="20" width="700" height="4"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Line_Hor.png" id="D5O-QU-ZmF">
-                                        <rect key="frame" x="34" y="924" width="700" height="4"/>
+                                        <rect key="frame" x="34" y="844" width="700" height="4"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Line_Ver.png" id="KBa-Bu-VcM">
-                                        <rect key="frame" x="34" y="100" width="6" height="824"/>
+                                        <rect key="frame" x="34" y="20" width="6" height="824"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="圓鋼管通用二.png" id="Ut2-fC-dMi">
-                                        <rect key="frame" x="50" y="516" width="686" height="400"/>
+                                        <rect key="frame" x="50" y="436" width="686" height="400"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="3Uy-tm-aZn" customClass="BaseButton">
-                                        <rect key="frame" x="334" y="948" width="136" height="40"/>
+                                        <rect key="frame" x="334" y="868" width="136" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="下一頁" backgroundImage="CustomerDataCard_07.png"/>
                                         <state key="selected" backgroundImage="EmployeeDataSheet_32.png"/>
@@ -7763,7 +7763,7 @@
                                         </connections>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="958-PN-dyt" customClass="BaseButton">
-                                        <rect key="frame" x="334" y="948" width="136" height="40"/>
+                                        <rect key="frame" x="334" y="868" width="136" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="上一頁" backgroundImage="CustomerDataCard_07.png"/>
                                         <state key="selected" backgroundImage="EmployeeDataSheet_32.png"/>
@@ -7773,19 +7773,9 @@
                                         </connections>
                                     </button>
                                     <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="圓鋼管通用三.png" id="eb2-rz-wKz">
-                                        <rect key="frame" x="48" y="310" width="686" height="400"/>
+                                        <rect key="frame" x="48" y="230" width="686" height="400"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="PYN-1g-fiC" customClass="BaseButton">
-                                        <rect key="frame" x="34" y="20" width="136" height="46"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="返回" backgroundImage="CustomerDataCard_07.png"/>
-                                        <state key="selected" backgroundImage="EmployeeDataSheet_32.png"/>
-                                        <state key="highlighted" backgroundImage="EmployeeDataSheet_21.png"/>
-                                        <connections>
-                                            <action selector="back2:" destination="QJu-wc-ZYT" eventType="touchUpInside" id="0dm-ia-aKA"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
@@ -7803,7 +7793,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t81-ZV-Bzy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1085" y="-7429"/>
+            <point key="canvasLocation" x="-43" y="-7455"/>
         </scene>
         <!--More Controller - H型鋼通用表格-->
         <scene sceneID="PCU-NR-wJa">
@@ -7814,7 +7804,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="wg5-Yb-Zai">
-                                <rect key="frame" x="0.0" y="19" width="768" height="944"/>
+                                <rect key="frame" x="0.0" y="19" width="768" height="1024"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="熱H一.png" id="A7J-0m-w1g">
@@ -7882,7 +7872,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SQm-j8-6CK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-938" y="-7429"/>
+            <point key="canvasLocation" x="-925" y="-7437"/>
         </scene>
         <!--App Nav Controller - Have_Process-->
         <scene sceneID="NrM-fY-WEl">
@@ -7898,7 +7888,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wzO-N5-bBs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2311" y="-5895"/>
+            <point key="canvasLocation" x="-2935" y="-6231"/>
         </scene>
     </scenes>
     <resources>
@@ -7936,4 +7926,9 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="N96-LI-kih"/>
+        <segue reference="ZMo-nS-Gdd"/>
+        <segue reference="hbq-ja-VAM"/>
+    </inferredMetricsTieBreakers>
 </document>
