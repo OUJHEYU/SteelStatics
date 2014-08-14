@@ -1,6 +1,12 @@
 #import <Foundation/Foundation.h>
 
+@class AddOrderButton;
+
+
 @interface SSViewHelper : NSObject
+
+
++(AddOrderButton*) getAddOrderButtonByActionKey: (NSString*)actionKey inView:(UIView*)view;
 
 +(void) iterateTextFieldRecursively: (UIView*)view handler:(void(^)(UITextField* tx))handler;
 

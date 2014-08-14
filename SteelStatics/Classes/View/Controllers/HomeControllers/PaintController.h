@@ -1,7 +1,9 @@
-#import "BaseController.h"
+#import "CaculateBaseController.h"
+
 @class CaculateTextField;
 @class  BaseTextField;
-@interface PaintController : BaseController
+
+@interface PaintController : CaculateBaseController
 
 //鋼板 caculate field
 @property (weak, nonatomic) IBOutlet CaculateTextField *boardl;

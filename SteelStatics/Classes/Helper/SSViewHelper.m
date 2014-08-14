@@ -6,6 +6,32 @@
 @implementation SSViewHelper
 
 
+
++(AddOrderButton*) getAddOrderButtonByActionKey: (NSString*)actionKey inView:(UIView*)view
+{
+    __block AddOrderButton* button = nil;
+    [self iterateAddOrderButtonRecursively:view handler:^BOOL(AddOrderButton *btn) {
+        if ([btn.actionKey isEqualToString: actionKey]) {
+            button = btn;
+            return YES;
+        }
+        return NO;
+    }];
+    return button;
+}
+
++(void) iterateAddOrderButtonRecursively: (UIView*)view handler:(BOOL(^)(AddOrderButton* btn))handler
+{
+    for (UIView* viewObj in view.subviews) {
+        if ([viewObj isKindOfClass:[AddOrderButton class]]) {
+            if(handler((AddOrderButton*)viewObj)) return;
+        } else {
+            [SSViewHelper iterateAddOrderButtonRecursively: viewObj handler:handler];
+        }
+    }
+}
+
+
 +(void) iterateTextFieldRecursively: (UIView*)view handler:(void(^)(UITextField* tx))handler
 {
     for (UIView* viewObj in view.subviews) {

@@ -1,8 +1,11 @@
-#import "BaseController.h"
+
+#import "CaculateBaseController.h"
+
 @class CaculateTextField;
 @class BaseTextField;
 @class DropDown1;
-@interface RolledSteelController : BaseController
+
+@interface ProcessingRolledSteelController : CaculateBaseController
 
 //標準H型鋼對稱 caculate field
 @property (weak, nonatomic) IBOutlet CaculateTextField *hsteelsymmetrym;
@@ -216,5 +219,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *z1;
 @property (weak, nonatomic) IBOutlet UILabel *z2;
 @property (weak, nonatomic) IBOutlet UILabel *z3;
+
 
 @end

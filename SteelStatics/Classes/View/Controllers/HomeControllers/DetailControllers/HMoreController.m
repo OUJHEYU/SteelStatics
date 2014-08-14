@@ -1,10 +1,6 @@
 #import "AppInterface.h"
 #import "HMoreController.h"
 
-@interface HMoreController ()
-
-@end
-
 @implementation HMoreController
 
 - (void)viewDidLoad
