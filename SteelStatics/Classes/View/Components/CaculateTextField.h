@@ -2,6 +2,4 @@
 
 @interface CaculateTextField : BaseTextField
 
-
-
 @end

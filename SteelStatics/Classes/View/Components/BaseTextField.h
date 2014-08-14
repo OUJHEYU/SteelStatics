@@ -3,7 +3,8 @@
 @interface BaseTextField : UITextField
 
 @property (assign, nonatomic) float value;
-//-(float) value;
-//-(void) setValue:(float)value;
+
+@property (strong) NSString* attributeKey;
+
 
 @end

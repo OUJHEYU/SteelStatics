@@ -1,22 +1,21 @@
 #import <UIKit/UIKit.h>
-#import "AppInterface.h"
+
 @class DropDown1;
+@class BaseTextField;
 @class BaseController;
+
 typedef void(^DropDownDidSelectIndexAction) (DropDown1* view , NSIndexPath* indexPath);
 
 
 
 @interface DropDown1 : UIView <UITableViewDelegate,UITableViewDataSource ,UIGestureRecognizerDelegate> {
-    UITableView *tv;//下拉清單
-    NSArray *tableArray;//下拉清單資料
-    UITextField *textField;//文本輸入框
     CGFloat tabheight;//table下拉清單的高度
     CGFloat frameHeight;//frame的高度
 }
 
-@property (nonatomic,retain) UITableView *tv;
-@property (nonatomic,retain) NSArray *tableArray;
-@property (nonatomic,retain) UITextField *textField;
+@property (nonatomic,strong) UITableView *tv;
+@property (nonatomic,strong) NSArray *tableArray;
+@property (nonatomic,strong) BaseTextField *textField;
 
 
 

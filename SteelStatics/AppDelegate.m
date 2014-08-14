@@ -8,6 +8,13 @@
     [IQKeyboardManager enableKeyboardManagerWithDistance: CanvasHeight(0)];
     
     [FrameTranslater setCanvasSize: CGSizeMake(768, 1024)];
+    
+//    NSNumber* aaa = [NSNumber numberWithDouble:  8.2];
+//    float aaaFloat = [aaa floatValue];
+//    NSString* aasTri = [aaa stringValue];
+//    NSString* string = [NSString stringWithFormat: @"%.2f", aaaFloat];
+//    CGFloat stringNUm = [string doubleValue];
+//    NSNumber* lllkdlkdl = [NSNumber numberWithFloat: stringNUm];
 
     UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main_iPad" bundle:nil];
     AppTabBarController* controller = [storyboard instantiateInitialViewController];

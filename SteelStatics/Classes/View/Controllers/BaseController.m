@@ -5,7 +5,6 @@
 @end
 
 @implementation BaseController
-
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -15,10 +14,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
     self.view.backgroundColor = [UIColor whiteColor];
     self.tabBarController.tabBar.hidden = YES;
-    
 
     [SSViewHelper iterateTextFieldRecursively: self.view handler:^(UITextField *view) {
         if ([view isKindOfClass:[UITextField class]]) {
@@ -29,7 +26,6 @@
         if ([view isKindOfClass:[BaseTextField class]]) {
             BaseTextField* tx = (BaseTextField*)view;
             tx.font = [UIFont fontWithName:@"Arial" size:CanvasFontSize(12)];
-            tx.keyboardType = UIKeyboardTypeDecimalPad;
             tx.enabled = NO;
         }
         // set delegate
@@ -168,97 +164,64 @@
 
 #pragma mark - IB Action
 - (IBAction)hmore:(id)sender {
-    CATransition *transition = [CATransition animation];
-    [transition setDuration:0.5];
-    [transition setType:@"pageCurl"];
-    [self.tabBarController.view.layer addAnimation:transition forKey:nil];
+    [self transiton];
     [self.tabBarController setSelectedIndex:5];
 }
 - (IBAction)rectangmore:(id)sender {
-    CATransition *transition = [CATransition animation];
-    [transition setDuration:0.5];
-    [transition setType:@"pageCurl"];
-    [self.tabBarController.view.layer addAnimation:transition forKey:nil];
+    [self transiton];
     [self.tabBarController setSelectedIndex:6];
 }
 - (IBAction)circlemore:(id)sender {
-    CATransition *transition = [CATransition animation];
-    [transition setDuration:0.5];
-    [transition setType:@"pageCurl"];
-    [self.tabBarController.view.layer addAnimation:transition forKey:nil];
+    [self transiton];
     [self.tabBarController setSelectedIndex:7];
 }
 - (IBAction)back:(id)sender {
-    CATransition *transition = [CATransition animation];
-    [transition setDuration:0.5];
-    [transition setType:@"pageUnCurl"];
-    [self.tabBarController.view.layer addAnimation:transition forKey:nil];
+    [self transiton];
     [self.tabBarController setSelectedIndex:0];
 }
 
 - (IBAction)back1:(id)sender {
-    CATransition *transition = [CATransition animation];
-    [transition setDuration:0.5];
-    [transition setType:@"pageUnCurl"];
-    [self.tabBarController.view.layer addAnimation:transition forKey:nil];
+    [self transiton];
     [self.tabBarController setSelectedIndex:0];
 }
 
 - (IBAction)back2:(id)sender {
-    CATransition *transition = [CATransition animation];
-    [transition setDuration:0.5];
-    [transition setType:@"pageUnCurl"];
-    [self.tabBarController.view.layer addAnimation:transition forKey:nil];
+    [self transiton];
     [self.tabBarController setSelectedIndex:0];
 }
-
-
 - (IBAction)Processhmore:(id)sender {
-    CATransition *transition = [CATransition animation];
-    [transition setDuration:0.5];
-    [transition setType:@"pageCurl"];
-    [self.tabBarController.view.layer addAnimation:transition forKey:nil];
+    [self transiton];
     [self.tabBarController setSelectedIndex:8];
+
 }
 - (IBAction)Processrectangmore:(id)sender {
-    CATransition *transition = [CATransition animation];
-    [transition setDuration:0.5];
-    [transition setType:@"pageCurl"];
-    [self.tabBarController.view.layer addAnimation:transition forKey:nil];
+    [self transiton];
     [self.tabBarController setSelectedIndex:9];
 }
 - (IBAction)Processcirclemore:(id)sender {
-    CATransition *transition = [CATransition animation];
-    [transition setDuration:0.5];
-    [transition setType:@"pageCurl"];
-    [self.tabBarController.view.layer addAnimation:transition forKey:nil];
+    [self transiton];
     [self.tabBarController setSelectedIndex:10];
 }
 
 - (IBAction)Processback:(id)sender {
-    CATransition *transition = [CATransition animation];
-    [transition setDuration:0.5];
-    [transition setType:@"pageUnCurl"];
-    [self.tabBarController.view.layer addAnimation:transition forKey:nil];
+    [self transiton];
     [self.tabBarController setSelectedIndex:1];
 }
 
 - (IBAction)Processback1:(id)sender {
-    CATransition *transition = [CATransition animation];
-    [transition setDuration:0.5];
-    [transition setType:@"pageUnCurl"];
-    [self.tabBarController.view.layer addAnimation:transition forKey:nil];
+    [self transiton];
     [self.tabBarController setSelectedIndex:1];
 }
 
 - (IBAction)Processback2:(id)sender {
-    CATransition *transition = [CATransition animation];
-    [transition setDuration:0.5];
-    [transition setType:@"pageUnCurl"];
-    [self.tabBarController.view.layer addAnimation:transition forKey:nil];
+    [self transiton];
     [self.tabBarController setSelectedIndex:1];
 }
-
-
-
+-(void)transiton
+{
+    CATransition *transition = [CATransition animation];
+    [transition setDuration:0.5];
+    [transition setType:@"pageCurl"];
+    [self.tabBarController.view.layer addAnimation:transition forKey:nil];
+}
 @end

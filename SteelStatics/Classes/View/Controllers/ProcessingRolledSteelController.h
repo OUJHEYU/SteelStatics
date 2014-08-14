@@ -3,7 +3,7 @@
 @class CaculateTextField;
 @class BaseTextField;
 @class DropDown1;
-@interface ProcessingRolledSteelController : BaseController <UIGestureRecognizerDelegate>
+@interface ProcessingRolledSteelController : BaseController
 
 //標準H型鋼對稱 caculate field
 @property (weak, nonatomic) IBOutlet CaculateTextField *hsteelsymmetrym;

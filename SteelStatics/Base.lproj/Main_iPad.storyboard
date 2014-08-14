@@ -30,7 +30,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NzC-PZ-I9t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3568" y="-5203"/>
+            <point key="canvasLocation" x="-3400" y="-4243"/>
         </scene>
         <!--Rolled Steel Controller - 表面未處理鋼材計算-->
         <scene sceneID="Ekp-2V-ddz">
@@ -41,7 +41,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="LAg-CB-0xk">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="2510"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="2565"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="表面未處理鋼材計算" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oyB-Bk-z4F">
@@ -2575,7 +2575,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="uEn-Ig-GXg" customClass="BaseButton">
                                                 <rect key="frame" x="575" y="79" width="136" height="40"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="H型鋼詳細規格" backgroundImage="CustomerDataCard_07.png"/>
+                                                <state key="normal" title="H型鋼詳細規格" backgroundImage="CustomerDataCard_07.png">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
                                                 <state key="selected" backgroundImage="EmployeeDataSheet_32.png"/>
                                                 <state key="highlighted" backgroundImage="EmployeeDataSheet_21.png"/>
                                                 <connections>
@@ -3254,7 +3256,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fJC-y2-cnF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1659" y="-6729"/>
+            <point key="canvasLocation" x="-1491" y="-5769"/>
         </scene>
         <!--Processing Rolled Steel Controller - 表面已處理鋼材計算-->
         <scene sceneID="57W-2N-MgO">
@@ -3265,7 +3267,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="f1p-kH-beh">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="2510"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="2565"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="表面已處理鋼材計算" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iDH-79-hFW">
@@ -6478,7 +6480,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GX1-H3-V3c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1659" y="-5403"/>
+            <point key="canvasLocation" x="-1491" y="-4443"/>
         </scene>
         <!--Paint Controller - 油漆計算-->
         <scene sceneID="W5N-Bo-Nse">
@@ -7595,7 +7597,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hPV-9J-ikZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="581" y="-4139"/>
+            <point key="canvasLocation" x="749" y="-3179"/>
         </scene>
         <!--Other Controller - 其它-->
         <scene sceneID="B0D-mH-H3V">
@@ -7626,7 +7628,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JyV-SN-5I1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1679" y="-4139"/>
+            <point key="canvasLocation" x="-1511" y="-3179"/>
         </scene>
         <!--Paint Controller - 報價單-->
         <scene sceneID="qjp-nB-77C">
@@ -7657,7 +7659,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ngD-Fn-Jax" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-560" y="-4139"/>
+            <point key="canvasLocation" x="-392" y="-3179"/>
         </scene>
         <!--Rectangle More Controller - 矩行管通用表格-->
         <scene sceneID="kTS-1P-Vq8">
@@ -7711,7 +7713,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hN7-Ic-Lla" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="227" y="-6729"/>
+            <point key="canvasLocation" x="395" y="-5769"/>
         </scene>
         <!--Circle More Controller - 圓鋼管通用表格-->
         <scene sceneID="Zvd-Oh-Iis">
@@ -7800,7 +7802,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t81-ZV-Bzy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1125" y="-6729"/>
+            <point key="canvasLocation" x="1293" y="-5769"/>
         </scene>
         <!--More Controller - H型鋼通用表格-->
         <scene sceneID="PCU-NR-wJa">
@@ -7889,7 +7891,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SQm-j8-6CK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-658" y="-6729"/>
+            <point key="canvasLocation" x="-490" y="-5769"/>
         </scene>
         <!--Rectangle More Controller - 矩行管通用表格-->
         <scene sceneID="Npp-Vy-uad">
@@ -7943,7 +7945,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TVq-KF-JdJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="259" y="-5403"/>
+            <point key="canvasLocation" x="427" y="-4443"/>
         </scene>
         <!--Circle More Controller - 圓鋼管通用表格-->
         <scene sceneID="eac-ZP-XLg">
@@ -8032,7 +8034,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hFm-my-rxm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1205" y="-5403"/>
+            <point key="canvasLocation" x="1373" y="-4443"/>
         </scene>
         <!--More Controller - H型鋼通用表格-->
         <scene sceneID="Phm-gA-1nu">
@@ -8121,7 +8123,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AiG-dk-NFZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-650" y="-5403"/>
+            <point key="canvasLocation" x="-482" y="-4443"/>
         </scene>
     </scenes>
     <resources>

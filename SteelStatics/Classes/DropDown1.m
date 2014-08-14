@@ -41,7 +41,7 @@
         tv.layer.borderColor = [[UIColor grayColor] CGColor];
         [self addSubview:tv];
         
-        textField = [[UITextField alloc] initWithFrame:CanvasRect(0, 0, frame.size.width, 31)];
+        textField = [[BaseTextField alloc] initWithFrame:CanvasRect(0, 0, frame.size.width, 31)];
         [textField setSizeWidth: frame.size.width];
         textField.borderStyle=UITextBorderStyleRoundedRect;//設置文字方塊的邊框風格
         [textField addTarget:self action:@selector(textFieldDidClicked:) forControlEvents:UIControlEventTouchDown];

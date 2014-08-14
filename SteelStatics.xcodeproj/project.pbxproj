@@ -88,7 +88,9 @@
 		BA15E23D1996155400DC1E22 /* UIColor+FlatColors.m in Sources */ = {isa = PBXBuildFile; fileRef = BA15E23C1996155400DC1E22 /* UIColor+FlatColors.m */; };
 		BA15E24019961A5B00DC1E22 /* UILabel+AdjustWidth.m in Sources */ = {isa = PBXBuildFile; fileRef = BA15E23F19961A5B00DC1E22 /* UILabel+AdjustWidth.m */; };
 		BA2EFB201995CE91006100B9 /* AppScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2EFB1F1995CE91006100B9 /* AppScrollView.m */; };
-		BA9977551999FC91002E5C3C /* EmployeeDataSheet_32@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA9977541999FC91002E5C3C /* EmployeeDataSheet_32@2x.png */; };
+		BA391DDC199B492300E5B724 /* EmployeeDataSheet_32@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA391DDB199B492300E5B724 /* EmployeeDataSheet_32@2x.png */; };
+		BA391DE2199B513B00E5B724 /* Values1.json in Resources */ = {isa = PBXBuildFile; fileRef = BA391DE1199B513B00E5B724 /* Values1.json */; };
+		BA391DE4199B602600E5B724 /* Values2.json in Resources */ = {isa = PBXBuildFile; fileRef = BA391DE3199B602600E5B724 /* Values2.json */; };
 		BABCA1941994C2EB00E585FB /* ProcessingRolledSteelController.m in Sources */ = {isa = PBXBuildFile; fileRef = BABCA1931994C2EB00E585FB /* ProcessingRolledSteelController.m */; };
 		BABCA1971994C36100E585FB /* OtherController.m in Sources */ = {isa = PBXBuildFile; fileRef = BABCA1961994C36100E585FB /* OtherController.m */; };
 		BABCA19A1994CD0B00E585FB /* SSViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BABCA1991994CD0B00E585FB /* SSViewHelper.m */; };
@@ -221,7 +223,9 @@
 		BA15E23F19961A5B00DC1E22 /* UILabel+AdjustWidth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UILabel+AdjustWidth.m"; path = "../../../Modules/View/Components/Label/UILabel+AdjustWidth.m"; sourceTree = "<group>"; };
 		BA2EFB1E1995CE91006100B9 /* AppScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppScrollView.h; sourceTree = "<group>"; };
 		BA2EFB1F1995CE91006100B9 /* AppScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppScrollView.m; sourceTree = "<group>"; };
-		BA9977541999FC91002E5C3C /* EmployeeDataSheet_32@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "EmployeeDataSheet_32@2x.png"; path = "../../../../../../Downloads/EmployeeDataSheet_32@2x.png"; sourceTree = "<group>"; };
+		BA391DDB199B492300E5B724 /* EmployeeDataSheet_32@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "EmployeeDataSheet_32@2x.png"; sourceTree = "<group>"; };
+		BA391DE1199B513B00E5B724 /* Values1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Values1.json; sourceTree = "<group>"; };
+		BA391DE3199B602600E5B724 /* Values2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Values2.json; sourceTree = "<group>"; };
 		BABCA1921994C2EB00E585FB /* ProcessingRolledSteelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProcessingRolledSteelController.h; sourceTree = "<group>"; };
 		BABCA1931994C2EB00E585FB /* ProcessingRolledSteelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProcessingRolledSteelController.m; sourceTree = "<group>"; };
 		BABCA1951994C36100E585FB /* OtherController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherController.h; sourceTree = "<group>"; };
@@ -376,6 +380,7 @@
 		4EE55CAD197520310078428D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BA391DE0199B512D00E5B724 /* Json */,
 				BAE0B1B4199353E50041BDE2 /* InterfaceBuilder */,
 				4EE55CAE197520310078428D /* Images */,
 			);
@@ -393,7 +398,6 @@
 				5E71DE8F19932D3700CC7CF0 /* 鋼板.png */,
 				5EB4EF70197DE73D00CCAFED /* 矩形管規.png */,
 				5E4119A41979F3FB008A1B2B /* 高焊H.png */,
-				BA9977541999FC91002E5C3C /* EmployeeDataSheet_32@2x.png */,
 				5EDFF87B197F98FC00A1EBFA /* btn_momal.png */,
 				5E0E29B8197A450F00B7BC87 /* AccountInformation-Details_09@2x.png */,
 				5E4119A51979F3FB008A1B2B /* 圓管.png */,
@@ -427,6 +431,7 @@
 				4EC462861975FA0700A57C7D /* Line_Hor@2x.png */,
 				5E99B8A51978B59800960698 /* icon.png */,
 				5E99B8A61978B59800960698 /* Line_Hor@2x.png */,
+				BA391DDB199B492300E5B724 /* EmployeeDataSheet_32@2x.png */,
 				5E99B8A71978B59800960698 /* Line_Ver@2x.png */,
 				4EC462871975FA0700A57C7D /* Line_Ver@2x.png */,
 			);
@@ -513,6 +518,15 @@
 			);
 			name = Frame;
 			path = ../../../Modules/View/Frame;
+			sourceTree = "<group>";
+		};
+		BA391DE0199B512D00E5B724 /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				BA391DE1199B513B00E5B724 /* Values1.json */,
+				BA391DE3199B602600E5B724 /* Values2.json */,
+			);
+			path = Json;
 			sourceTree = "<group>";
 		};
 		BAE0B1B4199353E50041BDE2 /* InterfaceBuilder */ = {
@@ -622,7 +636,7 @@
 				BAE0B1B819936E030041BDE2 /* 工字鋼.png in Resources */,
 				5E99B8B61978B59800960698 /* Line_Ver@2x.png in Resources */,
 				5E99B8B51978B59800960698 /* Line_Hor@2x.png in Resources */,
-				BA9977551999FC91002E5C3C /* EmployeeDataSheet_32@2x.png in Resources */,
+				BA391DDC199B492300E5B724 /* EmployeeDataSheet_32@2x.png in Resources */,
 				5E4119BF1979F3FB008A1B2B /* H型鋼不對稱.png in Resources */,
 				4EC462891975FA0700A57C7D /* Line_Ver@2x.png in Resources */,
 				5EFBC7651978F075003F2839 /* red.png in Resources */,
@@ -635,6 +649,7 @@
 				5E99B8B41978B59800960698 /* icon.png in Resources */,
 				5EFBC7661978F075003F2839 /* yellow.png in Resources */,
 				5E4119B61979F3FB008A1B2B /* 圓管.png in Resources */,
+				BA391DE4199B602600E5B724 /* Values2.json in Resources */,
 				4EC462881975FA0700A57C7D /* Line_Hor@2x.png in Resources */,
 				5E8CCFB11988A0E300F473EB /* bg-middle.png in Resources */,
 				5EFBC7641978F075003F2839 /* ori.png in Resources */,
@@ -645,6 +660,7 @@
 				4EE55C7E19751FB20078428D /* InfoPlist.strings in Resources */,
 				5E4119C11979F3FB008A1B2B /* Z型鋼.png in Resources */,
 				5EFBC7631978F075003F2839 /* green.png in Resources */,
+				BA391DE2199B513B00E5B724 /* Values1.json in Resources */,
 				5E4119C01979F3FB008A1B2B /* H型鋼截面.png in Resources */,
 				5E4119CD197A0358008A1B2B /* tif.png in Resources */,
 				5E4119B91979F3FB008A1B2B /* 圓鋼管通用二.png in Resources */,
