@@ -157,7 +157,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSLog(@"count=%lu",(unsigned long)[tableArray count]);
+//    NSLog(@"count=%lu",(unsigned long)[tableArray count]);
     return [tableArray count];
 }
 

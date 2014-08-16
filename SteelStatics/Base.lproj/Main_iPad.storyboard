@@ -24,7 +24,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NzC-PZ-I9t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4784" y="-5131"/>
+            <point key="canvasLocation" x="-7512" y="-6307"/>
         </scene>
         <!--App Nav Controller - Not_Process-->
         <scene sceneID="DRd-hc-lZO">
@@ -40,7 +40,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yz0-on-WvE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2935" y="-7455"/>
+            <point key="canvasLocation" x="-5663" y="-8631"/>
         </scene>
         <!--Rolled Steel Controller - 表面未處理鋼材計算-->
         <scene sceneID="Ekp-2V-ddz">
@@ -3266,7 +3266,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fJC-y2-cnF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1861" y="-7437"/>
+            <point key="canvasLocation" x="-4589" y="-8613"/>
         </scene>
         <!--Processing Rolled Steel Controller - 表面已處理鋼材計算-->
         <scene sceneID="57W-2N-MgO">
@@ -6493,7 +6493,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GX1-H3-V3c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1861" y="-6231"/>
+            <point key="canvasLocation" x="-4589" y="-7407"/>
         </scene>
         <!--Paint Controller - 油漆計算-->
         <scene sceneID="W5N-Bo-Nse">
@@ -7610,7 +7610,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hPV-9J-ikZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1861" y="-3730"/>
+            <point key="canvasLocation" x="-4589" y="-4906"/>
         </scene>
         <!--Order Table View Controller - Table_Price-->
         <scene sceneID="a75-bV-F7L">
@@ -7639,7 +7639,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oes-we-StJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2935" y="-3730"/>
+            <point key="canvasLocation" x="-5663" y="-4906"/>
         </scene>
         <!--Other Controller - 其它-->
         <scene sceneID="B0D-mH-H3V">
@@ -7670,7 +7670,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JyV-SN-5I1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2935" y="-5006"/>
+            <point key="canvasLocation" x="-5663" y="-6182"/>
         </scene>
         <!--Rectangle More Controller - 矩行管通用表格-->
         <scene sceneID="kTS-1P-Vq8">
@@ -7714,7 +7714,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hN7-Ic-Lla" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="833" y="-7455"/>
+            <point key="canvasLocation" x="-1895" y="-8631"/>
         </scene>
         <!--Circle More Controller - 圓鋼管通用表格-->
         <scene sceneID="Zvd-Oh-Iis">
@@ -7793,7 +7793,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t81-ZV-Bzy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-43" y="-7455"/>
+            <point key="canvasLocation" x="-2771" y="-8631"/>
         </scene>
         <!--More Controller - H型鋼通用表格-->
         <scene sceneID="PCU-NR-wJa">
@@ -7872,7 +7872,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SQm-j8-6CK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-925" y="-7437"/>
+            <point key="canvasLocation" x="-3653" y="-8613"/>
         </scene>
         <!--App Nav Controller - Have_Process-->
         <scene sceneID="NrM-fY-WEl">
@@ -7882,13 +7882,18 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="hFM-2U-JZN">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Pxs-Bg-qMJ">
+                        <rect key="frame" x="0.0" y="980" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </toolbar>
                     <connections>
                         <segue destination="ry0-Jp-QcB" kind="relationship" relationship="rootViewController" id="7xd-00-rTK"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wzO-N5-bBs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2935" y="-6231"/>
+            <point key="canvasLocation" x="-5663" y="-7407"/>
         </scene>
     </scenes>
     <resources>
@@ -7927,8 +7932,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="N96-LI-kih"/>
-        <segue reference="ZMo-nS-Gdd"/>
+        <segue reference="zKE-Lo-JI2"/>
         <segue reference="hbq-ja-VAM"/>
+        <segue reference="BU2-kZ-U8y"/>
     </inferredMetricsTieBreakers>
 </document>

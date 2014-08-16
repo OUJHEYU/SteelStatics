@@ -9,6 +9,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
+
     self.delegate = self;
 }
 
@@ -20,7 +21,6 @@
     NSArray* controllers = navigationController.viewControllers;
     
     AppTabBarController* tabController = (AppTabBarController*)self.view.window.rootViewController;
-    
     if (viewController == [controllers firstObject]) {
         
         [self.navigationController setNavigationBarHidden: YES animated:YES];

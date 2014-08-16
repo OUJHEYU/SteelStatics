@@ -12,7 +12,9 @@
         self.textFields = [[NSMutableArray alloc] init];
         
         for (int i = 0; i < 7; i++) {
-            UITextField* tx = [[UITextField alloc] initWithFrame: CanvasRect(i * 80, 0, 80, 50)];
+            UITextField* tx = [[UITextField alloc] initWithFrame: CanvasRect((i * 95)+40, 0, 100, 30)];
+            tx.font = [UIFont fontWithName:@"Arial" size:CanvasFontSize(20)];
+            tx.enabled = NO;
             [self.textFields addObject: tx];
             [self.contentView addSubview: tx];
         }
@@ -20,5 +22,4 @@
     }
     return self;
 }
-
 @end
