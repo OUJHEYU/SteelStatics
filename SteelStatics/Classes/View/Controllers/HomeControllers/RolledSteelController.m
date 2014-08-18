@@ -163,7 +163,7 @@
     hsteelasymmetrical.value = (((hsteelasymmetricalh.value - hsteelasymmetricalt1.value - hsteelasymmetricalt2.value)*hsteelasymmetricaltw.value*0.00785)+(hsteelasymmetricalb1.value*hsteelasymmetricalt1.value*0.00785)+(hsteelasymmetricalb2.value*hsteelasymmetricalt2.value*0.00785))*hsteelasymmetricalm.value*hsteelasymmetricalpcs.value*(hsteelasymmetricalloss.value / 100 + 1);
 }
 
-- (IBAction)hsteelsymmetryclear {
+- (IBAction)hsteelsymmetryclear {    
     hsteelsymmetrykg.text = nil;
     hsteelsymmetry.text = nil;
     hsteelsymmetrym.text = nil;

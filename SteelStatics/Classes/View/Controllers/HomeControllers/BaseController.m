@@ -2,7 +2,6 @@
 #import "AppInterface.h"
 @interface BaseController ()
 
-
 @end
 
 @implementation BaseController

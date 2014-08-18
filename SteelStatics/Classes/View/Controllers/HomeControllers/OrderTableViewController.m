@@ -1,7 +1,6 @@
 #import "OrderTableViewController.h"
 #import "AppInterface.h"
 
-
 #define REUSEIDENTIFIER @"reuseIdentifier"
 
 @implementation OrderTableViewController
@@ -12,9 +11,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.tableView setSeparatorInset:UIEdgeInsetsZero ];
-    [self.tableView setSeparatorColor:[UIColor grayColor]];
-    
+    [self.tableView setSeparatorColor:[UIColor clearColor]];
     [GestureHelper addGestureToView: self.view];
     NSArray* temp = @[@[@"序號",@"項目名稱",@"材料規格",@"單位",@"數量",@"單價",@"總價"],@[@"01",@"標準H型鋼",@"HW 100*100*6*8",@"個",@"10",@"130,000",@"1,200,000"], @[@"02",@"等邊矩形管",@"25*1.20",@"個",@"10",@"10,000",@"56,656"]];
     dataContents = [[NSMutableArray alloc] init];
@@ -53,7 +50,7 @@
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    UILabel* label = [self createLabel:@"工程報價單" frame:CanvasRect(0,0,0,0) setBorderWidth:CanvasWidth(3)];
+    UILabel* label = [self createLabel:@"工程報價單" frame:CanvasRect(0,0,0,0) setBorderWidth:CanvasWidth(0)];
     return label;
 }
 
@@ -77,14 +74,13 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     OrderTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:REUSEIDENTIFIER forIndexPath:indexPath];
-    
     NSArray* rowContents = [dataContents objectAtIndex: indexPath.row];
-    
     NSArray* textFields = [cell textFields];
     for (int i = 0; i < textFields.count; i++) {
         UITextField* tf = textFields[i];
         if (i < rowContents.count) {
             tf.text = rowContents[i];
+            [tf.layer setBorderWidth:0.5];
         }
     }
     // Configure the cell...
@@ -94,9 +90,14 @@
 // ----------------------- Delete Begin -----------------------
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSUInteger row = [indexPath row];
+    
+    if (row == 0)
+    {
+        return nil;
+    }
     return YES;
 }
-
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {

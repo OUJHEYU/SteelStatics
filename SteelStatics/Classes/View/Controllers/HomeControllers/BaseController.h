@@ -3,7 +3,7 @@
 @interface BaseController : UIViewController <UITextFieldDelegate>
 
 {
-    NSMutableArray  *mystr;
+    NSMutableArray  *dataarray;
 }
 
 @end
