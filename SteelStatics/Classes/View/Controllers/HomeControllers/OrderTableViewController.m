@@ -12,12 +12,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
     [self.tableView setSeparatorInset:UIEdgeInsetsZero ];
     [self.tableView setSeparatorColor:[UIColor grayColor]];
     
     [GestureHelper addGestureToView: self.view];
-    NSArray* temp = @[@[@"01",@"H型鋼",@"HN",@"個",@"10",@"130,000"], @[@"02",@"H型鋼",@"HN",@"個",@"10",@"130,000"]];
+    NSArray* temp = @[@[@"序號",@"項目名稱",@"材料規格",@"單位",@"數量",@"單價",@"總價"],@[@"01",@"標準H型鋼",@"HW 100*100*6*8",@"個",@"10",@"130,000",@"1,200,000"], @[@"02",@"等邊矩形管",@"25*1.20",@"個",@"10",@"10,000",@"56,656"]];
     dataContents = [[NSMutableArray alloc] init];
     [dataContents addObjectsFromArray: temp];
     
@@ -31,7 +30,6 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return CanvasHeight(30);
-    
 }
 
 
@@ -61,7 +59,6 @@
 
 
 - (void)setExtraCellLineHidden: (UITableView *)tableView
-
 {
     UIView *view = [UIView new];
     
@@ -112,7 +109,7 @@
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         
-    }   
+    }
 }
 
 

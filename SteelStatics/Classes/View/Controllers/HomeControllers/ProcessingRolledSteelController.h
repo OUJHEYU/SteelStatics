@@ -4,7 +4,6 @@
 @class CaculateTextField;
 @class BaseTextField;
 @class DropDown1;
-
 @interface ProcessingRolledSteelController : CaculateBaseController
 
 //標準H型鋼對稱 caculate field

@@ -2,6 +2,8 @@
 
 @interface BaseController : UIViewController <UITextFieldDelegate>
 
-
+{
+    NSMutableArray  *mystr;
+}
 
 @end

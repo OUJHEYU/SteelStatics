@@ -1,9 +1,7 @@
 #import "AppTabBarController.h"
 #import "AppInterface.h"
 
-
 @implementation AppTabBarController
-
 
 @synthesize customTabsView;
 
@@ -29,7 +27,6 @@
     
     button = [self createButton:@"油漆計算" frame:CanvasRect(600, 0, 150, 40) image:@"green" selector:@selector(buttonAction:) tag:4];
     [customTabsView addSubview: button];
-    
     
     [self.view addSubview: customTabsView];
 }
@@ -78,8 +75,6 @@
     CATransition *transition = [CATransition animation];
     [transition setDuration:0.5];
     [transition setType: @"pageUnCurl"];
-//    UIViewController* toController = self.selectedViewController; //[self.viewControllers objectAtIndex: index];
-//    [toController.view.layer addAnimation:transition forKey:nil];
     [self.view.layer addAnimation:transition forKey:nil];
     [self setSelectedIndex:index];
 }

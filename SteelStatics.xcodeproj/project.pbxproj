@@ -20,8 +20,6 @@
 		4EE55C9619751FB20078428D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EE55C9519751FB20078428D /* XCTest.framework */; };
 		4EE55C9719751FB20078428D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EE55C7319751FB20078428D /* Foundation.framework */; };
 		4EE55C9819751FB20078428D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EE55C7719751FB20078428D /* UIKit.framework */; };
-		4EE55CA019751FB20078428D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4EE55C9E19751FB20078428D /* InfoPlist.strings */; };
-		4EE55CA219751FB20078428D /* SteelStaticsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE55CA119751FB20078428D /* SteelStaticsTests.m */; };
 		5E0E29B9197A450F00B7BC87 /* AccountInformation-Details_09@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E0E29B8197A450F00B7BC87 /* AccountInformation-Details_09@2x.png */; };
 		5E14B9BF1977ACD600B4918D /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E14B9BE1977ACD600B4918D /* icon.png */; };
 		5E4119B21979F3FB008A1B2B /* 角鋼.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E4119A11979F3FB008A1B2B /* 角鋼.png */; };
@@ -130,9 +128,6 @@
 		4EE55C8E19751FB20078428D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4EE55C9419751FB20078428D /* SteelStaticsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SteelStaticsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EE55C9519751FB20078428D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		4EE55C9D19751FB20078428D /* SteelStaticsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SteelStaticsTests-Info.plist"; sourceTree = "<group>"; };
-		4EE55C9F19751FB20078428D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		4EE55CA119751FB20078428D /* SteelStaticsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SteelStaticsTests.m; sourceTree = "<group>"; };
 		4EE55CB61975216E0078428D /* AppInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppInterface.h; sourceTree = "<group>"; };
 		5E0E29B8197A450F00B7BC87 /* AccountInformation-Details_09@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AccountInformation-Details_09@2x.png"; sourceTree = "<group>"; };
 		5E14B9BE1977ACD600B4918D /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
@@ -277,7 +272,6 @@
 			isa = PBXGroup;
 			children = (
 				4EE55C7919751FB20078428D /* SteelStatics */,
-				4EE55C9B19751FB20078428D /* SteelStaticsTests */,
 				4EE55C7219751FB20078428D /* Frameworks */,
 				4EE55C7119751FB20078428D /* Products */,
 			);
@@ -326,24 +320,6 @@
 				4EE55C7C19751FB20078428D /* InfoPlist.strings */,
 				4EE55C7F19751FB20078428D /* main.m */,
 				4EE55C8119751FB20078428D /* SteelStatics-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		4EE55C9B19751FB20078428D /* SteelStaticsTests */ = {
-			isa = PBXGroup;
-			children = (
-				4EE55CA119751FB20078428D /* SteelStaticsTests.m */,
-				4EE55C9C19751FB20078428D /* Supporting Files */,
-			);
-			path = SteelStaticsTests;
-			sourceTree = "<group>";
-		};
-		4EE55C9C19751FB20078428D /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				4EE55C9D19751FB20078428D /* SteelStaticsTests-Info.plist */,
-				4EE55C9E19751FB20078428D /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -699,7 +675,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EE55CA019751FB20078428D /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -752,7 +727,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EE55CA219751FB20078428D /* SteelStaticsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -781,14 +755,6 @@
 				4EE55C8919751FB20078428D /* Base */,
 			);
 			name = Main_iPad.storyboard;
-			sourceTree = "<group>";
-		};
-		4EE55C9E19751FB20078428D /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4EE55C9F19751FB20078428D /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
