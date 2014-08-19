@@ -11,14 +11,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.tableView setSeparatorColor:[UIColor clearColor]];
+    
     [GestureHelper addGestureToView: self.view];
     NSArray* temp = @[@[@"序號",@"項目名稱",@"材料規格",@"單位",@"數量",@"單價",@"總價"],@[@"01",@"標準H型鋼",@"HW 100*100*6*8",@"個",@"10",@"130,000",@"1,200,000"], @[@"02",@"等邊矩形管",@"25*1.20",@"個",@"10",@"10,000",@"56,656"]];
     dataContents = [[NSMutableArray alloc] init];
     [dataContents addObjectsFromArray: temp];
-    
+
 //    self.tableView.allowsSelection=NO;
     [self setExtraCellLineHidden:self.tableView];
+    [self.tableView setSeparatorColor:[UIColor clearColor]];
     [self.tableView registerClass:[OrderTableViewCell class] forCellReuseIdentifier: REUSEIDENTIFIER];
 }
 
@@ -44,16 +45,15 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return CanvasHeight(50);
+    return CanvasHeight(80);
 }
-
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    UILabel* label = [self createLabel:@"工程報價單" frame:CanvasRect(0,0,0,0) setBorderWidth:CanvasWidth(0)];
+    UILabel* label = [self createLabel:@"信源鋼結構工程有限公司\n工程報價單"];
+    label.numberOfLines = 0;
     return label;
 }
-
 
 - (void)setExtraCellLineHidden: (UITableView *)tableView
 {
@@ -119,15 +119,15 @@
     return @"刪除";
 }
 // ----------------------- Delete Begin -----------------------
--(UILabel*) createLabel: (NSString*)title frame:(CGRect)frame setBorderWidth:(CGFloat)widthsize
+-(UILabel*) createLabel: (NSString*)title
 {
-    UILabel *label=[[UILabel alloc]initWithFrame:frame];
+    UILabel *label=[[UILabel alloc]init];
     label.text = title;
     label.font = [UIFont boldSystemFontOfSize:CanvasFontSize(30)];
     label.textAlignment = UITextAlignmentCenter;
-    label.textColor = [UIColor redColor];
+    label.textColor = [UIColor blueColor];
     label.backgroundColor = [UIColor whiteColor];
-    [[label layer] setBorderWidth:widthsize];
+//    [[label layer] setBorderWidth:widthsize];
     return label;
 }
 

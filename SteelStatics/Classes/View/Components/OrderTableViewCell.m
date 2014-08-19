@@ -40,6 +40,7 @@
 
 -(UITextField*) createText: (NSString*)title frame:(CGRect)frame
 {
+    
     UITextField *text = [[UITextField alloc]initWithFrame:frame];
     text.font = [UIFont fontWithName:@"Arial" size:CanvasFontSize(15)];
     text.text = title;
