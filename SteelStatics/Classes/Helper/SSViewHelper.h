@@ -7,8 +7,11 @@
 
 
 +(AddOrderButton*) getAddOrderButtonByActionKey: (NSString*)actionKey inView:(UIView*)view;
++(void) iterateAddOrderButtonRecursively: (UIView*)view handler:(BOOL(^)(AddOrderButton* button))handler;
 
-+(void) iterateTextFieldRecursively: (UIView*)view handler:(void(^)(UITextField* tx))handler;
++(void) iterateTextFieldRecursively: (UIView*)view handler:(void(^)(UITextField* textfield))handler;
+
++(void) iterateSubViewRecursively: (UIView*)view subViewClazz:(Class)subViewClazz handler:(BOOL(^)(UIView* view))handler;
 
 
 

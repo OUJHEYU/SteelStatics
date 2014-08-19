@@ -54,6 +54,8 @@
 -(void) buttonAction:(UIButton*)button
 {
     NSInteger index = button.tag;
+    if (self.selectedIndex == index) return;
+    
     [self transitionToIndex: index];
 }
 

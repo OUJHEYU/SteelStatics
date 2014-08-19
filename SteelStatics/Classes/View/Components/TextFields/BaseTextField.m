@@ -12,6 +12,7 @@
 }
 
 
+
 -(float) value
 {
     return [self.text floatValue];

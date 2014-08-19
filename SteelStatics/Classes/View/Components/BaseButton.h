@@ -2,7 +2,7 @@
 
 @interface BaseButton : UIButton
 
-@property(strong) NSString* actionKey;
+@property(strong) NSString* attributeKey;
 
 @property(copy) void(^didClickButtonAction)(BaseButton* button);
 

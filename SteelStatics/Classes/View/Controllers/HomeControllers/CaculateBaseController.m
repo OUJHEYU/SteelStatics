@@ -17,21 +17,22 @@
     // Do any additional setup after loading the view.
     
     
+    // textfield
     [SSViewHelper iterateTextFieldRecursively: self.view handler:^(UITextField *view) {
         if ([view isKindOfClass:[UITextField class]]) {
             UITextField* tx = (UITextField*)view;
             tx.font = [UIFont fontWithName:@"Arial" size:CanvasFontSize(12)];
             tx.enabled = YES;
         }
-        if ([view isKindOfClass:[BaseTextField class]]) {
+        
+        if ([view isKindOfClass:[ValueTextField class]] && ![view isKindOfClass:[CaculateTextField class]]) {
             BaseTextField* tx = (BaseTextField*)view;
-            tx.font = [UIFont fontWithName:@"Arial" size:CanvasFontSize(12)];
             tx.enabled = NO;
         }
+        
         // set delegate
         if ([view isKindOfClass:[CaculateTextField class]]) {
             CaculateTextField* tx = (CaculateTextField*)view;
-            tx.enabled = YES;
             tx.keyboardType = UIKeyboardTypeDecimalPad;
             tx.delegate = self;
         }
@@ -41,6 +42,25 @@
     
     // swip
     [GestureHelper addGestureToView: self.view];
+    
+    
+    // add order button
+    AppScrollView* scrollView = (AppScrollView*)self.view;
+    UIView* contentView = [scrollView.subviews firstObject];
+    [SSViewHelper iterateAddOrderButtonRecursively: contentView handler:^BOOL(AddOrderButton *button) {
+        button.didClickButtonAction = ^void(BaseButton* button) {
+            
+            ValueView* superView = (ValueView*)button.superview;
+            NSString* projectName = [superView projectName];
+            NSString* projectModelName = [superView projectModelName];
+            
+            AppTabBarController* tabController = (AppTabBarController*)((AppDelegate*)[UIApplication sharedApplication].delegate).window.rootViewController;
+            OrderTableViewController* tableViewController = (OrderTableViewController*)[tabController.viewControllers objectAtIndex: 3];
+            [tableViewController.tableView.dataContents addObject:@[projectName, projectModelName, @"套", @"22679", @"1", @"2258"]];
+            [tableViewController.tableView reloadData];
+        };
+        return NO;
+    }];
     
 }
 

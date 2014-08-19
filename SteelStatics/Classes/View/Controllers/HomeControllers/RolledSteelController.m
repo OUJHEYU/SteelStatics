@@ -126,13 +126,6 @@
     
     
     
-//    AddOrderButton* testButton = [SSViewHelper getAddOrderButtonByActionKey: @"1AddButton" inView:contentView];
-//    testButton.didClickButtonAction = ^void(BaseButton* button) {
-//        AppTabBarController* tabController = (AppTabBarController*)((AppDelegate*)[UIApplication sharedApplication].delegate).window.rootViewController;
-//        OrderTableViewController* tableViewController = (OrderTableViewController*)[tabController.viewControllers objectAtIndex: 3];
-//        [tableViewController.dataContents addObject:@[@"螺丝", @"M12", @"套", @"22679", @"1", @"2258"]];
-//        [tableViewController.tableView reloadData];
-//    };
 }
 
 -(NSDictionary*) getJson:(NSString*)fileName

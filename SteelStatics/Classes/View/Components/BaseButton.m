@@ -2,16 +2,26 @@
 
 @implementation BaseButton
 
+-(void)awakeFromNib
+{
+    [self setDefaultVariables];
+}
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
         
-        [self addTarget: self action:@selector(clickAction:) forControlEvents:UIControlEventTouchUpInside];
-        
+        [self setDefaultVariables];
     }
     return self;
+}
+
+
+-(void) setDefaultVariables
+{
+    [self addTarget: self action:@selector(clickAction:) forControlEvents:UIControlEventTouchUpInside];
 }
 
 

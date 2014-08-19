@@ -4,25 +4,27 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    //隱藏狀態欄
+    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
 
     [IQKeyboardManager enableKeyboardManagerWithDistance: CanvasHeight(0)];
     
     [FrameTranslater setCanvasSize: CGSizeMake(768, 1024)];
-    
-//    NSNumber* aaa = [NSNumber numberWithDouble:  8.2];
-//    float aaaFloat = [aaa floatValue];
-//    NSString* aasTri = [aaa stringValue];
-//    NSString* string = [NSString stringWithFormat: @"%.2f", aaaFloat];
-//    CGFloat stringNUm = [string doubleValue];
-//    NSNumber* lllkdlkdl = [NSNumber numberWithFloat: stringNUm];
 
+    // initialize the window
     UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main_iPad" bundle:nil];
-    AppTabBarController* controller = [storyboard instantiateInitialViewController];
+    AppTabBarController* tabController = [storyboard instantiateInitialViewController];
     self.window = [[UIWindow alloc] initWithFrame: [UIScreen mainScreen].bounds];
-    self.window.rootViewController = controller;
+    self.window.rootViewController = tabController;
     [self.window makeKeyAndVisible];
-    //隱藏狀態欄
-    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
+    
+    
+    // load all the view
+    for (int i = 0; i < tabController.viewControllers.count; i++) {
+        [tabController setSelectedIndex: i];
+    }
+    [tabController setSelectedIndex: 0];
+    
     
     
     return YES;

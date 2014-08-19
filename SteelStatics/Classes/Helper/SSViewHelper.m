@@ -10,9 +10,9 @@
 +(AddOrderButton*) getAddOrderButtonByActionKey: (NSString*)actionKey inView:(UIView*)view
 {
     __block AddOrderButton* button = nil;
-    [self iterateAddOrderButtonRecursively:view handler:^BOOL(AddOrderButton *btn) {
-        if ([btn.actionKey isEqualToString: actionKey]) {
-            button = btn;
+    [self iterateAddOrderButtonRecursively:view handler:^BOOL(AddOrderButton *button) {
+        if ([button.attributeKey isEqualToString: actionKey]) {
+            button = button;
             return YES;
         }
         return NO;
@@ -20,7 +20,7 @@
     return button;
 }
 
-+(void) iterateAddOrderButtonRecursively: (UIView*)view handler:(BOOL(^)(AddOrderButton* btn))handler
++(void) iterateAddOrderButtonRecursively: (UIView*)view handler:(BOOL(^)(AddOrderButton* button))handler
 {
     for (UIView* viewObj in view.subviews) {
         if ([viewObj isKindOfClass:[AddOrderButton class]]) {
@@ -32,7 +32,7 @@
 }
 
 
-+(void) iterateTextFieldRecursively: (UIView*)view handler:(void(^)(UITextField* tx))handler
++(void) iterateTextFieldRecursively: (UIView*)view handler:(void(^)(UITextField* textfield))handler
 {
     for (UIView* viewObj in view.subviews) {
         if ([viewObj isKindOfClass:[UITextField class]]) {
@@ -42,6 +42,18 @@
         }
     }
 }
+
++(void) iterateSubViewRecursively: (UIView*)view subViewClazz:(Class)subViewClazz handler:(BOOL(^)(UIView* view))handler
+{
+    for (UIView* viewObj in view.subviews) {
+        if ([viewObj isKindOfClass:[subViewClazz class]]) {
+            if (handler(viewObj)) return;
+        } else {
+            [SSViewHelper iterateSubViewRecursively: viewObj subViewClazz:subViewClazz handler:handler];
+        }
+    }
+}
+
 
 
 +(void) translateViewsFramesRecursive: (UIView*)view

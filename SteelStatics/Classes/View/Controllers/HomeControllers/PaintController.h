@@ -1,7 +1,8 @@
 #import "CaculateBaseController.h"
 
+@class BaseTextField;
+@class ValueTextField;
 @class CaculateTextField;
-@class  BaseTextField;
 
 @interface PaintController : CaculateBaseController
 
@@ -41,21 +42,21 @@
 @property (weak, nonatomic) IBOutlet CaculateTextField *hseelpercentage;
 
 //Base field
-@property (weak, nonatomic) IBOutlet BaseTextField *hsteelneedl;
-@property (weak, nonatomic) IBOutlet BaseTextField *hsteelneedkg;
-@property (weak, nonatomic) IBOutlet BaseTextField *hsteelton;
-@property (weak, nonatomic) IBOutlet BaseTextField *hsteelprice;
-@property (weak, nonatomic) IBOutlet BaseTextField *circlepipeneedl;
-@property (weak, nonatomic) IBOutlet BaseTextField *circlepipeeedkg;
-@property (weak, nonatomic) IBOutlet BaseTextField *circlepipeton;
-@property (weak, nonatomic) IBOutlet BaseTextField *circlepipeprice;
-@property (weak, nonatomic) IBOutlet BaseTextField *circlesteelneedl;
-@property (weak, nonatomic) IBOutlet BaseTextField *circlesteelneedkg;
-@property (weak, nonatomic) IBOutlet BaseTextField *circlesteelton;
-@property (weak, nonatomic) IBOutlet BaseTextField *circlesteelprice;
-@property (weak, nonatomic) IBOutlet BaseTextField *boardneedl;
-@property (weak, nonatomic) IBOutlet BaseTextField *boardneedkg;
-@property (weak, nonatomic) IBOutlet BaseTextField *boardton;
-@property (weak, nonatomic) IBOutlet BaseTextField *boardprice;
+@property (weak, nonatomic) IBOutlet ValueTextField *hsteelneedl;
+@property (weak, nonatomic) IBOutlet ValueTextField *hsteelneedkg;
+@property (weak, nonatomic) IBOutlet ValueTextField *hsteelton;
+@property (weak, nonatomic) IBOutlet ValueTextField *hsteelprice;
+@property (weak, nonatomic) IBOutlet ValueTextField *circlepipeneedl;
+@property (weak, nonatomic) IBOutlet ValueTextField *circlepipeeedkg;
+@property (weak, nonatomic) IBOutlet ValueTextField *circlepipeton;
+@property (weak, nonatomic) IBOutlet ValueTextField *circlepipeprice;
+@property (weak, nonatomic) IBOutlet ValueTextField *circlesteelneedl;
+@property (weak, nonatomic) IBOutlet ValueTextField *circlesteelneedkg;
+@property (weak, nonatomic) IBOutlet ValueTextField *circlesteelton;
+@property (weak, nonatomic) IBOutlet ValueTextField *circlesteelprice;
+@property (weak, nonatomic) IBOutlet ValueTextField *boardneedl;
+@property (weak, nonatomic) IBOutlet ValueTextField *boardneedkg;
+@property (weak, nonatomic) IBOutlet ValueTextField *boardton;
+@property (weak, nonatomic) IBOutlet ValueTextField *boardprice;
 
 @end

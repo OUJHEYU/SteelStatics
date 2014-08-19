@@ -71,15 +71,21 @@
 		BA391DDC199B492300E5B724 /* EmployeeDataSheet_32@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA391DDB199B492300E5B724 /* EmployeeDataSheet_32@2x.png */; };
 		BA391DE2199B513B00E5B724 /* Values1.json in Resources */ = {isa = PBXBuildFile; fileRef = BA391DE1199B513B00E5B724 /* Values1.json */; };
 		BA391DE4199B602600E5B724 /* Values2.json in Resources */ = {isa = PBXBuildFile; fileRef = BA391DE3199B602600E5B724 /* Values2.json */; };
+		BA79167319A336970001393E /* OrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA79167219A336970001393E /* OrderTableViewCell.m */; };
+		BA79167619A336AA0001393E /* OrderTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA79167519A336AA0001393E /* OrderTableView.m */; };
+		BA79167919A33BF70001393E /* TableViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BA79167819A33BF70001393E /* TableViewHelper.m */; };
+		BA79167C19A344B80001393E /* ValueView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA79167B19A344B80001393E /* ValueView.m */; };
+		BA79168219A346840001393E /* BaseTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = BA79167F19A346840001393E /* BaseTextField.m */; };
+		BA79168319A346840001393E /* CaculateTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = BA79168119A346840001393E /* CaculateTextField.m */; };
+		BA79168619A346980001393E /* ValueTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = BA79168519A346980001393E /* ValueTextField.m */; };
+		BA79168919A350190001393E /* ProjectnameTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = BA79168819A350190001393E /* ProjectnameTextField.m */; };
+		BA79168C19A37BC70001393E /* ProjectmodelnameTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = BA79168B19A37BC70001393E /* ProjectmodelnameTextField.m */; };
 		BA99E3C2199C85BA005FE1D3 /* IQKeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BA99E391199C85BA005FE1D3 /* IQKeyboardManager.m */; };
 		BA99E3C3199C85BA005FE1D3 /* SSNumberHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BA99E393199C85BA005FE1D3 /* SSNumberHelper.m */; };
 		BA99E3C4199C85BA005FE1D3 /* SSViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BA99E395199C85BA005FE1D3 /* SSViewHelper.m */; };
 		BA99E3C5199C85BA005FE1D3 /* AppScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA99E399199C85BA005FE1D3 /* AppScrollView.m */; };
 		BA99E3C6199C85BA005FE1D3 /* BaseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BA99E39B199C85BA005FE1D3 /* BaseButton.m */; };
-		BA99E3C7199C85BA005FE1D3 /* BaseTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = BA99E39D199C85BA005FE1D3 /* BaseTextField.m */; };
-		BA99E3C8199C85BA005FE1D3 /* CaculateTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = BA99E39F199C85BA005FE1D3 /* CaculateTextField.m */; };
 		BA99E3C9199C85BA005FE1D3 /* DropDown1.m in Sources */ = {isa = PBXBuildFile; fileRef = BA99E3A1199C85BA005FE1D3 /* DropDown1.m */; };
-		BA99E3CA199C85BA005FE1D3 /* OrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA99E3A3199C85BA005FE1D3 /* OrderTableViewCell.m */; };
 		BA99E3CB199C85BA005FE1D3 /* AppNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA99E3A6199C85BA005FE1D3 /* AppNavController.m */; };
 		BA99E3CC199C85BA005FE1D3 /* AppTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA99E3A8199C85BA005FE1D3 /* AppTabBarController.m */; };
 		BA99E3D8199C85BA005FE1D3 /* ViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BA99E3C1199C85BA005FE1D3 /* ViewManager.m */; };
@@ -189,6 +195,24 @@
 		BA391DDB199B492300E5B724 /* EmployeeDataSheet_32@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "EmployeeDataSheet_32@2x.png"; sourceTree = "<group>"; };
 		BA391DE1199B513B00E5B724 /* Values1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Values1.json; sourceTree = "<group>"; };
 		BA391DE3199B602600E5B724 /* Values2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Values2.json; sourceTree = "<group>"; };
+		BA79167119A336970001393E /* OrderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderTableViewCell.h; sourceTree = "<group>"; };
+		BA79167219A336970001393E /* OrderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderTableViewCell.m; sourceTree = "<group>"; };
+		BA79167419A336AA0001393E /* OrderTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderTableView.h; sourceTree = "<group>"; };
+		BA79167519A336AA0001393E /* OrderTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderTableView.m; sourceTree = "<group>"; };
+		BA79167719A33BF70001393E /* TableViewHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewHelper.h; sourceTree = "<group>"; };
+		BA79167819A33BF70001393E /* TableViewHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewHelper.m; sourceTree = "<group>"; };
+		BA79167A19A344B80001393E /* ValueView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValueView.h; sourceTree = "<group>"; };
+		BA79167B19A344B80001393E /* ValueView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValueView.m; sourceTree = "<group>"; };
+		BA79167E19A346840001393E /* BaseTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTextField.h; sourceTree = "<group>"; };
+		BA79167F19A346840001393E /* BaseTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTextField.m; sourceTree = "<group>"; };
+		BA79168019A346840001393E /* CaculateTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaculateTextField.h; sourceTree = "<group>"; };
+		BA79168119A346840001393E /* CaculateTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaculateTextField.m; sourceTree = "<group>"; };
+		BA79168419A346980001393E /* ValueTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValueTextField.h; sourceTree = "<group>"; };
+		BA79168519A346980001393E /* ValueTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValueTextField.m; sourceTree = "<group>"; };
+		BA79168719A350190001393E /* ProjectnameTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectnameTextField.h; sourceTree = "<group>"; };
+		BA79168819A350190001393E /* ProjectnameTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectnameTextField.m; sourceTree = "<group>"; };
+		BA79168A19A37BC70001393E /* ProjectmodelnameTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectmodelnameTextField.h; sourceTree = "<group>"; };
+		BA79168B19A37BC70001393E /* ProjectmodelnameTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectmodelnameTextField.m; sourceTree = "<group>"; };
 		BA99E390199C85BA005FE1D3 /* IQKeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQKeyboardManager.h; sourceTree = "<group>"; };
 		BA99E391199C85BA005FE1D3 /* IQKeyboardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQKeyboardManager.m; sourceTree = "<group>"; };
 		BA99E392199C85BA005FE1D3 /* SSNumberHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSNumberHelper.h; sourceTree = "<group>"; };
@@ -199,14 +223,8 @@
 		BA99E399199C85BA005FE1D3 /* AppScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppScrollView.m; sourceTree = "<group>"; };
 		BA99E39A199C85BA005FE1D3 /* BaseButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseButton.h; sourceTree = "<group>"; };
 		BA99E39B199C85BA005FE1D3 /* BaseButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseButton.m; sourceTree = "<group>"; };
-		BA99E39C199C85BA005FE1D3 /* BaseTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTextField.h; sourceTree = "<group>"; };
-		BA99E39D199C85BA005FE1D3 /* BaseTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTextField.m; sourceTree = "<group>"; };
-		BA99E39E199C85BA005FE1D3 /* CaculateTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaculateTextField.h; sourceTree = "<group>"; };
-		BA99E39F199C85BA005FE1D3 /* CaculateTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaculateTextField.m; sourceTree = "<group>"; };
 		BA99E3A0199C85BA005FE1D3 /* DropDown1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropDown1.h; sourceTree = "<group>"; };
 		BA99E3A1199C85BA005FE1D3 /* DropDown1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropDown1.m; sourceTree = "<group>"; };
-		BA99E3A2199C85BA005FE1D3 /* OrderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderTableViewCell.h; sourceTree = "<group>"; };
-		BA99E3A3199C85BA005FE1D3 /* OrderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderTableViewCell.m; sourceTree = "<group>"; };
 		BA99E3A5199C85BA005FE1D3 /* AppNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppNavController.h; sourceTree = "<group>"; };
 		BA99E3A6199C85BA005FE1D3 /* AppNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppNavController.m; sourceTree = "<group>"; };
 		BA99E3A7199C85BA005FE1D3 /* AppTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppTabBarController.h; sourceTree = "<group>"; };
@@ -436,6 +454,36 @@
 			path = Json;
 			sourceTree = "<group>";
 		};
+		BA79167019A336970001393E /* Tables */ = {
+			isa = PBXGroup;
+			children = (
+				BA79167119A336970001393E /* OrderTableViewCell.h */,
+				BA79167219A336970001393E /* OrderTableViewCell.m */,
+				BA79167419A336AA0001393E /* OrderTableView.h */,
+				BA79167519A336AA0001393E /* OrderTableView.m */,
+				BA79167719A33BF70001393E /* TableViewHelper.h */,
+				BA79167819A33BF70001393E /* TableViewHelper.m */,
+			);
+			path = Tables;
+			sourceTree = "<group>";
+		};
+		BA79167D19A346840001393E /* TextFields */ = {
+			isa = PBXGroup;
+			children = (
+				BA79167E19A346840001393E /* BaseTextField.h */,
+				BA79167F19A346840001393E /* BaseTextField.m */,
+				BA79168019A346840001393E /* CaculateTextField.h */,
+				BA79168119A346840001393E /* CaculateTextField.m */,
+				BA79168419A346980001393E /* ValueTextField.h */,
+				BA79168519A346980001393E /* ValueTextField.m */,
+				BA79168719A350190001393E /* ProjectnameTextField.h */,
+				BA79168819A350190001393E /* ProjectnameTextField.m */,
+				BA79168A19A37BC70001393E /* ProjectmodelnameTextField.h */,
+				BA79168B19A37BC70001393E /* ProjectmodelnameTextField.m */,
+			);
+			path = TextFields;
+			sourceTree = "<group>";
+		};
 		BA99E38F199C85BA005FE1D3 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -465,20 +513,18 @@
 		BA99E397199C85BA005FE1D3 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				BA79167D19A346840001393E /* TextFields */,
+				BA79167019A336970001393E /* Tables */,
 				BA99E398199C85BA005FE1D3 /* AppScrollView.h */,
 				BA99E399199C85BA005FE1D3 /* AppScrollView.m */,
 				BA99E39A199C85BA005FE1D3 /* BaseButton.h */,
 				BA99E39B199C85BA005FE1D3 /* BaseButton.m */,
-				BA99E39C199C85BA005FE1D3 /* BaseTextField.h */,
-				BA99E39D199C85BA005FE1D3 /* BaseTextField.m */,
-				BA99E39E199C85BA005FE1D3 /* CaculateTextField.h */,
-				BA99E39F199C85BA005FE1D3 /* CaculateTextField.m */,
 				BA99E3A0199C85BA005FE1D3 /* DropDown1.h */,
 				BA99E3A1199C85BA005FE1D3 /* DropDown1.m */,
-				BA99E3A2199C85BA005FE1D3 /* OrderTableViewCell.h */,
-				BA99E3A3199C85BA005FE1D3 /* OrderTableViewCell.m */,
 				BA99E402199CA04F005FE1D3 /* AddOrderButton.h */,
 				BA99E403199CA04F005FE1D3 /* AddOrderButton.m */,
+				BA79167A19A344B80001393E /* ValueView.h */,
+				BA79167B19A344B80001393E /* ValueView.m */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -686,19 +732,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA15E231199603A600DC1E22 /* RectHelper.m in Sources */,
+				BA79168C19A37BC70001393E /* ProjectmodelnameTextField.m in Sources */,
 				BA15E2371996053000DC1E22 /* NSArray+Additions.m in Sources */,
+				BA79168919A350190001393E /* ProjectnameTextField.m in Sources */,
 				BA99E3C4199C85BA005FE1D3 /* SSViewHelper.m in Sources */,
 				BA15E22C1996035800DC1E22 /* FrameHelper.m in Sources */,
 				BA99E3DE199C92F3005FE1D3 /* GestureHelper.m in Sources */,
+				BA79168319A346840001393E /* CaculateTextField.m in Sources */,
 				4EE55C8419751FB20078428D /* AppDelegate.m in Sources */,
 				BA99E3C2199C85BA005FE1D3 /* IQKeyboardManager.m in Sources */,
-				BA99E3CA199C85BA005FE1D3 /* OrderTableViewCell.m in Sources */,
 				BA99E3FD199C99D7005FE1D3 /* OtherController.m in Sources */,
 				BA99E3FB199C99D7005FE1D3 /* RectangleMoreController.m in Sources */,
 				BA15E23D1996155400DC1E22 /* UIColor+FlatColors.m in Sources */,
+				BA79168219A346840001393E /* BaseTextField.m in Sources */,
+				BA79167919A33BF70001393E /* TableViewHelper.m in Sources */,
 				BA15E22E1996035800DC1E22 /* UIView+Frame.m in Sources */,
 				BA99E3F7199C99D7005FE1D3 /* BaseController.m in Sources */,
 				BA15E23A1996153F00DC1E22 /* ColorHelper.m in Sources */,
+				BA79167319A336970001393E /* OrderTableViewCell.m in Sources */,
 				BA15E22D1996035800DC1E22 /* FrameTranslater.m in Sources */,
 				BA99E3CB199C85BA005FE1D3 /* AppNavController.m in Sources */,
 				BA99E3F9199C99D7005FE1D3 /* CircleMoreController.m in Sources */,
@@ -706,20 +757,21 @@
 				BA99E3D8199C85BA005FE1D3 /* ViewManager.m in Sources */,
 				BA99E3FA199C99D7005FE1D3 /* HMoreController.m in Sources */,
 				BA99E3FC199C99D7005FE1D3 /* OrderTableViewController.m in Sources */,
-				BA99E3C8199C85BA005FE1D3 /* CaculateTextField.m in Sources */,
 				BA99E400199C99D7005FE1D3 /* ProcessingRolledSteelController.m in Sources */,
 				BA15E24019961A5B00DC1E22 /* UILabel+AdjustWidth.m in Sources */,
 				BA99E3C5199C85BA005FE1D3 /* AppScrollView.m in Sources */,
 				BA99E3C3199C85BA005FE1D3 /* SSNumberHelper.m in Sources */,
 				BA99E3C6199C85BA005FE1D3 /* BaseButton.m in Sources */,
-				BA99E3C7199C85BA005FE1D3 /* BaseTextField.m in Sources */,
 				BA99E3FE199C99D7005FE1D3 /* PaintController.m in Sources */,
 				BA99E404199CA04F005FE1D3 /* AddOrderButton.m in Sources */,
+				BA79167619A336AA0001393E /* OrderTableView.m in Sources */,
 				4EE55C8019751FB20078428D /* main.m in Sources */,
 				BA99E3FF199C99D7005FE1D3 /* PrintController.m in Sources */,
 				BA99E401199C99D7005FE1D3 /* RolledSteelController.m in Sources */,
 				BA99E3F8199C99D7005FE1D3 /* CaculateBaseController.m in Sources */,
+				BA79167C19A344B80001393E /* ValueView.m in Sources */,
 				BA99E3CC199C85BA005FE1D3 /* AppTabBarController.m in Sources */,
+				BA79168619A346980001393E /* ValueTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

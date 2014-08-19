@@ -3,15 +3,17 @@
 
 @class CaculateTextField;
 @class BaseTextField;
+@class ValueTextField;
 @class DropDown1;
+
 @interface ProcessingRolledSteelController : CaculateBaseController
 
 //標準H型鋼對稱 caculate field
 @property (weak, nonatomic) IBOutlet CaculateTextField *hsteelsymmetrym;
 @property (weak, nonatomic) IBOutlet CaculateTextField *hsteelsymmetrypcs;
 @property (weak, nonatomic) IBOutlet CaculateTextField *hsteelsymmetryloss;
-@property (weak, nonatomic) IBOutlet BaseTextField *hsteelsymmetry;
-@property (weak, nonatomic) IBOutlet BaseTextField *hsteelsymmetrykg;
+@property (weak, nonatomic) IBOutlet ValueTextField *hsteelsymmetry;
+@property (weak, nonatomic) IBOutlet ValueTextField *hsteelsymmetrykg;
 @property (weak, nonatomic) IBOutlet UITextField *hsteelsymmetryname;
 
 //變截面H型鋼 caculate field
@@ -23,7 +25,7 @@
 @property (weak, nonatomic) IBOutlet CaculateTextField *hsectionm;
 @property (weak, nonatomic) IBOutlet CaculateTextField *hsectionpcs;
 @property (weak, nonatomic) IBOutlet CaculateTextField *hsectionloss;
-@property (weak, nonatomic) IBOutlet BaseTextField *hsection;
+@property (weak, nonatomic) IBOutlet ValueTextField *hsection;
 @property (weak, nonatomic) IBOutlet UITextField *hsectionname;
 @property (weak, nonatomic) IBOutlet UITextField *hsectionmodel;
 
@@ -37,7 +39,7 @@
 @property (weak, nonatomic) IBOutlet CaculateTextField *hsteelasymmetricalm;
 @property (weak, nonatomic) IBOutlet CaculateTextField *hsteelasymmetricalpcs;
 @property (weak, nonatomic) IBOutlet CaculateTextField *hsteelasymmetricalloss;
-@property (weak, nonatomic) IBOutlet BaseTextField *hsteelasymmetrical;
+@property (weak, nonatomic) IBOutlet ValueTextField *hsteelasymmetrical;
 @property (weak, nonatomic) IBOutlet UITextField *hsteelasymmetricalname;
 @property (weak, nonatomic) IBOutlet UITextField *hsteelasymmetricalmodel;
 
@@ -51,7 +53,7 @@
 @property (weak, nonatomic) IBOutlet CaculateTextField *bridgem;
 @property (weak, nonatomic) IBOutlet CaculateTextField *bridgepcs;
 @property (weak, nonatomic) IBOutlet CaculateTextField *bridgeloss;
-@property (weak, nonatomic) IBOutlet BaseTextField *bridge;
+@property (weak, nonatomic) IBOutlet ValueTextField *bridge;
 @property (weak, nonatomic) IBOutlet UITextField *bridgename;
 @property (weak, nonatomic) IBOutlet UITextField *bridgemodel;
 
@@ -66,7 +68,7 @@
 @property (weak, nonatomic) IBOutlet CaculateTextField *overheadm;
 @property (weak, nonatomic) IBOutlet CaculateTextField *overheadpcs;
 @property (weak, nonatomic) IBOutlet CaculateTextField *overheadloss;
-@property (weak, nonatomic) IBOutlet BaseTextField *overhead;
+@property (weak, nonatomic) IBOutlet ValueTextField *overhead;
 @property (weak, nonatomic) IBOutlet UITextField *overheadname;
 @property (weak, nonatomic) IBOutlet UITextField *overheadmodel;
 
@@ -74,16 +76,16 @@
 @property (weak, nonatomic) IBOutlet CaculateTextField *girderpcs;
 @property (weak, nonatomic) IBOutlet CaculateTextField *girderloss;
 @property (weak, nonatomic) IBOutlet CaculateTextField *girderm;
-@property (weak, nonatomic) IBOutlet BaseTextField *girderkg;
-@property (weak, nonatomic) IBOutlet BaseTextField *girder;
+@property (weak, nonatomic) IBOutlet ValueTextField *girderkg;
+@property (weak, nonatomic) IBOutlet ValueTextField *girder;
 @property (weak, nonatomic) IBOutlet UITextField *girdername;
 
 //槽鋼 caculate field
 @property (weak, nonatomic) IBOutlet CaculateTextField *channelpcs;
 @property (weak, nonatomic) IBOutlet CaculateTextField *channelloss;
 @property (weak, nonatomic) IBOutlet CaculateTextField *channelm;
-@property (weak, nonatomic) IBOutlet BaseTextField *channelkg;
-@property (weak, nonatomic) IBOutlet BaseTextField *channel;
+@property (weak, nonatomic) IBOutlet ValueTextField *channelkg;
+@property (weak, nonatomic) IBOutlet ValueTextField *channel;
 @property (weak, nonatomic) IBOutlet UITextField *channelname;
 
 //角鋼 caculate field
@@ -93,8 +95,8 @@
 @property (weak, nonatomic) IBOutlet CaculateTextField *anglem;
 @property (weak, nonatomic) IBOutlet CaculateTextField *anglepcs;
 @property (weak, nonatomic) IBOutlet CaculateTextField *angleloss;
-@property (weak, nonatomic) IBOutlet BaseTextField *angles;
-@property (weak, nonatomic) IBOutlet BaseTextField *anglekg;
+@property (weak, nonatomic) IBOutlet ValueTextField *angles;
+@property (weak, nonatomic) IBOutlet ValueTextField *anglekg;
 @property (weak, nonatomic) IBOutlet UITextField *anglesname;
 
 //圓管 caculate field
@@ -103,7 +105,7 @@
 @property (weak, nonatomic) IBOutlet CaculateTextField *circlepipem;
 @property (weak, nonatomic) IBOutlet CaculateTextField *circlepipepcs;
 @property (weak, nonatomic) IBOutlet CaculateTextField *circlepipeloss;
-@property (weak, nonatomic) IBOutlet BaseTextField *circlepipe;
+@property (weak, nonatomic) IBOutlet ValueTextField *circlepipe;
 @property (weak, nonatomic) IBOutlet UITextField *circlepipename;
 @property (weak, nonatomic) IBOutlet UITextField *circlepipemodel;
 
@@ -112,8 +114,8 @@
 @property (weak, nonatomic) IBOutlet CaculateTextField *circlesteelm;
 @property (weak, nonatomic) IBOutlet CaculateTextField *circlesteelpcs;
 @property (weak, nonatomic) IBOutlet CaculateTextField *circlesteelloss;
-@property (weak, nonatomic) IBOutlet BaseTextField *circlesteel;
-@property (weak, nonatomic) IBOutlet BaseTextField *circlesteelkg;
+@property (weak, nonatomic) IBOutlet ValueTextField *circlesteel;
+@property (weak, nonatomic) IBOutlet ValueTextField *circlesteelkg;
 @property (weak, nonatomic) IBOutlet UITextField *circlesteelname;
 
 //矩形管 caculate field
@@ -123,8 +125,8 @@
 @property (weak, nonatomic) IBOutlet CaculateTextField *rectanglepipem;
 @property (weak, nonatomic) IBOutlet CaculateTextField *rectanglepipepcs;
 @property (weak, nonatomic) IBOutlet CaculateTextField *rectanglepipeloss;
-@property (weak, nonatomic) IBOutlet BaseTextField *rectanglepipekg;
-@property (weak, nonatomic) IBOutlet BaseTextField *rectanglepipe;
+@property (weak, nonatomic) IBOutlet ValueTextField *rectanglepipekg;
+@property (weak, nonatomic) IBOutlet ValueTextField *rectanglepipe;
 @property (weak, nonatomic) IBOutlet UITextField *rectanglepipename;
 
 //鋼板 caculate field
@@ -133,7 +135,7 @@
 @property (weak, nonatomic) IBOutlet CaculateTextField *boardh;
 @property (weak, nonatomic) IBOutlet CaculateTextField *boardpcs;
 @property (weak, nonatomic) IBOutlet CaculateTextField *boardloss;
-@property (weak, nonatomic) IBOutlet BaseTextField *board;
+@property (weak, nonatomic) IBOutlet ValueTextField *board;
 @property (weak, nonatomic) IBOutlet UITextField *boardname;
 @property (weak, nonatomic) IBOutlet UITextField *boardmodel;
 
@@ -145,8 +147,8 @@
 @property (weak, nonatomic) IBOutlet CaculateTextField *csteelm;
 @property (weak, nonatomic) IBOutlet CaculateTextField *csteelpcs;
 @property (weak, nonatomic) IBOutlet CaculateTextField *csteelloss;
-@property (weak, nonatomic) IBOutlet BaseTextField *csteelkg;
-@property (weak, nonatomic) IBOutlet BaseTextField *csteel;
+@property (weak, nonatomic) IBOutlet ValueTextField *csteelkg;
+@property (weak, nonatomic) IBOutlet ValueTextField *csteel;
 @property (weak, nonatomic) IBOutlet UITextField *csteelname;
 
 //Z型鋼 caculate field
@@ -157,8 +159,8 @@
 @property (weak, nonatomic) IBOutlet CaculateTextField *zsteelm;
 @property (weak, nonatomic) IBOutlet CaculateTextField *zsteelpcs;
 @property (weak, nonatomic) IBOutlet CaculateTextField *zsteelloss;
-@property (weak, nonatomic) IBOutlet BaseTextField *zsteelkg;
-@property (weak, nonatomic) IBOutlet BaseTextField *zsteel;
+@property (weak, nonatomic) IBOutlet ValueTextField *zsteelkg;
+@property (weak, nonatomic) IBOutlet ValueTextField *zsteel;
 @property (weak, nonatomic) IBOutlet UITextField *zsteelname;
 
 

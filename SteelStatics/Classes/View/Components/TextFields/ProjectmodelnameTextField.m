@@ -1,6 +1,6 @@
-#import "CaculateTextField.h"
+#import "ProjectmodelnameTextField.h"
 
-@implementation CaculateTextField
+@implementation ProjectmodelnameTextField
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -11,6 +11,9 @@
     return self;
 }
 
-
+-(void)awakeFromNib
+{
+    self.attributeKey = @"PROJECT_MODELNAME";
+}
 
 @end

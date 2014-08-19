@@ -2,9 +2,9 @@
 
 @interface BaseTextField : UITextField
 
-@property (assign, nonatomic) float value;
-
 @property (strong) NSString* attributeKey;
+
+@property (assign, nonatomic) float value;
 
 
 @end

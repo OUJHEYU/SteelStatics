@@ -1,8 +1,13 @@
-#import <UIKit/UIKit.h>
+#import "BaseController.h"
 
-@interface OrderTableViewController : UITableViewController
 
-@property (strong) NSMutableArray* dataContents;
+@class OrderTableView;
+
+
+@interface OrderTableViewController : UIViewController //BaseController
+
+
+@property(strong, readonly) OrderTableView* tableView;
 
 
 @end
