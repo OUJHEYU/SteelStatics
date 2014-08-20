@@ -290,7 +290,7 @@
     {
         [weakSelf hsteelsymmetryselect];
         
-        NSArray* textFields = @[weakSelf.hsteelsymmetryloss,weakSelf.hsteelsymmetry,weakSelf.hsteelsymmetrym,weakSelf.hsteelsymmetrypcs,weakSelf.hsteelsymmetryname];
+        NSArray* textFields = @[weakSelf.hsteelsymmetryloss,weakSelf.hsteelsymmetry,weakSelf.hsteelsymmetrym,weakSelf.hsteelsymmetrypcs];
         [SSViewHelper clearTextField: textFields];
     };;
     NSArray* arr1=[[NSArray alloc]initWithObjects:@"HW 100*100*6*8",@"HW 125*125*6.5*9",@"HW 150*150*7*10",@"HW 175*175*7.5*11",@"HW 200*200*8*12",@"HW #200*204*12*12",@"HW 250*250*9*14",@"HW #250*255*14*14",@"HW #294*302*12*12",@"HW 300*300*10*15",@"HW 300*305*15*15",@"HW #344*348*10*16",@"HW 350*350*12*19",@"HW #388*402*15*15",@"HW #394*398*11*18",@"HW 400*400*13*21",@"HW #400*408*21*21",@"HW 414*405*18*28",@"HW #428*407*20*35",@"HW #458*417*30*50",@"HW 498*432*45*70",@"HM 148*100*6*9",@"HM 194*150*6*9",@"HM 244*175*7*11",@"HM 294*200*8*12",@"HM 340*250*9*14",@"HM 390*300*10*16",@"HM 440*300*11*18",@"HM 482*300*11*15",@"HM 488*300*11*18",@"HM 582*300*12*17",@"HM 588*300*12*20",@"HM #594*302*14*23",@"HN 100*50*5*7",@"HN 125*60*6*8",@"HN 150*75*5*7",@"HN 175*90*5*8",@"HN 198*99*4.5*7",@"HN 200*100*5.5*8",@"HN 248*124*5*8",@"HN 250*125*6*9",@"HN 298*149*5.5*8",@"HN 300*150*6.5*9",@"HN 347*174*6*9",@"HN 350*175*7*11",@"HN #400*150*8*13",@"HN 396*199*7*11",@"HN 400*200*8*13",@"HN #450*150*9*14",@"HN 446*199*8*12",@"HN 450*200*9*14",@"HN #500*150*10*16",@"HN 496*199*9*14",@"HN 500*200*10*16",@"HN #506*201*11*19",@"HN 596*199*10*15",@"HN 600*200*11*17",@"HN #606*201*12*20",@"HN #692*300*13*20",@"HN 700*300*13*24",@"HP 200*204*12*12",@"HP 244*252*11*11",@"HP 250*255*14*14",@"HP 294*302*12*12",@"HP 300*300*10*15",@"HP 300*305*15*15",@"HP 338*351*13*13",@"HP 344*354*16*16",@"HP 350*350*12*19",@"HP 350*357*19*19",@"HP 388*402*15*15",@"HP 394*405*18*18",@"HP 400*400*13*21",@"HP 400*408*21*21",@"HP 414*405*18*28",@"HP 428*407*20*35",nil];
@@ -314,7 +314,7 @@
         NSArray* hiddenNoViews = @[weakSelf.rectanglepipekglabel,weakSelf.rectanglepipekg];
         [SSViewHelper setViewsHiddenNO:hiddenNoViews];
         
-        NSArray* textFields = @[weakSelf.rectanglepipe,weakSelf.rectanglepipem,weakSelf.rectanglepipename,weakSelf.rectanglepipeloss,weakSelf.rectanglepipepcs];
+        NSArray* textFields = @[weakSelf.rectanglepipe,weakSelf.rectanglepipem,weakSelf.rectanglepipeloss,weakSelf.rectanglepipepcs];
         [SSViewHelper clearTextField: textFields];
         
         [weakSelf.r3 setOriginX:CanvasX(215)];
@@ -347,7 +347,7 @@
         NSArray* hiddenNoViews = @[weakSelf.rectanglepipekglabel,weakSelf.rectanglepipekg];
         [SSViewHelper setViewsHiddenNO:hiddenNoViews];
         
-        NSArray* textFields = @[weakSelf.rectanglepipe,weakSelf.rectanglepipem,weakSelf.rectanglepipename,weakSelf.rectanglepipeloss,weakSelf.rectanglepipepcs];
+        NSArray* textFields = @[weakSelf.rectanglepipe,weakSelf.rectanglepipem,weakSelf.rectanglepipeloss,weakSelf.rectanglepipepcs];
         [SSViewHelper clearTextField: textFields];
 
         weakSelf.rectanglepipelonglabel.text = @" (Kg)";
@@ -377,7 +377,7 @@
         NSArray* hiddenNoViews = @[weakSelf.circlesteelkg,weakSelf.circlesteelkglabel];
         [SSViewHelper setViewsHiddenNO:hiddenNoViews];
         
-        NSArray* textFields = @[weakSelf.circlesteel,weakSelf.circlesteelloss,weakSelf.circlesteelm,weakSelf.circlesteelpcs,weakSelf.circlesteelname];
+        NSArray* textFields = @[weakSelf.circlesteel,weakSelf.circlesteelloss,weakSelf.circlesteelm,weakSelf.circlesteelpcs];
         [SSViewHelper clearTextField: textFields];
         
         [weakSelf.c1 setOriginX:CanvasX(228)];
@@ -401,7 +401,7 @@
         NSArray* hiddenNoViews = @[weakSelf.csteelkglabel,weakSelf.csteelkg];
         [SSViewHelper setViewsHiddenNO:hiddenNoViews];
         
-        NSArray* textFields = @[weakSelf.csteelm,weakSelf.csteelname,weakSelf.csteelpcs,weakSelf.csteelloss,weakSelf.csteel];
+        NSArray* textFields = @[weakSelf.csteelm,weakSelf.csteelpcs,weakSelf.csteelloss,weakSelf.csteel];
         [SSViewHelper clearTextField: textFields];
         
         [weakSelf.csteelm setOriginX:CanvasX(221)];
@@ -424,7 +424,7 @@
     {
         [weakSelf girderselect];
         
-        NSArray* textFields = @[weakSelf.girder,weakSelf.girderloss,weakSelf.girderpcs,weakSelf.girdername,weakSelf.girderm];
+        NSArray* textFields = @[weakSelf.girder,weakSelf.girderloss,weakSelf.girderpcs,weakSelf.girderm];
         [SSViewHelper clearTextField: textFields];
     };;
     NSArray* arr6=[[NSArray alloc]initWithObjects:@"工10",@"工12.6",@"工14",@"工16",@"工18",@"工20a",@"工20b",@"工22a",@"工22b",@"工25a",@"工25b",@"工28a",@"工28b",@"工32a",@"工32b",@"工32c",@"工36a",@"工36b",@"工36c",@"工40a",@"工40b",@"工40c",@"工45a",@"工45b",@"工45c",@"工50a",@"工50b",@"工50c",@"工56a",@"工56b",@"工56c",@"工63a",@"工63b",@"工63c",nil];
@@ -459,7 +459,7 @@
         NSArray* hiddenNoViews = @[weakSelf.zsteelkg,weakSelf.zsteelkglabel,weakSelf.anglessidekg2label];
         [SSViewHelper setViewsHiddenNO:hiddenNoViews];
         
-        NSArray* textFields = @[weakSelf.zsteelm,weakSelf.zsteelloss,weakSelf.zsteelpcs,weakSelf.zsteelname,weakSelf.zsteel];
+        NSArray* textFields = @[weakSelf.zsteelm,weakSelf.zsteelloss,weakSelf.zsteelpcs,weakSelf.zsteel];
         [SSViewHelper clearTextField: textFields];
 
         weakSelf.zsteelhlabel.text = @"  (Kg)";
@@ -491,7 +491,7 @@
         NSArray* hiddenNoViews = @[weakSelf.anglekg,weakSelf.anglessidekglabel,weakSelf.anglessidekg2label];
         [SSViewHelper setViewsHiddenNO:hiddenNoViews];
         
-        NSArray* textFields = @[weakSelf.angleloss,weakSelf.angles,weakSelf.anglem,weakSelf.anglepcs,weakSelf.anglesname];
+        NSArray* textFields = @[weakSelf.angleloss,weakSelf.angles,weakSelf.anglem,weakSelf.anglepcs];
         [SSViewHelper clearTextField: textFields];
         
         [weakSelf.anglem setOriginX:CanvasX(239)];
@@ -520,7 +520,7 @@
         NSArray* hiddenNoViews = @[weakSelf.anglekg,weakSelf.anglessidekglabel,weakSelf.anglessidekg2label];
         [SSViewHelper setViewsHiddenNO:hiddenNoViews];
         
-        NSArray* textFields = @[weakSelf.angleloss,weakSelf.angles,weakSelf.anglem,weakSelf.anglepcs,weakSelf.anglesname];
+        NSArray* textFields = @[weakSelf.angleloss,weakSelf.angles,weakSelf.anglem,weakSelf.anglepcs];
         [SSViewHelper clearTextField: textFields];
         
         [weakSelf.anglem setOriginX:CanvasX(239)];

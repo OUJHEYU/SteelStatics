@@ -13,7 +13,11 @@
 //    [GestureHelper addGestureToView: self.view];
 }
 
-
+-(void) autoUpdateResuls
+{
+    
+    
+}
 
 
 @end

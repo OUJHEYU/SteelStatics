@@ -16,7 +16,6 @@
     [self setDefaultVariables];
 }
 
-
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -26,7 +25,6 @@
     }
     return self;
 }
-
 
 -(void) setDefaultVariables
 {
@@ -87,6 +85,7 @@
     UIView* headerview = [[UIView alloc]init];
     headerview.backgroundColor = [UIColor clearColor];
     tableView.tableHeaderView = headerview;
+    
     UILabel* label1 = [TableViewHelper createLabel:@"信源鋼結構工程有限公司\n工程報價單" frame:CanvasRect(133.5,0,500,80) boldStstemFontOfSize: CanvasFontSize(30)];
     UILabel *label2 = [TableViewHelper createLabel:@"建設單位:" frame:CanvasRect(1,85,150,30) boldStstemFontOfSize:CanvasFontSize(25)];
     UILabel *label3 = [TableViewHelper createLabel:@"名稱:" frame:CanvasRect(21,115,50,30) boldStstemFontOfSize:CanvasFontSize(18)];
@@ -95,13 +94,13 @@
     UILabel *label6 = [TableViewHelper createLabel:@"規格:" frame:CanvasRect(21,145,50,30) boldStstemFontOfSize:CanvasFontSize(18)];
     UILabel *label7 = [TableViewHelper createLabel:@"柱距:" frame:CanvasRect(280,145,50,30) boldStstemFontOfSize:CanvasFontSize(18)];
     UILabel *label8 = [TableViewHelper createLabel:@"滴水高度:" frame:CanvasRect(490,145,90,30) boldStstemFontOfSize:CanvasFontSize(18)];
-    UITextField *text1 = [TableViewHelper createText:@"廣東恆大電梯有限公司" frame:CanvasRect(160, 86.5,600,30) enabled:YES  size:CanvasFontSize(25) BorderWidth:0];
-    UITextField *text2 = [TableViewHelper createText:@"車間一" frame:CanvasRect(90, 116.5,175,30) enabled:YES  size:CanvasFontSize(18) BorderWidth:0];
-    UITextField *text3 = [TableViewHelper createText:@"20%" frame:CanvasRect(349, 116.5,150,30) enabled:YES  size:CanvasFontSize(18) BorderWidth:0];
-    UITextField *text4 = [TableViewHelper createText:@"7200平方公尺" frame:CanvasRect(599, 116.5,160,30) enabled:YES  size:CanvasFontSize(18) BorderWidth:0];
-    UITextField *text5 = [TableViewHelper createText:@"48mX50m" frame:CanvasRect(90, 146.5,175,30) enabled:YES  size:CanvasFontSize(18) BorderWidth:0];
-    UITextField *text6 = [TableViewHelper createText:@"7.5m" frame:CanvasRect(349, 146.5,150,30) enabled:YES  size:CanvasFontSize(18) BorderWidth:0];
-    UITextField *text7 = [TableViewHelper createText:@"10.0m" frame:CanvasRect(599, 146.5,160,30) enabled:YES  size:CanvasFontSize(18) BorderWidth:0];
+    UITextField *text1 = [TableViewHelper createText:@"" frame:CanvasRect(160, 86.5,600,30) enabled:YES  size:CanvasFontSize(25) BorderWidth:0];
+    UITextField *text2 = [TableViewHelper createText:@"" frame:CanvasRect(90, 116.5,175,30) enabled:YES  size:CanvasFontSize(18) BorderWidth:0];
+    UITextField *text3 = [TableViewHelper createText:@"%" frame:CanvasRect(349, 116.5,150,30) enabled:YES  size:CanvasFontSize(18) BorderWidth:0];
+    UITextField *text4 = [TableViewHelper createText:@"平方公尺" frame:CanvasRect(599, 116.5,160,30) enabled:YES  size:CanvasFontSize(18) BorderWidth:0];
+    UITextField *text5 = [TableViewHelper createText:@"mXm" frame:CanvasRect(90, 146.5,175,30) enabled:YES  size:CanvasFontSize(18) BorderWidth:0];
+    UITextField *text6 = [TableViewHelper createText:@"m" frame:CanvasRect(349, 146.5,150,30) enabled:YES  size:CanvasFontSize(18) BorderWidth:0];
+    UITextField *text7 = [TableViewHelper createText:@"m" frame:CanvasRect(599, 146.5,160,30) enabled:YES  size:CanvasFontSize(18) BorderWidth:0];
     UITextField *text8 = [TableViewHelper createText:@"" frame:CanvasRect(3, 85,761,30) enabled:NO  size:CanvasFontSize(20) BorderWidth:0.5];
     UITextField *text9 = [TableViewHelper createText:@"" frame:CanvasRect(3, 115,761,30) enabled:NO  size:CanvasFontSize(20) BorderWidth:0.5];
     UITextField *text10 = [TableViewHelper createText:@"" frame:CanvasRect(3, 145,761,30) enabled:NO  size:CanvasFontSize(20) BorderWidth:0.5];
@@ -145,7 +144,7 @@
     [headerview addSubview:label6];
     [headerview addSubview:label7];
     [headerview addSubview:label8];
-    return headerview;
+    return tableView.tableHeaderView;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
@@ -158,18 +157,24 @@
     UIView* footerview = [[UIView alloc]init];
     footerview.backgroundColor = [UIColor clearColor];
     tableView.tableFooterView = footerview;
+    
+    NSDate *  senddate=[NSDate date];
+    NSDateFormatter  *dateformatter=[[NSDateFormatter alloc] init];
+    [dateformatter setDateFormat:@"YYYY年MM月dd日"];
+    NSString *  locationString=[dateformatter stringFromDate:senddate];
+    
     UITextField *text1 = [TableViewHelper createText:@"聯繫人" frame:CanvasRect(388, 0, 111, 30) enabled:NO size:CanvasFontSize(15) BorderWidth:0.5];
-    UITextField *text2 = [TableViewHelper createText:@"林廷宇" frame:CanvasRect(499, 0, 265, 30) enabled:YES size:CanvasFontSize(15) BorderWidth:0.5];
+    UITextField *text2 = [TableViewHelper createText:@"" frame:CanvasRect(499, 0, 265, 30) enabled:YES size:CanvasFontSize(15) BorderWidth:0.5];
     UITextField *text3 = [TableViewHelper createText:@"手機" frame:CanvasRect(388, 30, 111, 30) enabled:NO size:CanvasFontSize(15) BorderWidth:0.5];
-    UITextField *text4 = [TableViewHelper createText:@"13827587758" frame:CanvasRect(499, 30, 265, 30) enabled:YES size:CanvasFontSize(15) BorderWidth:0.5];
+    UITextField *text4 = [TableViewHelper createText:@"" frame:CanvasRect(499, 30, 265, 30) enabled:YES size:CanvasFontSize(15) BorderWidth:0.5];
     UITextField *text5 = [TableViewHelper createText:@"電話" frame:CanvasRect(388, 60, 111, 30) enabled:NO size:CanvasFontSize(15) BorderWidth:0.5];
-    UITextField *text6 = [TableViewHelper createText:@"0758-36348858(838)" frame:CanvasRect(499, 60, 265, 30) enabled:YES size:CanvasFontSize(15) BorderWidth:0.5];
+    UITextField *text6 = [TableViewHelper createText:@"0758-36348858" frame:CanvasRect(499, 60, 265, 30) enabled:YES size:CanvasFontSize(15) BorderWidth:0.5];
     UITextField *text7 = [TableViewHelper createText:@"傳真" frame:CanvasRect(388, 90, 111, 30) enabled:NO size:CanvasFontSize(15) BorderWidth:0.5];
-    UITextField *text8 = [TableViewHelper createText:@"0758-36348858(838)" frame:CanvasRect(499, 90, 265, 30) enabled:YES size:CanvasFontSize(15) BorderWidth:0.5];
+    UITextField *text8 = [TableViewHelper createText:@"0758-36348758" frame:CanvasRect(499, 90, 265, 30) enabled:YES size:CanvasFontSize(15) BorderWidth:0.5];
     UITextField *text9 = [TableViewHelper createText:@"地址" frame:CanvasRect(388, 120, 111, 30) enabled:NO size:CanvasFontSize(15) BorderWidth:0.5];
     UITextField *text10 = [TableViewHelper createText:@"肇慶市大旺高新區" frame:CanvasRect(499, 120, 265, 30) enabled:YES size:CanvasFontSize(15) BorderWidth:0.5];
     UITextField *text11 = [TableViewHelper createText:@"報價日期" frame:CanvasRect(388, 150, 111, 30) enabled:NO size:CanvasFontSize(15) BorderWidth:0.5];
-    UITextField *text12 = [TableViewHelper createText:@"2014年8月23日" frame:CanvasRect(499, 150, 265, 30) enabled:YES size:CanvasFontSize(15) BorderWidth:0.5];
+    UITextField *text12 = [TableViewHelper createText:locationString frame:CanvasRect(499, 150, 265, 30) enabled:YES size:CanvasFontSize(15) BorderWidth:0.5];
     UITextView *textView1 = [TableViewHelper createTextview:@"說明:\n\n1.本報價未含報建費、總包公司配合費、材料檢測費、防火塗料費、吊車樑及安裝費\n\n2.因材料波動較大，本報價有效期為三天\n\n3.落水管為±0.00以上" frame:CanvasRect(3 , 0, 385, 180)];
     [footerview addSubview:text1];
     [footerview addSubview:text2];
@@ -184,7 +189,7 @@
     [footerview addSubview:text11];
     [footerview addSubview:text12];
     [footerview addSubview:textView1];
-    return footerview;
+    return tableView.tableFooterView;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

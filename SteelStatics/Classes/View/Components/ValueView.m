@@ -38,6 +38,14 @@
     return value == nil ? @"" : value;
 }
 
+//-(NSString*) Totalcaculate
+//{
+//    NSString* qua = [self getQuantityTextField].text;
+//    NSString* unit = [self getUnitextField].text;
+//    NSString* total = nsstring;
+//    return total == nil ? @"" : value;
+//}
+
 -(NSMutableDictionary*)getDatas
 {
     NSDictionary* values = @{
@@ -45,11 +53,12 @@
                              @"PROJECT_MODELNAME": [self projectModelName],
                              @"UINIT" : @"個",
                              @"QUANTITY" : [self quantity],
+                             @"UNIT" : @"",
+                             @"TOTAL" : @"",
                              };
     
     return [values mutableCopy];
 }
-
 
 -(BaseTextField*) getProjectNameTextField
 {
@@ -70,5 +79,9 @@
     return  [SSViewHelper getBaseTextFieldByAttributeKey: key inView:self];
 }
 
+-(BaseTextField*) getUnitextField
+{
+    return [self getBaseTextFieldByKey:@"UNIT"];
+}
 
 @end

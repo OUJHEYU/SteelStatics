@@ -45,9 +45,6 @@
 		5E8CCFAE1988A0DF00F473EB /* OutSingle_姓名栏@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E8CCFAC1988A0DF00F473EB /* OutSingle_姓名栏@2x.png */; };
 		5E8CCFAF1988A0DF00F473EB /* Picking_通知按钮@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E8CCFAD1988A0DF00F473EB /* Picking_通知按钮@2x.png */; };
 		5E8CCFB11988A0E300F473EB /* bg-middle.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E8CCFB01988A0E200F473EB /* bg-middle.png */; };
-		5E99B8B41978B59800960698 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E99B8A51978B59800960698 /* icon.png */; };
-		5E99B8B51978B59800960698 /* Line_Hor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E99B8A61978B59800960698 /* Line_Hor@2x.png */; };
-		5E99B8B61978B59800960698 /* Line_Ver@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E99B8A71978B59800960698 /* Line_Ver@2x.png */; };
 		5EAA8E001980D74300E55A3D /* down_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EAA8DFF1980D74300E55A3D /* down_dark.png */; };
 		5EB4EF71197DE73D00CCAFED /* 矩形管規.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EB4EF70197DE73D00CCAFED /* 矩形管規.png */; };
 		5EDFF871197F3C5700A1EBFA /* 矩形管.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EDFF870197F3C5700A1EBFA /* 矩形管.png */; };
@@ -683,8 +680,6 @@
 				4EE55C8F19751FB20078428D /* Images.xcassets in Resources */,
 				5E8CCFAF1988A0DF00F473EB /* Picking_通知按钮@2x.png in Resources */,
 				BAE0B1B819936E030041BDE2 /* 工字鋼.png in Resources */,
-				5E99B8B61978B59800960698 /* Line_Ver@2x.png in Resources */,
-				5E99B8B51978B59800960698 /* Line_Hor@2x.png in Resources */,
 				BA391DDC199B492300E5B724 /* EmployeeDataSheet_32@2x.png in Resources */,
 				5E4119BF1979F3FB008A1B2B /* H型鋼不對稱.png in Resources */,
 				4EC462891975FA0700A57C7D /* Line_Ver@2x.png in Resources */,
@@ -695,7 +690,6 @@
 				5E4119B51979F3FB008A1B2B /* 高焊H.png in Resources */,
 				5E0E29B9197A450F00B7BC87 /* AccountInformation-Details_09@2x.png in Resources */,
 				5E4119BC1979F3FB008A1B2B /* 熱H一.png in Resources */,
-				5E99B8B41978B59800960698 /* icon.png in Resources */,
 				5EFBC7661978F075003F2839 /* yellow.png in Resources */,
 				5E4119B61979F3FB008A1B2B /* 圓管.png in Resources */,
 				BA391DE4199B602600E5B724 /* Values2.json in Resources */,
