@@ -21,34 +21,46 @@
 
 -(NSString*) projectName
 {
-    return [self getProjectNameTextField].text;
+    NSString* value = [self getProjectNameTextField].text;
+    return value == nil ? @"" : value;
 }
 
-
--(BaseTextField*) getProjectModelNameTextField
+-(NSString*) projectModelName
 {
-    return  [ValueView getBaseTextFieldByAttributeKey: @"PROJECT_MODELNAME" inView:self];
-    
+    UITextField* tx = [self getProjectModelNameTextField];
+     NSString* value = tx.text;
+    return value == nil ? @"" : value;
 }
+
+
+
+-(NSMutableDictionary*)getDatas
+{
+    NSDictionary* values = @{
+                             @"PROJECT_NAME": [self projectName],
+                             @"PROJECT_MODELNAME": [self projectModelName],
+                             @"UINIT" : @"個",
+                             };
+    
+    return [values mutableCopy];
+}
+
 
 -(BaseTextField*) getProjectNameTextField
 {
-    return  [ValueView getBaseTextFieldByAttributeKey: @"PROJECT_NAME" inView:self];
-    
+    return [self getBaseTextFieldByKey:@"PROJECT_NAME"];
 }
 
-+(BaseTextField*) getBaseTextFieldByAttributeKey:(NSString*)attributeKey inView:(UIView*)inView
+-(BaseTextField*) getProjectModelNameTextField
 {
-    __block BaseTextField* result = nil;
-    [SSViewHelper iterateSubViewRecursively: inView subViewClazz:[BaseTextField class] handler:^BOOL(UIView *view) {
-        BaseTextField* textField = (BaseTextField*) view;
-        if ([textField.attributeKey isEqualToString:attributeKey]) {
-            result = textField;
-            return YES;
-        }
-        return NO;
-    }];
-    return result;
+    return [self getBaseTextFieldByKey:@"PROJECT_MODELNAME"];
 }
+
+
+-(BaseTextField*) getBaseTextFieldByKey:(NSString*)key
+{
+    return  [SSViewHelper getBaseTextFieldByAttributeKey: key inView:self];
+}
+
 
 @end

@@ -3,7 +3,13 @@
 @interface ValueView : UIView
 
 
+@property (strong) NSString* attributeKey;
 
--(NSString*) projectName;
--(NSString*) projectModelName;
+
+-(NSMutableDictionary*) getDatas;
+
+
+
+
+
 @end

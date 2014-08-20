@@ -51,7 +51,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="LAg-CB-0xk">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="2450"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="2475"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="表面未處理鋼材計算" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oyB-Bk-z4F">
@@ -333,9 +333,6 @@
                                                 <state key="normal" title="刷新" backgroundImage="CustomerDataCard_07.png"/>
                                                 <state key="selected" backgroundImage="EmployeeDataSheet_32.png"/>
                                                 <state key="highlighted" backgroundImage="EmployeeDataSheet_21.png"/>
-                                                <connections>
-                                                    <action selector="overheadclear" destination="VLD-5W-Lho" eventType="touchUpInside" id="JNH-WV-STe"/>
-                                                </connections>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Line_Hor.png" id="wOn-7A-Lnd">
                                                 <rect key="frame" x="157" y="-2" width="600" height="6"/>
@@ -359,7 +356,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="nXb-Xs-Sfq" customClass="ProjectnameTextField">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="nXb-Xs-Sfq" customClass="ProjectmodelnameTextField">
                                                 <rect key="frame" x="575" y="9" width="165" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -505,9 +502,6 @@
                                                 <state key="normal" title="刷新" backgroundImage="CustomerDataCard_07.png"/>
                                                 <state key="selected" backgroundImage="EmployeeDataSheet_32.png"/>
                                                 <state key="highlighted" backgroundImage="EmployeeDataSheet_21.png"/>
-                                                <connections>
-                                                    <action selector="boardclear" destination="VLD-5W-Lho" eventType="touchUpInside" id="0l5-nB-6bE"/>
-                                                </connections>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Line_Hor.png" id="sAI-Z7-Tpu">
                                                 <rect key="frame" x="3" y="167" width="149" height="4"/>
@@ -535,7 +529,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="4Wb-M0-F4E" customClass="ProjectnameTextField">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="4Wb-M0-F4E" customClass="ProjectmodelnameTextField">
                                                 <rect key="frame" x="575" y="9" width="165" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -753,9 +747,6 @@
                                                 <state key="normal" title="刷新" backgroundImage="CustomerDataCard_07.png"/>
                                                 <state key="selected" backgroundImage="EmployeeDataSheet_32.png"/>
                                                 <state key="highlighted" backgroundImage="EmployeeDataSheet_21.png"/>
-                                                <connections>
-                                                    <action selector="bridgeclear" destination="VLD-5W-Lho" eventType="touchUpInside" id="H9w-G3-Ur0"/>
-                                                </connections>
                                             </button>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="變截高度" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="etd-9w-ZwY">
                                                 <rect key="frame" x="157" y="40" width="60" height="21"/>
@@ -825,7 +816,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="VbW-hT-B2o" customClass="ProjectnameTextField">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="VbW-hT-B2o" customClass="ProjectmodelnameTextField">
                                                 <rect key="frame" x="575" y="9" width="165" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1063,6 +1054,9 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="attributeKey" value="valueView8"/>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" id="AIT-tP-KAo" customClass="ValueView">
                                         <rect key="frame" x="20" y="2145" width="745" height="175"/>
@@ -1281,6 +1275,9 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="attributeKey" value="valueView5"/>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" id="0kJ-g4-tvU" customClass="ValueView">
                                         <rect key="frame" x="20" y="1095" width="745" height="175"/>
@@ -1390,9 +1387,6 @@
                                                 <state key="normal" title="刷新" backgroundImage="CustomerDataCard_07.png"/>
                                                 <state key="selected" backgroundImage="EmployeeDataSheet_32.png"/>
                                                 <state key="highlighted" backgroundImage="EmployeeDataSheet_21.png"/>
-                                                <connections>
-                                                    <action selector="channelclear" destination="VLD-5W-Lho" eventType="touchUpInside" id="KNa-lk-CmJ"/>
-                                                </connections>
                                             </button>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="單位重" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WUi-wu-RXD">
                                                 <rect key="frame" x="165" y="40" width="45" height="21"/>
@@ -1439,6 +1433,9 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="attributeKey" value="valueView7"/>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" id="zHQ-h4-6g6" customClass="ValueView">
                                         <rect key="frame" x="20" y="920" width="745" height="175"/>
@@ -1544,9 +1541,6 @@
                                                 <state key="normal" title="刷新" backgroundImage="CustomerDataCard_07.png"/>
                                                 <state key="selected" backgroundImage="EmployeeDataSheet_32.png"/>
                                                 <state key="highlighted" backgroundImage="EmployeeDataSheet_21.png"/>
-                                                <connections>
-                                                    <action selector="girderclear" destination="VLD-5W-Lho" eventType="touchUpInside" id="Ydx-0x-8Td"/>
-                                                </connections>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Line_Hor.png" id="PQ6-zg-dgZ">
                                                 <rect key="frame" x="3" y="167" width="149" height="4"/>
@@ -1597,6 +1591,9 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="attributeKey" value="valueView6"/>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" id="PfV-jD-DiD" customClass="ValueView">
                                         <rect key="frame" x="20" y="1270" width="745" height="175"/>
@@ -1809,6 +1806,9 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="attributeKey" value="valueView9"/>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" id="tvU-nr-xUX" customClass="ValueView">
                                         <rect key="frame" x="20" y="220" width="745" height="175"/>
@@ -1958,9 +1958,6 @@
                                                 <state key="normal" title="刷新" backgroundImage="CustomerDataCard_07.png"/>
                                                 <state key="selected" backgroundImage="EmployeeDataSheet_32.png"/>
                                                 <state key="highlighted" backgroundImage="EmployeeDataSheet_21.png"/>
-                                                <connections>
-                                                    <action selector="hsectionclear" destination="VLD-5W-Lho" eventType="touchUpInside" id="c9c-y6-wMD"/>
-                                                </connections>
                                             </button>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="e2x-By-nW6">
                                                 <rect key="frame" x="223" y="63" width="16" height="21"/>
@@ -2066,7 +2063,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="cXI-Js-lfd" customClass="ProjectnameTextField">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="cXI-Js-lfd" customClass="ProjectmodelnameTextField">
                                                 <rect key="frame" x="575" y="9" width="165" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -2282,7 +2279,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="QNr-hS-6GW">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="QNr-hS-6GW" customClass="ProjectnameTextField">
                                                 <rect key="frame" x="405" y="9" width="97" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -2303,6 +2300,9 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="attributeKey" value="valueView2"/>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" id="OiJ-Ur-VmY" customClass="ValueView">
                                         <rect key="frame" x="20" y="1445" width="745" height="175"/>
@@ -2428,9 +2428,6 @@
                                                 <state key="normal" title="刷新" backgroundImage="CustomerDataCard_07.png"/>
                                                 <state key="selected" backgroundImage="EmployeeDataSheet_32.png"/>
                                                 <state key="highlighted" backgroundImage="EmployeeDataSheet_21.png"/>
-                                                <connections>
-                                                    <action selector="circlepipeclear" destination="VLD-5W-Lho" eventType="touchUpInside" id="9H2-Af-8FM"/>
-                                                </connections>
                                             </button>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="外圓" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oqy-LW-p1V">
                                                 <rect key="frame" x="169" y="40" width="70" height="21"/>
@@ -2474,7 +2471,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="uHx-bt-UQ4">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="uHx-bt-UQ4" customClass="ProjectnameTextField">
                                                 <rect key="frame" x="405" y="9" width="97" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -2486,7 +2483,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="WWq-YW-oTk">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="WWq-YW-oTk" customClass="ProjectmodelnameTextField">
                                                 <rect key="frame" x="575" y="9" width="165" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -2578,9 +2575,6 @@
                                                 <state key="normal" title="刷新" backgroundImage="CustomerDataCard_07.png"/>
                                                 <state key="selected" backgroundImage="EmployeeDataSheet_32.png"/>
                                                 <state key="highlighted" backgroundImage="EmployeeDataSheet_21.png"/>
-                                                <connections>
-                                                    <action selector="hsteelsymmetryclear" destination="VLD-5W-Lho" eventType="touchUpInside" id="8Fw-P2-ayl"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="uEn-Ig-GXg" customClass="BaseButton">
                                                 <rect key="frame" x="575" y="79" width="136" height="40"/>
@@ -2666,6 +2660,9 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="attributeKey" value="valueView1"/>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" id="xyw-Wh-3GI" customClass="ValueView">
                                         <rect key="frame" x="20" y="395" width="745" height="175"/>
@@ -2879,9 +2876,6 @@
                                                 <state key="normal" title="刷新" backgroundImage="CustomerDataCard_07.png"/>
                                                 <state key="selected" backgroundImage="EmployeeDataSheet_32.png"/>
                                                 <state key="highlighted" backgroundImage="EmployeeDataSheet_21.png"/>
-                                                <connections>
-                                                    <action selector="hsteelasymmetricalclear" destination="VLD-5W-Lho" eventType="touchUpInside" id="q0U-ft-9it"/>
-                                                </connections>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Line_Hor.png" id="qa9-1S-SLv">
                                                 <rect key="frame" x="3" y="6" width="149" height="4"/>
@@ -2893,7 +2887,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="Kz8-i4-xsb">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="`" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="Kz8-i4-xsb" customClass="ProjectnameTextField">
                                                 <rect key="frame" x="405" y="9" width="97" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -2905,7 +2899,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="jvM-0h-SbC">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="jvM-0h-SbC" customClass="ProjectmodelnameTextField">
                                                 <rect key="frame" x="575" y="9" width="165" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -3063,7 +3057,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="jq8-Wh-VIh">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="jq8-Wh-VIh" customClass="ProjectnameTextField">
                                                 <rect key="frame" x="405" y="9" width="97" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -3078,6 +3072,9 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="attributeKey" value="valueView4"/>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -3277,7 +3274,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="f1p-kH-beh">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="2450"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="2475"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="表面已處理鋼材計算" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iDH-79-hFW">
@@ -3559,9 +3556,6 @@
                                                 <state key="normal" title="刷新" backgroundImage="CustomerDataCard_07.png"/>
                                                 <state key="selected" backgroundImage="EmployeeDataSheet_32.png"/>
                                                 <state key="highlighted" backgroundImage="EmployeeDataSheet_21.png"/>
-                                                <connections>
-                                                    <action selector="overheadclear" destination="ry0-Jp-QcB" eventType="touchUpInside" id="DX7-z4-jA0"/>
-                                                </connections>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Line_Hor.png" id="0Hz-oT-kDS">
                                                 <rect key="frame" x="157" y="-2" width="600" height="6"/>
@@ -3585,7 +3579,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="SHy-Bb-X1Y" customClass="ProjectnameTextField">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="SHy-Bb-X1Y" customClass="ProjectmodelnameTextField">
                                                 <rect key="frame" x="575" y="9" width="165" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -3731,9 +3725,6 @@
                                                 <state key="normal" title="刷新" backgroundImage="CustomerDataCard_07.png"/>
                                                 <state key="selected" backgroundImage="EmployeeDataSheet_32.png"/>
                                                 <state key="highlighted" backgroundImage="EmployeeDataSheet_21.png"/>
-                                                <connections>
-                                                    <action selector="boardclear" destination="ry0-Jp-QcB" eventType="touchUpInside" id="rde-yL-dPD"/>
-                                                </connections>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Line_Hor.png" id="raU-yL-xBJ">
                                                 <rect key="frame" x="3" y="167" width="149" height="4"/>
@@ -3761,7 +3752,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="rm4-L8-UWS" customClass="ProjectnameTextField">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="rm4-L8-UWS" customClass="ProjectmodelnameTextField">
                                                 <rect key="frame" x="575" y="9" width="165" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -3979,9 +3970,6 @@
                                                 <state key="normal" title="刷新" backgroundImage="CustomerDataCard_07.png"/>
                                                 <state key="selected" backgroundImage="EmployeeDataSheet_32.png"/>
                                                 <state key="highlighted" backgroundImage="EmployeeDataSheet_21.png"/>
-                                                <connections>
-                                                    <action selector="bridgeclear" destination="ry0-Jp-QcB" eventType="touchUpInside" id="6dw-oW-RRb"/>
-                                                </connections>
                                             </button>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="變截高度" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8W6-3c-jAh">
                                                 <rect key="frame" x="157" y="40" width="60" height="21"/>
@@ -4051,7 +4039,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="wMV-59-Zgt" customClass="ProjectnameTextField">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="wMV-59-Zgt" customClass="ProjectmodelnameTextField">
                                                 <rect key="frame" x="575" y="9" width="165" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -4289,6 +4277,9 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="attributeKey" value="valueView8"/>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" id="BMn-Nl-PWK" customClass="ValueView">
                                         <rect key="frame" x="20" y="2145" width="745" height="175"/>
@@ -4507,6 +4498,9 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="attributeKey" value="valueView5"/>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" id="sUS-Nl-Z2Y" customClass="ValueView">
                                         <rect key="frame" x="20" y="1095" width="745" height="175"/>
@@ -4616,9 +4610,6 @@
                                                 <state key="normal" title="刷新" backgroundImage="CustomerDataCard_07.png"/>
                                                 <state key="selected" backgroundImage="EmployeeDataSheet_32.png"/>
                                                 <state key="highlighted" backgroundImage="EmployeeDataSheet_21.png"/>
-                                                <connections>
-                                                    <action selector="channelclear" destination="ry0-Jp-QcB" eventType="touchUpInside" id="0Lp-De-uTM"/>
-                                                </connections>
                                             </button>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="單位重" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eRS-HX-Mi4">
                                                 <rect key="frame" x="165" y="40" width="45" height="21"/>
@@ -4665,6 +4656,9 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="attributeKey" value="valueView7"/>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" id="Fkc-dP-ghn" customClass="ValueView">
                                         <rect key="frame" x="20" y="920" width="745" height="175"/>
@@ -4770,9 +4764,6 @@
                                                 <state key="normal" title="刷新" backgroundImage="CustomerDataCard_07.png"/>
                                                 <state key="selected" backgroundImage="EmployeeDataSheet_32.png"/>
                                                 <state key="highlighted" backgroundImage="EmployeeDataSheet_21.png"/>
-                                                <connections>
-                                                    <action selector="girderclear" destination="ry0-Jp-QcB" eventType="touchUpInside" id="6Sb-Fy-inm"/>
-                                                </connections>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Line_Hor.png" id="jBD-n6-0K9">
                                                 <rect key="frame" x="3" y="167" width="149" height="4"/>
@@ -4823,6 +4814,9 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="attributeKey" value="valueView6"/>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" id="C9y-Gx-Nq9" customClass="ValueView">
                                         <rect key="frame" x="20" y="1270" width="745" height="175"/>
@@ -5035,6 +5029,9 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="attributeKey" value="valueView9"/>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" id="dkc-gN-JQ3" customClass="ValueView">
                                         <rect key="frame" x="20" y="220" width="745" height="175"/>
@@ -5184,9 +5181,6 @@
                                                 <state key="normal" title="刷新" backgroundImage="CustomerDataCard_07.png"/>
                                                 <state key="selected" backgroundImage="EmployeeDataSheet_32.png"/>
                                                 <state key="highlighted" backgroundImage="EmployeeDataSheet_21.png"/>
-                                                <connections>
-                                                    <action selector="hsectionclear" destination="ry0-Jp-QcB" eventType="touchUpInside" id="3kF-8K-QZS"/>
-                                                </connections>
                                             </button>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gbF-ET-6Mm">
                                                 <rect key="frame" x="223" y="63" width="16" height="21"/>
@@ -5292,7 +5286,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="SSz-dc-8D8" customClass="ProjectnameTextField">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="SSz-dc-8D8" customClass="ProjectmodelnameTextField">
                                                 <rect key="frame" x="575" y="9" width="165" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -5529,6 +5523,9 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="attributeKey" value="valueView2"/>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" id="GIg-Qu-ibR" customClass="ValueView">
                                         <rect key="frame" x="20" y="1445" width="745" height="175"/>
@@ -5654,9 +5651,6 @@
                                                 <state key="normal" title="刷新" backgroundImage="CustomerDataCard_07.png"/>
                                                 <state key="selected" backgroundImage="EmployeeDataSheet_32.png"/>
                                                 <state key="highlighted" backgroundImage="EmployeeDataSheet_21.png"/>
-                                                <connections>
-                                                    <action selector="circlepipeclear" destination="ry0-Jp-QcB" eventType="touchUpInside" id="UNd-UE-fID"/>
-                                                </connections>
                                             </button>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="外圓" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lqa-dy-QnQ">
                                                 <rect key="frame" x="169" y="40" width="70" height="21"/>
@@ -5712,7 +5706,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="OGQ-OE-xnk" customClass="ProjectnameTextField">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="OGQ-OE-xnk" customClass="ProjectmodelnameTextField">
                                                 <rect key="frame" x="575" y="9" width="165" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -5804,9 +5798,6 @@
                                                 <state key="normal" title="刷新" backgroundImage="CustomerDataCard_07.png"/>
                                                 <state key="selected" backgroundImage="EmployeeDataSheet_32.png"/>
                                                 <state key="highlighted" backgroundImage="EmployeeDataSheet_21.png"/>
-                                                <connections>
-                                                    <action selector="hsteelsymmetryclear" destination="ry0-Jp-QcB" eventType="touchUpInside" id="YLs-PP-efI"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="ObP-Su-TJK" customClass="BaseButton">
                                                 <rect key="frame" x="575" y="79" width="136" height="40"/>
@@ -5890,6 +5881,9 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="attributeKey" value="valueView1"/>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" id="FCu-9H-3Zd" customClass="ValueView">
                                         <rect key="frame" x="20" y="395" width="745" height="175"/>
@@ -6103,9 +6097,6 @@
                                                 <state key="normal" title="刷新" backgroundImage="CustomerDataCard_07.png"/>
                                                 <state key="selected" backgroundImage="EmployeeDataSheet_32.png"/>
                                                 <state key="highlighted" backgroundImage="EmployeeDataSheet_21.png"/>
-                                                <connections>
-                                                    <action selector="hsteelasymmetricalclear" destination="ry0-Jp-QcB" eventType="touchUpInside" id="glW-1G-6ZN"/>
-                                                </connections>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Line_Hor.png" id="zBg-JW-Ki3">
                                                 <rect key="frame" x="3" y="6" width="149" height="4"/>
@@ -6129,7 +6120,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="W19-6S-3w2" customClass="ProjectnameTextField">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="W19-6S-3w2" customClass="ProjectmodelnameTextField">
                                                 <rect key="frame" x="575" y="9" width="165" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -6302,6 +6293,9 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="attributeKey" value="valueView4"/>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -6760,9 +6754,6 @@
                                                 <state key="normal" title="刷新" backgroundImage="CustomerDataCard_07.png"/>
                                                 <state key="selected" backgroundImage="EmployeeDataSheet_32.png"/>
                                                 <state key="highlighted" backgroundImage="EmployeeDataSheet_21.png"/>
-                                                <connections>
-                                                    <action selector="boardpaint" destination="dQe-74-aeO" eventType="touchUpInside" id="3DB-WQ-7J4"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="O3D-rm-KcX" customClass="AddOrderButton">
                                                 <rect key="frame" x="644" y="135" width="80" height="40"/>
@@ -7017,9 +7008,6 @@
                                                 <state key="normal" title="刷新" backgroundImage="CustomerDataCard_07.png"/>
                                                 <state key="selected" backgroundImage="EmployeeDataSheet_32.png"/>
                                                 <state key="highlighted" backgroundImage="EmployeeDataSheet_21.png"/>
-                                                <connections>
-                                                    <action selector="circlepipepaint" destination="dQe-74-aeO" eventType="touchUpInside" id="nOU-wv-HxK"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="WJT-kd-I66" customClass="AddOrderButton">
                                                 <rect key="frame" x="644" y="134" width="80" height="40"/>
@@ -7244,9 +7232,6 @@
                                                 <state key="normal" title="刷新" backgroundImage="CustomerDataCard_07.png"/>
                                                 <state key="selected" backgroundImage="EmployeeDataSheet_32.png"/>
                                                 <state key="highlighted" backgroundImage="EmployeeDataSheet_21.png"/>
-                                                <connections>
-                                                    <action selector="circlesteelpaint" destination="dQe-74-aeO" eventType="touchUpInside" id="tFt-1v-It9"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="evi-k7-ZJg" customClass="AddOrderButton">
                                                 <rect key="frame" x="644" y="135" width="80" height="40"/>
@@ -7535,9 +7520,6 @@
                                                 <state key="normal" title="刷新" backgroundImage="CustomerDataCard_07.png"/>
                                                 <state key="selected" backgroundImage="EmployeeDataSheet_32.png"/>
                                                 <state key="highlighted" backgroundImage="EmployeeDataSheet_21.png"/>
-                                                <connections>
-                                                    <action selector="hsteelpaint" destination="dQe-74-aeO" eventType="touchUpInside" id="Iav-Ao-lbF"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="Lxm-4j-buO" customClass="AddOrderButton">
                                                 <rect key="frame" x="644" y="128" width="80" height="40"/>
@@ -7922,8 +7904,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="BU2-kZ-U8y"/>
-        <segue reference="zKE-Lo-JI2"/>
-        <segue reference="92e-Gs-HcW"/>
+        <segue reference="hbq-ja-VAM"/>
+        <segue reference="ZMo-nS-Gdd"/>
+        <segue reference="N96-LI-kih"/>
     </inferredMetricsTieBreakers>
 </document>

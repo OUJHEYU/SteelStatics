@@ -85,77 +85,48 @@
     [super viewDidLoad];
     
     AppScrollView* scrollView = (AppScrollView*)self.view;
-    
     UIView* contentView = [scrollView.subviews firstObject];
     scrollView.contentSize = CGSizeMake(scrollView.bounds.size.width, contentView.bounds.size.height);
     // Do any additional setup after loading the view.
-}
-- (IBAction)boardpaint {
-    boardl.text = nil;
-    boardw.text = nil;
-    boardh.text = nil;
-    boardpcs.text = nil;
-    boardpaintprice.text = nil;
-    boardpaintarea.text = nil;
-    boardpercentage.text = nil;
-    boardpaintface.text = nil;
-    boardneedl.text = nil;
-    boardneedkg.text = nil;
-    boardton.text = nil;
-    boardprice.text = nil;
+ 
     
-    [boardpaintface becomeFirstResponder];
-    [boardpaintface resignFirstResponder];
-}
-- (IBAction)circlepipepaint {
-    circlepipediamter.text = nil;
-    circlepipethick.text = nil;
-    circlepipem.text = nil;
-    circlepipepcs.text = nil;
-    circlepipepaintprice.text = nil;
-    circlepipepaintface.text = nil;
-    circlepipepercentage.text = nil;
-    circlepipeneedl.text = nil;
-    circlepipeeedkg.text = nil;
-    circlepipeton.text = nil;
-    circlepipeprice.text = nil;
     
-    [circlepipepaintprice becomeFirstResponder];
-    [circlepipepaintprice resignFirstResponder];
-}
-- (IBAction)circlesteelpaint {
-    circlesteeldiamter.text = nil;
-    circlesteelm.text = nil;
-    circlesteelpcs.text = nil;
-    circlesteelpaintprice.text = nil;
-    circlesteelpaintface.text = nil;
-    circlesteelpercentage.text = nil;
-    circlesteelneedl.text = nil;
-    circlesteelneedkg.text = nil;
-    circlesteelton.text = nil;
-    circlesteelprice.text = nil;
     
-    [circlesteelneedkg becomeFirstResponder];
-    [circlesteelneedkg resignFirstResponder];
-}
-- (IBAction)hsteelpaint {
-    hseelh2.text = nil;
-    hseelb.text = nil;
-    hseelt1.text = nil;
-    hseelt2.text = nil;
-    hseelm.text = nil;
-    hseelpcs.text = nil;
-    hseelpaintprice.text = nil;
-    hseelpaintface.text = nil;
-    hseelpercentage.text = nil;
-    hsteelneedl.text = nil;
-    hsteelneedkg.text = nil;
-    hsteelton.text = nil;
-    hsteelprice.text = nil;
-    
-    [hsteelneedl becomeFirstResponder];
-    [hsteelneedl resignFirstResponder];
+    [SSViewHelper iterateSubViewRecursively: contentView subViewClazz:[BaseButton class] handler:^BOOL(UIView *view) {
+        BaseButton* refreshButton = (BaseButton*)view;
+        if ([[refreshButton titleForState:UIControlStateNormal] isEqualToString: @"刷新"]) {
+            refreshButton.didClickButtonAction = ^void(BaseButton* button) {
+                [self refreshValueView: button];
+            };
+        }
+        
+        return NO;
+    }];
 }
 
+- (IBAction) refreshValueView:(UIButton*)sender
+{
+    [SSViewHelper resignFirstResponserOnView: [self contentView]];
+    
+    UIButton* refreshButton = sender;
+    UIView* valueView = refreshButton.superview;
+    
+    while (valueView && ![valueView isKindOfClass:[ValueView class]]) {
+        valueView = valueView.superview;
+    }
+    
+    [SSViewHelper iterateSubViewRecursively: valueView subViewClazz:[UITextField class] handler:^BOOL(UIView *view) {
+        UITextField* tx = (UITextField*)view;
+        tx.text = nil;
+        return NO;
+    }];
+    
+}
+
+-(UIView*) contentView
+{
+    UIView* contentView = [self.view.subviews firstObject];
+    return contentView;
+}
 
 @end

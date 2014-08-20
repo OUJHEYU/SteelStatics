@@ -33,10 +33,7 @@
     self.delegate = self;
     self.dataSource = self;
     
-    NSArray* temp = @[@[@"標準H型鋼",@"HW 100*100*6*8",@"個",@"10",@"130,000",@"1,200,000"], @[@"等邊矩形管",@"25*1.20",@"個",@"10",@"10,000",@"56,656"]];
     dataContents = [[NSMutableArray alloc] init];
-    [dataContents addObjectsFromArray: temp];
-    
     
     [self setExtraCellLineHidden:self];
     [self setSeparatorColor:[UIColor clearColor]];
@@ -199,19 +196,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     OrderTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:REUSEIDENTIFIER forIndexPath:indexPath];
-    NSArray* rowContents = [dataContents objectAtIndex: indexPath.row];
-    NSArray* textFields = [cell textFields];
-    for (int i = 0; i < textFields.count; i++) {
-        UITextField* tf = textFields[i];
-        if (i == 0) {
-            tf.text = [NSString stringWithFormat: @"%ld", indexPath.row + 1];
-        } else {
-            
-            if (i < rowContents.count) {
-                tf.text = rowContents[i - 1];
-            }
-        }
-    }
+    NSDictionary* rowContents = [dataContents objectAtIndex: indexPath.row];
+    [cell setDatas: rowContents index:indexPath.row];
     // Configure the cell...
     return cell;
 }
@@ -228,6 +214,7 @@
         // Delete the row from the data source
         [dataContents removeObjectAtIndex: indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        
         
         
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {

@@ -1,6 +1,8 @@
 #import <Foundation/Foundation.h>
 
 @class AddOrderButton;
+@class ValueView;
+@class BaseTextField;
 
 
 @interface SSViewHelper : NSObject
@@ -15,6 +17,11 @@
 
 
 
++(ValueView*) getValueView: (NSString*)attributeKey inView:(UIView*)inView;;
++(BaseTextField*) getBaseTextFieldByAttributeKey:(NSString*)attributeKey inView:(UIView*)inView;
+
+
+
 +(void) translateViewsFramesRecursive: (UIView*)view;
 +(void) translateLabelFont: (UILabel*)label;
 
@@ -22,5 +29,12 @@
 +(void) setViewsHiddenNO: (NSArray*)views;
 +(void) setViewsHiddenYes: (NSArray*)views;
 +(void) setViewsHidden: (NSArray*)views hiden:(BOOL)hidden;
+
++(void) clearTextField: (NSArray*)textFields;
+
+
++(void) resignFirstResponserOnView: (UIView*)containerView;
+
+
 
 @end

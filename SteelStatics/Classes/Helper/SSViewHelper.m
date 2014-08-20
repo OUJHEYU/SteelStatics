@@ -56,6 +56,41 @@
 
 
 
+#pragma mark -
+
++(ValueView*) getValueView: (NSString*)attributeKey inView:(UIView*)inView
+{
+    __block ValueView* result = nil;
+    [self iterateSubViewRecursively: inView subViewClazz:[ValueView class] handler:^BOOL(UIView *view) {
+        ValueView* valueView = (ValueView*)view;
+        if ([valueView.attributeKey isEqualToString: attributeKey]) {
+            result = valueView;
+            return YES;
+        }
+        return NO;
+    }];
+    return result;
+}
+
++(BaseTextField*) getBaseTextFieldByAttributeKey:(NSString*)attributeKey inView:(UIView*)inView
+{
+    __block BaseTextField* result = nil;
+    [SSViewHelper iterateSubViewRecursively: inView subViewClazz:[BaseTextField class] handler:^BOOL(UIView *view) {
+        BaseTextField* textField = (BaseTextField*) view;
+        if ([textField.attributeKey isEqualToString:attributeKey]) {
+            result = textField;
+            return YES;
+        }
+        return NO;
+    }];
+    return result;
+}
+
+
+
+
+#pragma mark -
+
 +(void) translateViewsFramesRecursive: (UIView*)view
 {
     [FrameHelper setFrame:view.frame view:view];
@@ -83,6 +118,8 @@
 
 
 
+#pragma mark -
+
 +(void) setViewsHiddenNO: (NSArray*)views
 {
     [self setViewsHidden: views hiden:NO];
@@ -98,6 +135,35 @@
     for (UIView* v in views) {
         v.hidden = hidden;
     }
+}
+
+
+#pragma mark -
+
++(void) clearTextField: (NSArray*)textFields
+{
+    for (UITextField* tx in textFields) {
+        tx.text = nil;
+    }
+}
+
+
+
+#pragma mark -
+/**
+ *  make the fist responser(u don't know who) loose its focus
+ *
+ *  @param containerView the view visible
+ */
++(void) resignFirstResponserOnView: (UIView*)containerView
+{
+    // just a trick , make the fist responser(u don't know who) loose its focus
+    UITextField* invisibleTextField = [[UITextField alloc] initWithFrame: CGRectZero];
+    invisibleTextField.hidden = YES;
+    [containerView addSubview: invisibleTextField];
+    [invisibleTextField becomeFirstResponder];
+    [invisibleTextField resignFirstResponder];
+    [invisibleTextField removeFromSuperview];
 }
 
 @end

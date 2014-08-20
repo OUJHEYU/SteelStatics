@@ -49,14 +49,13 @@
     UIView* contentView = [scrollView.subviews firstObject];
     [SSViewHelper iterateAddOrderButtonRecursively: contentView handler:^BOOL(AddOrderButton *button) {
         button.didClickButtonAction = ^void(BaseButton* button) {
-            
-            ValueView* superView = (ValueView*)button.superview;
-            NSString* projectName = [superView projectName];
-            NSString* projectModelName = [superView projectModelName];
-            
             AppTabBarController* tabController = (AppTabBarController*)((AppDelegate*)[UIApplication sharedApplication].delegate).window.rootViewController;
             OrderTableViewController* tableViewController = (OrderTableViewController*)[tabController.viewControllers objectAtIndex: 3];
-            [tableViewController.tableView.dataContents addObject:@[projectName, projectModelName, @"套", @"22679", @"1", @"2258"]];
+            
+            ValueView* superView = (ValueView*)button.superview;
+            NSMutableDictionary* values = [superView getDatas];
+            
+            [tableViewController.tableView.dataContents addObject: values];
             [tableViewController.tableView reloadData];
         };
         return NO;
