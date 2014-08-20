@@ -32,7 +32,11 @@
     return value == nil ? @"" : value;
 }
 
-
+-(NSString*) quantity
+{
+    NSString* value = [self getQuantityTextField].text;
+    return value == nil ? @"" : value;
+}
 
 -(NSMutableDictionary*)getDatas
 {
@@ -40,6 +44,7 @@
                              @"PROJECT_NAME": [self projectName],
                              @"PROJECT_MODELNAME": [self projectModelName],
                              @"UINIT" : @"個",
+                             @"QUANTITY" : [self quantity],
                              };
     
     return [values mutableCopy];
@@ -55,7 +60,10 @@
 {
     return [self getBaseTextFieldByKey:@"PROJECT_MODELNAME"];
 }
-
+-(BaseTextField*) getQuantityTextField
+{
+    return [self getBaseTextFieldByKey:@"QUANTITY"];
+}
 
 -(BaseTextField*) getBaseTextFieldByKey:(NSString*)key
 {

@@ -21,7 +21,7 @@
         
         [self createText:@"4" frame:CanvasRect(388, 0, 45, 30) key: @"UINIT"];
         
-        [self createText:@"5" frame:CanvasRect(433, 0, 66, 30) key:key];
+        [self createText:@"5" frame:CanvasRect(433, 0, 66, 30) key:@"QUANTITY"];
         
         [self createText:@"6" frame:CanvasRect(499, 0, 120, 30) key:key];
         
