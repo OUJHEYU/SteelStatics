@@ -6,7 +6,11 @@
 
 
 @implementation OrderTableView
+{
+    ValueTextField* unit;
+    ValueTextField* quantity;
 
+}
 
 @synthesize cellsDataContents;
 
@@ -170,12 +174,60 @@
 
 
 #pragma mark - UITextField Delegate Methods
+- (BOOL)textFieldShouldEndEditing:(BaseTextField *)textField
+{
+    BOOL should = YES;
+    
+    NSString* key = textField.attributeKey;
+    NSString* text = textField.text;
+    
+    
+    if ([key isEqualToString:@"UNIT"] || [key isEqualToString:@"QUANTITY"]) {
+    
+       should =  [SSNumberHelper isNumericValue: text];
+        
+        BOOL isNumeric = should;
+        if (!isNumeric) {
+            UIAlertView* alert = [[UIAlertView alloc] initWithTitle: @"錯誤"
+                                                            message: @"請輸入數字"
+                                                           delegate: nil
+                                                  cancelButtonTitle: @"確定"
+                                                  otherButtonTitles: nil];
+            [alert show];
+        }
+    }
+    
+    return should;
+}
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
     NSIndexPath* indexPath = [TableViewHelper getIndexPath: self cellSubView:textField];
     OrderTableViewCell* cell = (OrderTableViewCell*)[TableViewHelper getTableViewCell: self cellSubView:textField];
     NSDictionary* datas = [cell getDatas];
     [cellsDataContents replaceObjectAtIndex: indexPath.row withObject:datas];
+
+    
+    [self updateResults];
+    
+    [self reloadData];
+}
+
+
+-(void) updateResults
+{
+    for (NSMutableDictionary* dictionary in cellsDataContents) {
+        
+        if (isNotEmpty(dictionary[@"UNIT"]) && isNotEmpty(dictionary[@"QUANTITY"])) {
+            
+            float unitPrice = [dictionary[@"UNIT"] floatValue];
+            float quantityPrice = [dictionary[@"QUANTITY"] floatValue];
+            
+            float total = unitPrice * quantityPrice;
+            NSString* totalString = [NSString stringWithFormat:@"%.0f", total];
+            [dictionary setObject:totalString forKey:@"TOTAL"];
+        }
+        
+    }
 }
 
 

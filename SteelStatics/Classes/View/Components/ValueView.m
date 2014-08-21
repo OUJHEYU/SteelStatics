@@ -58,7 +58,7 @@
                              @"PROJECT_MODELNAME": [self projectModelName],
                              @"UINIT" : @"個",
                              @"QUANTITY" : [self quantity],
-                             @"UNIT" : @"20",
+                             @"UNIT" : @"",
                              @"TOTAL" : [self totalcaculate],
                              };
     
