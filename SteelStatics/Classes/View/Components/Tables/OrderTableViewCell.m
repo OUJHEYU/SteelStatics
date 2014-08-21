@@ -2,14 +2,15 @@
 #import "AppInterface.h"
 
 @implementation OrderTableViewCell
+{
+    BOOL isTextFieldsHaveSetDelegate;
+}
 
 -(id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
-        
-        self.textFields = [[NSMutableDictionary alloc] init];
         
         [self createText:@"1" frame:CanvasRect(3, 0, 46, 30) key:@"NO."];
         
@@ -24,38 +25,84 @@
         [self createText:@"6" frame:CanvasRect(499, 0, 120, 30) key:@"UNIT"];
         
         [self createText:@"7" frame:CanvasRect(619, 0, 145, 30) key:@"TOTAL"];
-
+        
     }
     return self;
 }
 
 -(void)setDatas:(NSDictionary *)values index:(NSUInteger)index
 {
-    for (NSString* key in self.textFields) {
-        UITextField* tx = self.textFields[key];
-        
-        if ([key isEqualToString:@"NO."]) {
-            tx.text = [NSString stringWithFormat: @"%ld", index + 1];
-            tx.enabled = NO;
-        } else {
-            NSString* value = values[key];
-            tx.text = value;
+    [SSViewHelper iterateSubViewRecursively: self.contentView subViewClazz:[BaseTextField class] handler:^BOOL(UIView *view) {
+        if ([view isKindOfClass:[BaseTextField class]]) {
+            BaseTextField* textField = (BaseTextField*)view;
+            NSString* key = textField.attributeKey;
+            
+            if ([key isEqualToString:@"NO."]) {
+                textField.text = [NSString stringWithFormat: @"%ld", index + 1];
+                textField.enabled = NO;
+            } else {
+                textField.text = values[key];
+            }
         }
-    }
-
+        return NO;
+    }];
 }
 
--(UITextField*) createText: (NSString*)title frame:(CGRect)frame key:(NSString*)key
+-(NSDictionary*) getDatas
 {
+    NSMutableDictionary* result = [NSMutableDictionary dictionary];
     
-    UITextField *text = [[UITextField alloc]initWithFrame:frame];
-    text.font = [UIFont fontWithName:@"Arial" size:CanvasFontSize(15)];
-    text.text = title;
-    [text.layer setBorderWidth:0.5];
-    text.textAlignment = NSTextAlignmentCenter;
-    [self.contentView addSubview: text];
-    [self.textFields setObject: text forKey:key];
-    return text;
+    [SSViewHelper iterateSubViewRecursively: self.contentView subViewClazz:[BaseTextField class] handler:^BOOL(UIView *view) {
+        if ([view isKindOfClass:[BaseTextField class]]) {
+            BaseTextField* textField = (BaseTextField*)view;
+            NSString* key = textField.attributeKey;
+            
+            if ([key isEqualToString:@"NO."]) {
+                
+            } else {
+                NSString* value = textField.text;
+                [result setObject: value forKey:key];
+            }
+        }
+        return NO;
+    }];
+    
+    return result;
+}
+
+
+
+
+
+-(BaseTextField*) createText: (NSString*)title frame:(CGRect)frame key:(NSString*)key
+{
+    BaseTextField *textTextField = [[BaseTextField alloc]initWithFrame:frame];
+    textTextField.font = [UIFont fontWithName:@"Arial" size:CanvasFontSize(15)];
+    textTextField.text = title;
+    [textTextField.layer setBorderWidth:0.5];
+    textTextField.textAlignment = NSTextAlignmentCenter;
+    textTextField.attributeKey = key;
+    
+        [self.contentView addSubview: textTextField];
+    return textTextField;
+}
+
+
+-(void) setTextFieldsDelegate: (id<UITextFieldDelegate>)delegate
+{
+    if (isTextFieldsHaveSetDelegate) {
+        return;
+    }
+
+    [SSViewHelper iterateSubViewRecursively: self.contentView subViewClazz:[BaseTextField class] handler:^BOOL(UIView *view) {
+        if ([view isKindOfClass:[BaseTextField class]]) {
+            BaseTextField* textField = (BaseTextField*)view;
+            textField.delegate = delegate;
+        }
+        return NO;
+    }];
+    
+    isTextFieldsHaveSetDelegate = YES;
 }
 
 @end

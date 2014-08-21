@@ -18,7 +18,7 @@
         frameHeight = frame.size.height;
     }
     tabheight = frameHeight-CanvasHeight(30);
-    
+
     frame.size.height = CanvasHeight(30.0f);
     
     self=[super initWithFrame:frame];
@@ -27,7 +27,6 @@
     {
         tv = [[UITableView alloc] initWithFrame:CanvasRect(0, 27, frame.size.width, 0)];
         [tv setSizeWidth: frame.size.width];
-        
         
         // UITableViewCell in ios7 now has gaps on left and right
         // http://stackoverflow.com/questions/18982347/uitableviewcell-in-ios7-now-has-gaps-on-left-and-right/19059028#19059028
@@ -59,8 +58,6 @@
     }
     return self;
 }
-
-
 
 - (void)tapRecognized:(UITapGestureRecognizer*)gesture
 {
@@ -158,7 +155,6 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-//    NSLog(@"count=%lu",(unsigned long)[tableArray count]);
     return [tableArray count];
 }
 

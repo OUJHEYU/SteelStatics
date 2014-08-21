@@ -2,9 +2,16 @@
 
 @interface OrderTableViewCell : UITableViewCell
 
-@property (strong) NSMutableDictionary* textFields;
+
+-(void) setDatas:(NSDictionary *)values index:(NSUInteger)index;
+-(NSDictionary*) getDatas;
 
 
--(void)setDatas:(NSDictionary *)values index:(NSUInteger)index;
+
+
+
+-(void) setTextFieldsDelegate: (id<UITextFieldDelegate>)delegate;
+
+
 
 @end

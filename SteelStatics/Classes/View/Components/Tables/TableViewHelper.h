@@ -12,4 +12,10 @@
 
 
 
++(NSIndexPath*) getIndexPath: (UITableView*)tableView cellSubView:(UIView*)subview;
++(UITableViewCell*) getTableViewCell: (UITableView*)tableView cellSubView:(UIView*)subview;
+
+
+
+
 @end

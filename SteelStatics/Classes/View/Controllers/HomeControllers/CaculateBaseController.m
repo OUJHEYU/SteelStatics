@@ -55,7 +55,7 @@
             ValueView* superView = (ValueView*)button.superview;
             NSMutableDictionary* values = [superView getDatas];
             
-            [tableViewController.tableView.dataContents addObject: values];
+            [tableViewController.tableView.cellsDataContents addObject: values];
             [tableViewController.tableView reloadData];
         };
         return NO;

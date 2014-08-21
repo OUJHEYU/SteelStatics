@@ -4,6 +4,5 @@
 
 #pragma mark - Override Methods
 
--(void) autoUpdateResuls;
 
 @end
