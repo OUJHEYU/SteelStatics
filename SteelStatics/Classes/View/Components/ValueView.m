@@ -56,7 +56,7 @@
     NSDictionary* values = @{
                              @"PROJECT_NAME": [self projectName],
                              @"PROJECT_MODELNAME": [self projectModelName],
-                             @"UINIT" : @"個",
+                             @"UINIT" : @"Kg",
                              @"QUANTITY" : [self quantity],
                              @"UNIT" : @"",
                              @"TOTAL" : [self totalcaculate],

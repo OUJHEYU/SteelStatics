@@ -1,5 +1,4 @@
 #import "BaseButton.h"
-
 @implementation BaseButton
 
 -(void)awakeFromNib
@@ -18,12 +17,10 @@
     return self;
 }
 
-
 -(void) setDefaultVariables
 {
     [self addTarget: self action:@selector(clickAction:) forControlEvents:UIControlEventTouchUpInside];
 }
-
 
 -(void) clickAction: (UIButton*)button
 {
