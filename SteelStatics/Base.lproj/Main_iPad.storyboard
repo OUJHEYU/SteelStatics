@@ -7947,11 +7947,6 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     </view>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="KpA-cJ-qJN">
-                                        <rect key="frame" x="0.0" y="1024" width="768" height="1004"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </tableView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
@@ -8334,8 +8329,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="zKE-Lo-JI2"/>
-        <segue reference="92e-Gs-HcW"/>
-        <segue reference="BU2-kZ-U8y"/>
+        <segue reference="N96-LI-kih"/>
+        <segue reference="ZMo-nS-Gdd"/>
+        <segue reference="hbq-ja-VAM"/>
     </inferredMetricsTieBreakers>
 </document>

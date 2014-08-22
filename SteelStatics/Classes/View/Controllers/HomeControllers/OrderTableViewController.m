@@ -13,19 +13,12 @@
 //    [GestureHelper addGestureToView: self.view];
 }
 
--(void) autoUpdateResuls
-{
-    
-    
-}
-
 - (IBAction)pinchAction:(id)sender {
     
     
     UIPinchGestureRecognizer* recoginizer = (UIPinchGestureRecognizer*)sender;
     
     if(recoginizer.state == UIGestureRecognizerStateEnded){
-        
         NSLog(@"-------  do the scale job .... -");
     }
 }
