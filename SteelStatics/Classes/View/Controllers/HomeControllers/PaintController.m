@@ -64,22 +64,31 @@
 
 -(void) autoUpdateResuls:(UITextField *)textField
 {
-    circlepipeprice.value = circlepipepaintprice.value * 1.0567;
-    circlepipeeedkg.value = ((3.1415926 * circlepipediamter.value / 10 * circlepipem.value * 100 * circlepipepcs.value) / 10000) * ((100 + circlepipepercentage.value)/100)/circlepipepaintface.value;
-    circlepipeneedl.value = circlepipeeedkg.value * 0.9463325;
-    circlepipeton.value = circlepipeeedkg.value/((0.02466 * circlepipethick.value * (circlepipediamter.value - circlepipethick.value)) * circlepipem.value * circlepipepcs.value)*1000*circlepipepaintprice.value;
-    boardprice.value = boardpaintprice.value * 1.0567;
-    boardneedkg.value = ((boardl.value*boardw.value)/100*boardpaintface.value)/10000*((100 + boardpercentage.value)/100)/boardpaintarea.value;;
-    boardneedl.value = boardneedkg.value * 0.9463325;
-    boardton.value = boardneedkg.value / ((boardl.value * boardw.value * boardh.value * 0.00000785) * boardpcs.value)*1000*boardpaintprice.value;
-    circlesteelprice.value = circlesteelpaintprice.value * 1.0567;
-    circlesteelneedkg.value = ((3.1415926*circlesteeldiamter.value/10*100*circlesteelm.value*circlesteelpcs.value)/10000)/circlesteelpaintface.value*((100+circlesteelpercentage.value)/100);
-    circlesteelneedl.value = circlesteelneedkg.value * 0.9463325;
-    circlesteelton.value = circlesteelneedkg.value / ((0.00617 * circlesteeldiamter.value * circlesteeldiamter.value) * circlesteelm.value * circlesteelpcs.value)*circlesteelpaintprice.value*1000;
-    hsteelprice.value = hseelpaintprice.value * 1.0567;
-    hsteelneedkg.value = (((hseelh2.value*2+hseelb.value*4)*10*hseelm.value*hseelpcs.value)/10000)/hseelpaintface.value*((100+hseelpercentage.value)/100);
-    hsteelneedl.value = hsteelneedkg.value * 0.9463325;
-    hsteelton.value = hsteelneedkg.value / ((hseelh2.value*hseelt1.value+hseelb.value*hseelt2.value*2)*0.00785* hseelm.value * hseelpcs.value)*1000*hseelpaintprice.value;
+    ValueView* editValueView = [SSViewHelper getSuperValueViewBySubView: textField];
+    if ([SSViewHelper getSuperValueViewBySubView:circlepipeprice] == editValueView) {
+        circlepipeprice.value = circlepipepaintprice.value * 1.0567;
+        circlepipeeedkg.value = ((3.1415926 * circlepipediamter.value / 10 * circlepipem.value * 100 * circlepipepcs.value) / 10000) * ((100 + circlepipepercentage.value)/100)/circlepipepaintface.value;
+        circlepipeneedl.value = circlepipeeedkg.value * 0.9463325;
+        circlepipeton.value = circlepipeeedkg.value/((0.02466 * circlepipethick.value * (circlepipediamter.value - circlepipethick.value)) * circlepipem.value * circlepipepcs.value)*1000*circlepipepaintprice.value;
+    }
+    if ([SSViewHelper getSuperValueViewBySubView:boardprice] == editValueView) {
+        boardprice.value = boardpaintprice.value * 1.0567;
+        boardneedkg.value = ((boardl.value*boardw.value)/100*boardpaintface.value)/10000*((100 + boardpercentage.value)/100)/boardpaintarea.value;;
+        boardneedl.value = boardneedkg.value * 0.9463325;
+        boardton.value = boardneedkg.value / ((boardl.value * boardw.value * boardh.value * 0.00000785) * boardpcs.value)*1000*boardpaintprice.value;
+    }
+    if ([SSViewHelper getSuperValueViewBySubView:circlesteelprice] == editValueView) {
+        circlesteelprice.value = circlesteelpaintprice.value * 1.0567;
+        circlesteelneedkg.value = ((3.1415926*circlesteeldiamter.value/10*100*circlesteelm.value*circlesteelpcs.value)/10000)/circlesteelpaintface.value*((100+circlesteelpercentage.value)/100);
+        circlesteelneedl.value = circlesteelneedkg.value * 0.9463325;
+        circlesteelton.value = circlesteelneedkg.value / ((0.00617 * circlesteeldiamter.value * circlesteeldiamter.value) * circlesteelm.value * circlesteelpcs.value)*circlesteelpaintprice.value*1000;
+    }
+    if ([SSViewHelper getSuperValueViewBySubView:hsteelprice] == editValueView) {
+        hsteelprice.value = hseelpaintprice.value * 1.0567;
+        hsteelneedkg.value = (((hseelh2.value*2+hseelb.value*4)*10*hseelm.value*hseelpcs.value)/10000)/hseelpaintface.value*((100+hseelpercentage.value)/100);
+        hsteelneedl.value = hsteelneedkg.value * 0.9463325;
+        hsteelton.value = hsteelneedkg.value / ((hseelh2.value*hseelt1.value+hseelb.value*hseelt2.value*2)*0.00785* hseelm.value * hseelpcs.value)*1000*hseelpaintprice.value;
+    }
 }
 
 - (void)viewDidLoad
