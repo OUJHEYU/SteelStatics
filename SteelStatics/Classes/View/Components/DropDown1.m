@@ -49,6 +49,7 @@
         if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
             fontsize -= 0.7;
         }
+        textField.keyboardType = UIKeyboardTypeNumberPad;
         textField.font = [UIFont fontWithName:@"Arial" size:fontsize];
         textField.textAlignment = NSTextAlignmentCenter;
         textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
@@ -92,16 +93,19 @@
 
 -(void) textFieldDidClicked: (UITextField*)textFieldObj
 {
-    [textFieldObj becomeFirstResponder];
-    [textFieldObj resignFirstResponder];
     [self.window endEditing:YES];
-    
+
     if([tv sizeHeight] != 0 ) {
         [self pullup];
+        [textField becomeFirstResponder];
+        [textField resignFirstResponder];
     } else {
         [self dropdown];
+        [textField becomeFirstResponder];
+        [textField resignFirstResponder];
     }
 }
+
 -(void)pullup
 {
     [UIView animateWithDuration: 0.4 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
@@ -113,7 +117,7 @@
 }
 
 -(void)dropdown{
-    
+
     // registry Hide tableview event
     NSArray* gestures = [self.window gestureRecognizers];
     if (! [gestures containsObject: gestureRecognizer]) {
@@ -123,9 +127,6 @@
         }
         [self.window addGestureRecognizer:gestureRecognizer];
     }
-    
-    
-    //隱藏鍵盤
 
     //如果下拉清單尚未顯示，則進行顯示
     CGRect sf = self.frame;
@@ -144,8 +145,6 @@
     self.frame = sf;
     tv.frame = frame;
     [UIView commitAnimations];
-    
-    
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

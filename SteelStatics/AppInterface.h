@@ -48,6 +48,8 @@
 
 #import "ValueView.h"
 
+#import "ValueCaluateView.h"
+
 #import "AddOrderButton.h"
 
 #import "DropDown1.h"
@@ -62,6 +64,7 @@
 #import "OrderTableView.h"
 #import "TableViewHelper.h"
 #import "OrderTableViewCell.h"
+#import "FormulaView.h"
 
 
 

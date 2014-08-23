@@ -65,6 +65,8 @@
 		BA15E23A1996153F00DC1E22 /* ColorHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BA15E2391996153F00DC1E22 /* ColorHelper.m */; };
 		BA15E23D1996155400DC1E22 /* UIColor+FlatColors.m in Sources */ = {isa = PBXBuildFile; fileRef = BA15E23C1996155400DC1E22 /* UIColor+FlatColors.m */; };
 		BA15E24019961A5B00DC1E22 /* UILabel+AdjustWidth.m in Sources */ = {isa = PBXBuildFile; fileRef = BA15E23F19961A5B00DC1E22 /* UILabel+AdjustWidth.m */; };
+		BA1D818519A82C0F0045386E /* ValueCaluateView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA1D818419A82C0F0045386E /* ValueCaluateView.m */; };
+		BA1D818819A8392E0045386E /* FormulaView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA1D818719A8392E0045386E /* FormulaView.m */; };
 		BA391DDC199B492300E5B724 /* EmployeeDataSheet_32@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA391DDB199B492300E5B724 /* EmployeeDataSheet_32@2x.png */; };
 		BA391DE2199B513B00E5B724 /* Values1.json in Resources */ = {isa = PBXBuildFile; fileRef = BA391DE1199B513B00E5B724 /* Values1.json */; };
 		BA391DE4199B602600E5B724 /* Values2.json in Resources */ = {isa = PBXBuildFile; fileRef = BA391DE3199B602600E5B724 /* Values2.json */; };
@@ -189,6 +191,10 @@
 		BA15E23C1996155400DC1E22 /* UIColor+FlatColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+FlatColors.m"; path = "../../../Modules/View/Color/UIColor+FlatColors.m"; sourceTree = "<group>"; };
 		BA15E23E19961A5B00DC1E22 /* UILabel+AdjustWidth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UILabel+AdjustWidth.h"; path = "../../../Modules/View/Components/Label/UILabel+AdjustWidth.h"; sourceTree = "<group>"; };
 		BA15E23F19961A5B00DC1E22 /* UILabel+AdjustWidth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UILabel+AdjustWidth.m"; path = "../../../Modules/View/Components/Label/UILabel+AdjustWidth.m"; sourceTree = "<group>"; };
+		BA1D818319A82C0F0045386E /* ValueCaluateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValueCaluateView.h; sourceTree = "<group>"; };
+		BA1D818419A82C0F0045386E /* ValueCaluateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValueCaluateView.m; sourceTree = "<group>"; };
+		BA1D818619A8392E0045386E /* FormulaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormulaView.h; sourceTree = "<group>"; };
+		BA1D818719A8392E0045386E /* FormulaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormulaView.m; sourceTree = "<group>"; };
 		BA391DDB199B492300E5B724 /* EmployeeDataSheet_32@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "EmployeeDataSheet_32@2x.png"; sourceTree = "<group>"; };
 		BA391DE1199B513B00E5B724 /* Values1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Values1.json; sourceTree = "<group>"; };
 		BA391DE3199B602600E5B724 /* Values2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Values2.json; sourceTree = "<group>"; };
@@ -460,6 +466,8 @@
 				BA79167519A336AA0001393E /* OrderTableView.m */,
 				BA79167719A33BF70001393E /* TableViewHelper.h */,
 				BA79167819A33BF70001393E /* TableViewHelper.m */,
+				BA1D818619A8392E0045386E /* FormulaView.h */,
+				BA1D818719A8392E0045386E /* FormulaView.m */,
 			);
 			path = Tables;
 			sourceTree = "<group>";
@@ -522,6 +530,8 @@
 				BA99E403199CA04F005FE1D3 /* AddOrderButton.m */,
 				BA79167A19A344B80001393E /* ValueView.h */,
 				BA79167B19A344B80001393E /* ValueView.m */,
+				BA1D818319A82C0F0045386E /* ValueCaluateView.h */,
+				BA1D818419A82C0F0045386E /* ValueCaluateView.m */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -755,9 +765,11 @@
 				BA15E24019961A5B00DC1E22 /* UILabel+AdjustWidth.m in Sources */,
 				BA99E3C5199C85BA005FE1D3 /* AppScrollView.m in Sources */,
 				BA99E3C3199C85BA005FE1D3 /* SSNumberHelper.m in Sources */,
+				BA1D818519A82C0F0045386E /* ValueCaluateView.m in Sources */,
 				BA99E3C6199C85BA005FE1D3 /* BaseButton.m in Sources */,
 				BA99E3FE199C99D7005FE1D3 /* PaintController.m in Sources */,
 				BA99E404199CA04F005FE1D3 /* AddOrderButton.m in Sources */,
+				BA1D818819A8392E0045386E /* FormulaView.m in Sources */,
 				BA79167619A336AA0001393E /* OrderTableView.m in Sources */,
 				4EE55C8019751FB20078428D /* main.m in Sources */,
 				BA99E3FF199C99D7005FE1D3 /* PrintController.m in Sources */,

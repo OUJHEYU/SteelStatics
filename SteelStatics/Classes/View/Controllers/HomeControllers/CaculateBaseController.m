@@ -55,6 +55,8 @@
             ValueView* superView = (ValueView*)button.superview;
             NSMutableDictionary* values = [superView getDatas];
             
+            
+            
             [tableViewController.tableView.cellsDataContents addObject: values];
             [tableViewController.tableView reloadData];
         };
@@ -84,12 +86,12 @@
         
         return;
     }
-    [self autoUpdateResuls];
+    [self autoUpdateResuls:textField];
 }
 
 #pragma mark - Override Methods
 
--(void) autoUpdateResuls
+-(void) autoUpdateResuls:(UITextField *)textField
 {
     
 }

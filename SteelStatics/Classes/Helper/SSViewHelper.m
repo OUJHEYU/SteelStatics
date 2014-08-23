@@ -88,6 +88,19 @@
 
 
 
++(BaseTextField*) createText: (NSString*)title frame:(CGRect)frame key:(NSString*)key enable:(BOOL)enabled
+{
+    BaseTextField *textTextField = [[BaseTextField alloc]initWithFrame:frame];
+    textTextField.font = [UIFont fontWithName:@"Arial" size:CanvasFontSize(15)];
+    textTextField.text = title;
+    [textTextField.layer setBorderWidth:0.5];
+    textTextField.textAlignment = NSTextAlignmentCenter;
+    textTextField.attributeKey = key;
+    textTextField.enabled = enabled;
+    return textTextField;
+}
+
+
 
 #pragma mark -
 
@@ -146,6 +159,27 @@
         tx.text = nil;
     }
 }
+
+
++(ValueView*) getSuperValueViewBySubView: (UIView*)subView
+{
+    ValueView* valueView = (ValueView*)subView.superview;
+    while (valueView && ![valueView isKindOfClass:[ValueView class]]) {
+        valueView = (ValueView*)valueView.superview;
+    }
+    return valueView;
+}
+
+
++(ValueCaluateView*) getSuperValueCaculateViewBySubView: (UIView*)subView
+{
+    ValueCaluateView* valueView = (ValueCaluateView*)subView.superview;
+    while (valueView && ![valueView isKindOfClass:[ValueCaluateView class]]) {
+        valueView = (ValueCaluateView*)valueView.superview;
+    }
+    return valueView;
+}
+
 
 
 

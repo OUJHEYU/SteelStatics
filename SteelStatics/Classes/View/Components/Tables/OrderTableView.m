@@ -215,7 +215,7 @@
 #pragma mark - Table view data source
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CanvasHeight(30);
+    return CanvasHeight(50);
 }
 
 

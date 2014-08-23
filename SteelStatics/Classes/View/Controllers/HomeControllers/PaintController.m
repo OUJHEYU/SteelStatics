@@ -59,8 +59,10 @@
 @synthesize boardneedkg;
 @synthesize boardton;
 @synthesize boardprice;
+
 #pragma mark - Override Methods
--(void) autoUpdateResuls
+
+-(void) autoUpdateResuls:(UITextField *)textField
 {
     circlepipeprice.value = circlepipepaintprice.value * 1.0567;
     circlepipeeedkg.value = ((3.1415926 * circlepipediamter.value / 10 * circlepipem.value * 100 * circlepipepcs.value) / 10000) * ((100 + circlepipepercentage.value)/100)/circlepipepaintface.value;

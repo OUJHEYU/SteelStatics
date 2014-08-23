@@ -135,22 +135,85 @@
     return result;
 }
 
--(void) autoUpdateResuls
+-(void) autoUpdateResuls:(UITextField *)textField
 {
-    [self hsteelsymmetrycaculate];
-    [self girdercaculate];
-    [self channelcaculate];
-    [self anglescaculate];
-    [self rectanglepipecaculate];
-    [self csteelcaculate];
-    [self zsteelcaculate];
-    [self circlesteelcaculate];
-    hsection.value = ((hsectionh1.value + hsectionh2.value) / 2 * hsectiont1.value * 0.00785 + hsectionb.value * hsectiont2.value * 2 * 0.00785) * hsectionm.value * hsectionpcs.value * (hsectionloss.value / 100 + 1);
-    bridge.value = ((bridgeh1.value + bridgeh2.value) / 2 * bridget1.value * 0.00785 + bridgeb.value * bridget2.value * 2 * 0.00785) * bridgem.value * bridgepcs.value * (sqrtf(100 * 100 + bridgewater.value * bridgewater.value) / 100) * (bridgeloss.value / 100 + 1);
-    overhead.value = ((overheadmidl.value * overheadw.value * overheadm.value * 0.00785) + (overheadtopl.value * overheadtopw.value * overheadm.value * 0.00785) + (overheadlowerl.value * overheadlowerw.value * (overheadm.value + ((overheadmidl.value - overheadoxh.value) / 500)) * 0.00785)) * overheadpcs.value * (overheadloss.value / 100 + 1);
-    board.value = (boardl.value * boardw.value * boardh.value * 0.00000785) * boardpcs.value * (boardloss.value / 100 + 1);
-    circlepipe.value = (0.02466 * circlepipethick.value * (circlepipediamter.value - circlepipethick.value)) * circlepipem.value * circlepipepcs.value * (circlepipeloss.value / 100 + 1);
-    hsteelasymmetrical.value = (((hsteelasymmetricalh.value - hsteelasymmetricalt1.value - hsteelasymmetricalt2.value)*hsteelasymmetricaltw.value*0.00785)+(hsteelasymmetricalb1.value*hsteelasymmetricalt1.value*0.00785)+(hsteelasymmetricalb2.value*hsteelasymmetricalt2.value*0.00785))*hsteelasymmetricalm.value*hsteelasymmetricalpcs.value*(hsteelasymmetricalloss.value / 100 + 1);
+    ValueView* editValueView = [SSViewHelper getSuperValueViewBySubView: textField];
+    
+    if ([SSViewHelper getSuperValueViewBySubView:zsteel] == editValueView) {
+        if ([dd8.textField.text isEqualToString:@""]){
+            zsteel.value = (0.00785 * zsteelthick.value * (zsteelh.value + 2 * zsteelb.value + 2 * zsteelc.value)) * zsteelm.value * zsteelpcs.value * (zsteelloss.value / 100 + 1);
+        }else{
+            zsteel.value = 4.233 * zsteelm.value * zsteelpcs.value * (zsteelloss.value / 100 + 1);
+        }
+    }
+    
+    if ([SSViewHelper getSuperValueViewBySubView:csteel] == editValueView) {
+        if ([dd5.textField.text isEqualToString:@""]) {
+            csteel.value = (0.00785 * csteelthick.value * (csteelh.value + 2 * csteelb.value + 2 * csteelc.value)) * csteelm.value * csteelpcs.value * (csteelloss.value / 100 + 1);
+        }else{
+            csteel.value = csteelkg.value * csteelm.value * csteelpcs.value * (csteelloss.value / 100 + 1);
+        }
+    }
+    
+    if ([SSViewHelper getSuperValueViewBySubView:hsteelsymmetry] == editValueView) {
+        hsteelsymmetry.value = hsteelsymmetrykg.value * hsteelsymmetrym.value * hsteelsymmetrypcs.value * (hsteelsymmetryloss.value / 100 +1);
+    }
+    
+    if ([SSViewHelper getSuperValueViewBySubView:angles] == editValueView) {
+        if ([dd9.textField.text isEqualToString:@""]&&[dd10.textField.text isEqualToString:@""] &&[dd10.textField.text isEqualToString:@""]){
+            angles.value = (0.00785 * anglethick.value * (angleside1.value + angleside2.value - anglethick.value)) * anglem.value * anglepcs.value * (angleloss.value / 100 + 1);
+        }else{
+            angles.value = anglekg.value * anglem.value * anglepcs.value * (angleloss.value / 100 + 1);
+        }
+    }
+    
+    if ([SSViewHelper getSuperValueViewBySubView:girder] == editValueView) {
+        girder.value = girderkg.value * girderm.value * girderpcs.value * (girderloss.value / 100 + 1);
+    }
+    
+    if ([SSViewHelper getSuperValueViewBySubView:channel] == editValueView) {
+        channel.value = channelkg.value * channelm.value * channelpcs.value * (channelpcs.value / 100 + 1);
+    }
+    
+    if ([SSViewHelper getSuperValueViewBySubView:rectanglepipe] == editValueView) {
+        if ([dd2.textField.text isEqualToString:@""]&&[dd3.textField.text isEqualToString:@""]){
+            rectanglepipe.value = ((rectanglepipelong.value + rectanglepipeshort.value - 2 * rectanglepipethick.value) * rectanglepipethick.value * 0.0157) * rectanglepipem.value * rectanglepipepcs.value * (rectanglepipeloss.value / 100 + 1);
+        }else{
+            rectanglepipe.value = rectanglepipekg.value * rectanglepipem.value * rectanglepipepcs.value * (rectanglepipeloss.value / 100 + 1);
+        }
+    }
+    
+    if ([SSViewHelper getSuperValueViewBySubView:circlesteel] == editValueView) {
+        if ([dd4.textField.text isEqualToString:@""]){
+            circlesteel.value = (0.00617 * circlesteeldiamter.value * circlesteeldiamter.value) * circlesteelm.value * circlesteelpcs.value * (circlesteelloss.value / 100 + 1);
+        }else{
+            circlesteel.value = circlesteelkg.value * circlesteelm.value * circlesteelpcs.value * (circlesteelloss.value / 100 + 1);
+        }
+    }
+    
+    if ([SSViewHelper getSuperValueViewBySubView:hsection] == editValueView) {
+        hsection.value = ((hsectionh1.value + hsectionh2.value) / 2 * hsectiont1.value * 0.00785 + hsectionb.value * hsectiont2.value * 2 * 0.00785) * hsectionm.value * hsectionpcs.value * (hsectionloss.value / 100 + 1);
+    }
+    
+    if ([SSViewHelper getSuperValueViewBySubView:bridge] == editValueView) {
+        bridge.value = ((bridgeh1.value + bridgeh2.value) / 2 * bridget1.value * 0.00785 + bridgeb.value * bridget2.value * 2 * 0.00785) * bridgem.value * bridgepcs.value * (sqrtf(100 * 100 + bridgewater.value * bridgewater.value) / 100) * (bridgeloss.value / 100 + 1);
+    }
+    
+    if ([SSViewHelper getSuperValueViewBySubView:overhead] == editValueView) {
+        overhead.value = ((overheadmidl.value * overheadw.value * overheadm.value * 0.00785) + (overheadtopl.value * overheadtopw.value * overheadm.value * 0.00785) + (overheadlowerl.value * overheadlowerw.value * (overheadm.value + ((overheadmidl.value - overheadoxh.value) / 500)) * 0.00785)) * overheadpcs.value * (overheadloss.value / 100 + 1);
+    }
+    
+    if ([SSViewHelper getSuperValueViewBySubView:board] == editValueView) {
+        board.value = (boardl.value * boardw.value * boardh.value * 0.00000785) * boardpcs.value * (boardloss.value / 100 + 1);
+    }
+    
+    if ([SSViewHelper getSuperValueViewBySubView:circlepipe] == editValueView) {
+        circlepipe.value = (0.02466 * circlepipethick.value * (circlepipediamter.value - circlepipethick.value)) * circlepipem.value * circlepipepcs.value * (circlepipeloss.value / 100 + 1);
+    }
+    
+    if ([SSViewHelper getSuperValueViewBySubView:hsteelasymmetrical] == editValueView) {
+        hsteelasymmetrical.value = (((hsteelasymmetricalh.value - hsteelasymmetricalt1.value - hsteelasymmetricalt2.value)*hsteelasymmetricaltw.value*0.00785)+(hsteelasymmetricalb1.value*hsteelasymmetricalt1.value*0.00785)+(hsteelasymmetricalb2.value*hsteelasymmetricalt2.value*0.00785))*hsteelasymmetricalm.value*hsteelasymmetricalpcs.value*(hsteelasymmetricalloss.value / 100 + 1);
+    }
 }
 
 - (IBAction) refreshValueView:(UIButton*)sender
@@ -198,7 +261,8 @@
     [SSViewHelper setViewsHiddenYes:hiddenYesViews];
     
     rectanglepipelonglabel.text = @"(mm)";
-    
+    [dd9.textField becomeFirstResponder];
+    [dd9.textField resignFirstResponder];
     [r3 setOriginX:CanvasX(498)];
     [rectanglepipem setOriginX:CanvasX(369)];
     [rectanglepipepcs setOriginX:CanvasX(439)];
@@ -265,7 +329,8 @@
     
     NSArray* hiddenYesViews = @[anglekg,anglessidekglabel,anglessidekg2label];
     [SSViewHelper setViewsHiddenYes:hiddenYesViews];
-    
+    [dd2.textField becomeFirstResponder];
+    [dd2.textField resignFirstResponder];
     [anglem setOriginX:CanvasX(399)];
     [anglepcs setOriginX:CanvasX(479)];
     [angleloss setOriginX:CanvasX(559)];
@@ -534,58 +599,6 @@
     valueView9 = [SSViewHelper getValueView: @"valueView9" inView:contentView];
     [valueView9 addSubview:dd10];
     
-    
-}
-
-
--(void)circlesteelcaculate
-{
-    if ([dd4.textField.text isEqualToString:@""]){
-        circlesteel.value = (0.00617 * circlesteeldiamter.value * circlesteeldiamter.value) * circlesteelm.value * circlesteelpcs.value * (circlesteelloss.value / 100 + 1);
-    }else{
-        circlesteel.value = circlesteelkg.value * circlesteelm.value * circlesteelpcs.value * (circlesteelloss.value / 100 + 1);
-    }
-}
-
--(void)rectanglepipecaculate
-{
-    if ([dd2.textField.text isEqualToString:@""]){
-        rectanglepipe.value = ((rectanglepipelong.value + rectanglepipeshort.value - 2 * rectanglepipethick.value) * rectanglepipethick.value * 0.0157) * rectanglepipem.value * rectanglepipepcs.value * (rectanglepipeloss.value / 100 + 1);
-    }else{
-        rectanglepipe.value = rectanglepipekg.value * rectanglepipem.value * rectanglepipepcs.value * (rectanglepipeloss.value / 100 + 1);
-    }
-}
-
--(void)hsteelsymmetrycaculate
-{
-    hsteelsymmetry.value = hsteelsymmetrykg.value * hsteelsymmetrym.value * hsteelsymmetrypcs.value * (hsteelsymmetryloss.value / 100 +1);
-    
-}
--(void)anglescaculate
-{
-    if ([dd9.textField.text isEqualToString:@""]&&[dd10.textField.text isEqualToString:@""]){
-        angles.value = (0.00785 * anglethick.value * (angleside1.value + angleside2.value - anglethick.value)) * anglem.value * anglepcs.value * (angleloss.value / 100 + 1);
-    }else{
-        angles.value = anglekg.value * anglem.value * anglepcs.value * (angleloss.value / 100 + 1);
-    }
-}
--(void)csteelcaculate
-{
-    if ([dd5.textField.text isEqualToString:@""]) {
-        csteel.value = (0.00785 * csteelthick.value * (csteelh.value + 2 * csteelb.value + 2 * csteelc.value)) * csteelm.value * csteelpcs.value * (csteelloss.value / 100 + 1);
-        
-    }else{
-        csteel.value = csteelkg.value * csteelm.value * csteelpcs.value * (csteelloss.value / 100 + 1);
-    }
-}
-
--(void)zsteelcaculate
-{
-    if ([dd8.textField.text isEqualToString:@""]){
-        zsteel.value = (0.00785 * zsteelthick.value * (zsteelh.value + 2 * zsteelb.value + 2 * zsteelc.value)) * zsteelm.value * zsteelpcs.value * (zsteelloss.value / 100 + 1);
-    }else{
-        zsteel.value = 4.233 * zsteelm.value * zsteelpcs.value * (zsteelloss.value / 100 + 1);
-    }
     
 }
 
