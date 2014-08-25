@@ -97,7 +97,6 @@
 		BA99E3FC199C99D7005FE1D3 /* OrderTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA99E3EC199C99D7005FE1D3 /* OrderTableViewController.m */; };
 		BA99E3FD199C99D7005FE1D3 /* OtherController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA99E3EE199C99D7005FE1D3 /* OtherController.m */; };
 		BA99E3FE199C99D7005FE1D3 /* PaintController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA99E3F0199C99D7005FE1D3 /* PaintController.m */; };
-		BA99E3FF199C99D7005FE1D3 /* PrintController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA99E3F2199C99D7005FE1D3 /* PrintController.m */; };
 		BA99E400199C99D7005FE1D3 /* ProcessingRolledSteelController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA99E3F4199C99D7005FE1D3 /* ProcessingRolledSteelController.m */; };
 		BA99E401199C99D7005FE1D3 /* RolledSteelController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA99E3F6199C99D7005FE1D3 /* RolledSteelController.m */; };
 		BA99E404199CA04F005FE1D3 /* AddOrderButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BA99E403199CA04F005FE1D3 /* AddOrderButton.m */; };
@@ -252,8 +251,6 @@
 		BA99E3EE199C99D7005FE1D3 /* OtherController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherController.m; sourceTree = "<group>"; };
 		BA99E3EF199C99D7005FE1D3 /* PaintController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaintController.h; sourceTree = "<group>"; };
 		BA99E3F0199C99D7005FE1D3 /* PaintController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaintController.m; sourceTree = "<group>"; };
-		BA99E3F1199C99D7005FE1D3 /* PrintController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrintController.h; sourceTree = "<group>"; };
-		BA99E3F2199C99D7005FE1D3 /* PrintController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrintController.m; sourceTree = "<group>"; };
 		BA99E3F3199C99D7005FE1D3 /* ProcessingRolledSteelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProcessingRolledSteelController.h; sourceTree = "<group>"; };
 		BA99E3F4199C99D7005FE1D3 /* ProcessingRolledSteelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProcessingRolledSteelController.m; sourceTree = "<group>"; };
 		BA99E3F5199C99D7005FE1D3 /* RolledSteelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RolledSteelController.h; sourceTree = "<group>"; };
@@ -562,8 +559,6 @@
 				BA99E3EE199C99D7005FE1D3 /* OtherController.m */,
 				BA99E3EF199C99D7005FE1D3 /* PaintController.h */,
 				BA99E3F0199C99D7005FE1D3 /* PaintController.m */,
-				BA99E3F1199C99D7005FE1D3 /* PrintController.h */,
-				BA99E3F2199C99D7005FE1D3 /* PrintController.m */,
 				BA99E3F3199C99D7005FE1D3 /* ProcessingRolledSteelController.h */,
 				BA99E3F4199C99D7005FE1D3 /* ProcessingRolledSteelController.m */,
 				BA99E3F5199C99D7005FE1D3 /* RolledSteelController.h */,
@@ -772,7 +767,6 @@
 				BA1D818819A8392E0045386E /* FormulaView.m in Sources */,
 				BA79167619A336AA0001393E /* OrderTableView.m in Sources */,
 				4EE55C8019751FB20078428D /* main.m in Sources */,
-				BA99E3FF199C99D7005FE1D3 /* PrintController.m in Sources */,
 				BA99E401199C99D7005FE1D3 /* RolledSteelController.m in Sources */,
 				BA99E3F8199C99D7005FE1D3 /* CaculateBaseController.m in Sources */,
 				BA79167C19A344B80001393E /* ValueView.m in Sources */,

@@ -6494,7 +6494,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                         <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="keyPath" value="DIAMETER"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="attributeKey" value="DIAMETER"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" background="AccountInformation-Details_09.png" id="6W2-q3-R6I" customClass="CaculateTextField">
@@ -8828,8 +8828,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="zKE-Lo-JI2"/>
-        <segue reference="92e-Gs-HcW"/>
-        <segue reference="BU2-kZ-U8y"/>
+        <segue reference="hbq-ja-VAM"/>
+        <segue reference="ZMo-nS-Gdd"/>
+        <segue reference="N96-LI-kih"/>
     </inferredMetricsTieBreakers>
 </document>

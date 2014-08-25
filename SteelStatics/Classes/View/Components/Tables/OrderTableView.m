@@ -221,7 +221,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self performSelector:@selector(deselect) withObject:nil afterDelay:0.1f];
+    [self performSelector:@selector(deselect) withObject:nil afterDelay:0.3f];
 }
 
 
@@ -285,6 +285,7 @@
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [self endEditing:YES];
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
         [cellsDataContents removeObjectAtIndex: indexPath.row];

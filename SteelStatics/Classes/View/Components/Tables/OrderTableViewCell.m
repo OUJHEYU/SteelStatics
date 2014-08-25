@@ -13,7 +13,6 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
-        
         CGFloat height = 50;
         
         [self createTextAndAddToContentView:@"1" frame:CanvasRect(3, 0, 51, height) key:@"NO." enable:NO];

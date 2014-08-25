@@ -1,11 +1,3 @@
-//
-//  FormulaView.m
-//  SteelStatics
-//
-//  Created by develop on 2014/8/23.
-//  Copyright (c) 2014年 isaacs. All rights reserved.
-//
-
 #import "FormulaView.h"
 #import "AppInterface.h"
 
@@ -16,12 +8,8 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        
-        self.backgroundColor = [UIColor clearColor];
-        
-        [self createTextFields];
-        
-        
+        self.backgroundColor = [UIColor redColor];
+        [self.layer setBorderWidth:0.5];
 //        [ColorHelper setBorder: self];
     }
     return self;
@@ -63,7 +51,8 @@
 
 -(void) setDatas:(NSDictionary*) dictionary
 {
-    NSLog(@"");
+ 
+    NSLog(@"%@",dictionary);
 }
 
 
@@ -78,14 +67,5 @@
 {
     
 }
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
 
 @end

@@ -2,7 +2,10 @@
 #import "AppInterface.h"
 
 @implementation OrderTableViewController
-
+{
+    int count;
+    UIView* viewww;
+}
 
 - (void)viewDidLoad
 {
@@ -15,11 +18,21 @@
 
 - (IBAction)pinchAction:(id)sender {
     
-    
     UIPinchGestureRecognizer* recoginizer = (UIPinchGestureRecognizer*)sender;
-    
+
     if(recoginizer.state == UIGestureRecognizerStateEnded){
-        NSLog(@"-------  do the scale job .... -");
+       
+        if (count == 0) {
+            count ++;
+    
+
+        }else if (count == 1){
+            count --;
+
+        }
+        
+        
+        NSLog(@"- - - do the scale job - - -");
     }
 }
 
