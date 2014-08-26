@@ -2,19 +2,20 @@
 #import "AppInterface.h"
 
 @implementation FormulaView
-
+{
+    int count;
+}
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        self.backgroundColor = [UIColor redColor];
+        self.backgroundColor = [UIColor grayColor];
         [self.layer setBorderWidth:0.5];
 //        [ColorHelper setBorder: self];
     }
     return self;
 }
-
 
 -(void) createTextFields
 {
@@ -39,33 +40,26 @@
     [self addSubview:text8];
     [self addSubview:text9];
     [self addSubview:text10];
-    
 }
-
 
 -(void) clearDatas
 {
-    
-}
 
+}
 
 -(void) setDatas:(NSDictionary*) dictionary
 {
- 
     NSLog(@"%@",dictionary);
 }
 
 
-
 -(void) hide
 {
-    
+    self.frame = CanvasRect(404, 0, 90, 50);
 }
-
 
 -(void) show
 {
-    
+    self.frame = CanvasRect(229, 0, 535, 50);
 }
-
 @end

@@ -54,12 +54,8 @@
     
     // FORMULA
     NSMutableDictionary* caluateDictionary = [values objectForKey:@"FORMULA"];
-    
     [formulaView clearDatas];
     [formulaView setDatas: caluateDictionary];
-    
-    
-    
     
 }
 

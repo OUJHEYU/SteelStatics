@@ -256,6 +256,7 @@
     [section0HeaderView addSubview:text17];
     [section0HeaderView addSubview:text18];
 
+//    self.tableHeaderView = section0HeaderView;  
     return section0HeaderView;
 }
 
