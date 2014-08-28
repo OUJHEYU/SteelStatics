@@ -64,7 +64,6 @@
 
 
 
-
 //角鋼 Label
 @synthesize anglessidekglabel, anglesside1label, anglesside2label, anglesthicklabel, anglesmlabel, anglespcslabel, angleslosslabel, anglessidekg2label, a1, a2;
 

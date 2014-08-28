@@ -9,7 +9,6 @@
 {
     ValueTextField* unit;
     ValueTextField* quantity;
-
 }
 
 @synthesize cellsDataContents;
@@ -230,10 +229,12 @@
     return 1;
 }
 
+
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     return CanvasHeight(30);
 }
+
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
@@ -256,9 +257,10 @@
     [section0HeaderView addSubview:text17];
     [section0HeaderView addSubview:text18];
 
-//    self.tableHeaderView = section0HeaderView;  
+//    self.tableHeaderView = section0HeaderView;
     return section0HeaderView;
 }
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -276,13 +278,12 @@
     // Configure the cell...
     return cell;
 }
-
 // ----------------------- Delete Begin -----------------------
-
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return YES;
 }
+
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -299,12 +300,12 @@
     [tableView reloadData];
 }
 
+
 - (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return @"刪除";
 }
 // ----------------------- Delete Begin -----------------------
 #pragma mark - Table view delegate
-
 
 @end

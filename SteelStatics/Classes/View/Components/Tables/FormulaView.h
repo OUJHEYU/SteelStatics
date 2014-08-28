@@ -5,5 +5,6 @@
 -(void) clearDatas;
 
 -(void) setDatas:(NSDictionary*) dictionary;
-
+-(void) show;
+-(void) hide;
 @end
